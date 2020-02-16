@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{o}{\PYGZgt{}} \PYG{n+nf}{library}\PYG{p}{(}\PYG{n}{matrixcalc}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{n}{k}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k}
-	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
-\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.2696947} \PYG{l+m}{0.2897812} \PYG{l+m}{0.0490421} \PYG{l+m}{0.09383964} \PYG{l+m}{0.07187831} \PYG{l+m}{0.225764}
-\end{Verbatim}

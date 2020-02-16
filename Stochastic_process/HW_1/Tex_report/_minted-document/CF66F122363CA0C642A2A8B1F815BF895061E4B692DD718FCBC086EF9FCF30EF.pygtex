@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{theor} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n}{p\PYGZus{}k}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}} \PYG{n}{plot\PYGZus{}df} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{data.frame}\PYG{p}{(}\PYG{n}{type} \PYG{o}{=} \PYG{n+nf}{rep}\PYG{p}{(}\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}theoretical\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}emperical\PYGZdq{}}\PYG{p}{),} \PYG{n}{each}\PYG{o}{=}\PYG{n}{m}\PYG{p}{),}
+\PYG{o}{+}                       \PYG{n}{step} \PYG{o}{=} \PYG{n+nf}{rep}\PYG{p}{(}\PYG{n+nf}{paste}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Шаг\PYGZdq{}}\PYG{p}{,}\PYG{n+nf}{as.character}\PYG{p}{(}\PYG{l+m}{1}\PYG{o}{:}\PYG{n}{m}\PYG{p}{)),} \PYG{l+m}{2}\PYG{p}{),}
+\PYG{o}{+}                       \PYG{n}{prob} \PYG{o}{=} \PYG{n+nf}{c}\PYG{p}{(}\PYG{n}{theor}\PYG{p}{,} \PYG{n}{emp}\PYG{p}{))}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{png}\PYG{p}{(}\PYG{n}{filename} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}../img/2.png\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n}{width} \PYG{o}{=} \PYG{l+m}{1920}\PYG{p}{,} \PYG{n}{height} \PYG{o}{=} \PYG{l+m}{1080}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n}{res} \PYG{o}{=} \PYG{l+m}{96} \PYG{o}{*} \PYG{l+m}{1.25}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{ggplot}\PYG{p}{(}\PYG{n}{data}\PYG{o}{=}\PYG{n}{plot\PYGZus{}df}\PYG{p}{,} \PYG{n+nf}{aes}\PYG{p}{(}\PYG{n}{x}\PYG{o}{=}\PYG{n}{step}\PYG{p}{,} \PYG{n}{y}\PYG{o}{=}\PYG{n}{prob}\PYG{p}{,} \PYG{n}{fill}\PYG{o}{=}\PYG{n}{type}\PYG{p}{))} \PYG{o}{+}
+\PYG{o}{+}   \PYG{n+nf}{geom\PYGZus{}bar}\PYG{p}{(}\PYG{n}{stat}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}identity\PYGZdq{}}\PYG{p}{,} \PYG{n}{position}\PYG{o}{=}\PYG{n+nf}{position\PYGZus{}dodge}\PYG{p}{())} \PYG{o}{+}
+\PYG{o}{+}   \PYG{n+nf}{theme\PYGZus{}bw}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{dev.off}\PYG{p}{()}
+\end{Verbatim}

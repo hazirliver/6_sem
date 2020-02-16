@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{prob\PYGZus{}diff} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{emp} \PYG{o}{\PYGZhy{}} \PYG{n}{theor}
+\PYG{o}{\PYGZgt{}} \PYG{n}{prob\PYGZus{}diff}
+\PYG{n}{[1]} \PYG{l+m}{\PYGZhy{}0.02185318}  \PYG{l+m}{0.04306471} \PYG{l+m}{\PYGZhy{}0.03653119}  \PYG{l+m}{0.04781875}  \PYG{l+m}{0.01630567} \PYG{l+m}{\PYGZhy{}0.04880477}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{max}\PYG{p}{(}\PYG{n+nf}{abs}\PYG{p}{(}\PYG{n}{prob\PYGZus{}diff}\PYG{p}{))}
+\PYG{n}{[1]} \PYG{l+m}{0.04880477}
+\end{Verbatim}

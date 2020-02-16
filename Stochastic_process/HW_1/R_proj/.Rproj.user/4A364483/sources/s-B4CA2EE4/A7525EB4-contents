@@ -26,6 +26,10 @@ tails <- lapply(r, function(x) (1-tail(x,1)))
 p <- mapply(append, mapply(append, heads,p_tmp,SIMPLIFY = F),
             tails, SIMPLIFY = F)
 
+
+mapply(sum, p)
+
+
 # 4. Первый из полученных векторов p считаем вектором начальных вероятностей, 
 #             из остальных составляем матрицу переходов P,
 #             записывая их по строкам
@@ -43,7 +47,7 @@ library(diagram)
 png(filename = "../img/1.png",
     width = 1920, height = 1080,
     res = 96 * 1.25)
-plotmat(signif(P,3), 
+plotmat(signif(t(P),3), 
         lwd = 1, box.lwd = 2, 
         cex.txt = 0.8, 
         box.size = 0.04, 
@@ -72,7 +76,7 @@ p_k <- p0 %*% matrix.power(P,k)
 
 tracs <- list()
 
-for (k in 1:n)
+for (i in 1:n)
 {
   r0 <- runif(1, min = 0, max = 1)
   foo <- function(r0_loc,j)
@@ -95,7 +99,7 @@ for (k in 1:n)
 }
 
 tracs_array <- t(simplify2array(tracs,higher = F))
-colnames(tracs_array) <- paste("Шаг",as.character(1:m))
+colnames(tracs_array) <- paste("Шаг",as.character(1:k))
 rownames(tracs_array) <- paste("Тр.",as.character(1:n))
 
 
@@ -110,16 +114,20 @@ library(ggplot2)
 emp <- hist(tracs_array, breaks = 0:m)$density
 theor <- as.numeric(p_k)
 
-matr <- matrix(c(rep("theor", m),rep("emperical", m),
-                 1:m,1:m,
-                 theor,emp), ncol = 3)
-
-
 
 plot_df <- data.frame(type = rep(c("theoretical", "emperical"), each=m),
                       step = rep(paste("Шаг",as.character(1:m)), 2),
                       prob = c(theor, emp))
 
+png(filename = "../img/2.png",
+    width = 1920, height = 1080,
+    res = 96 * 2)
 ggplot(data=plot_df, aes(x=step, y=prob, fill=type)) +
   geom_bar(stat="identity", position=position_dodge()) + 
   theme_bw()
+dev.off()
+
+
+prob_diff <- emp - theor
+prob_diff
+max(abs(prob_diff))

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  16 FEB 2020 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  16 FEB 2020 19:03
 entering extended mode
 **./document.tex
 (document.tex
@@ -1067,29 +1067,29 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 77.
 \openout3 = `document.pyg'.
 
 
-(_minted-document/5E1B70F376902381A1BD231DBA9E2ED35061E4B692DD718FCBC086EF9FCF3
+(_minted-document/31945C940B9A536EF16009409300B8D45061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
 \openout3 = `document.pyg'.
 
 
-(_minted-document/CE283B4AB05126AC5003B7AFAF7E852F5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/371A369861100955561F4427D74F125D5061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [2])
 \openout3 = `document.pyg'.
 
 
-(_minted-document/DAF5F089A7D174F7B684A685E6AF4D205061E4B692DD718FCBC086EF9FCF3
+(_minted-document/E06C1DD5734D05DA4581E01985C3CCBD5061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [3])
 \openout3 = `document.pyg'.
 
 
-(_minted-document/57FB6E08758B81726A362FB290710AAA5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/D3DF025C0FDC2D5EBDF8A4DF0CBD7AB35061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
 \openout3 = `document.pyg'.
 
 
-(_minted-document/9978C3B5F44A1EC2BCE8AE3D736ECA455061E4B692DD718FCBC086EF9FCF3
+(_minted-document/DF4428441F366F8513ABBACC7A1B84505061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 192--194
+Underfull \hbox (badness 10000) in paragraph at lines 193--195
 
  []
 
@@ -1101,10 +1101,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--194
 <../img/1.png, id=31, 1156.32pt x 650.43pt>
 File: ../img/1.png Graphic file (type png)
 <use ../img/1.png>
-Package pdftex.def Info: ../img/1.png  used on input line 218.
+Package pdftex.def Info: ../img/1.png  used on input line 219.
 (pdftex.def)             Requested size: 1156.31718pt x 650.4284pt.
 
-Overfull \hbox (9.46297pt too wide) in paragraph at lines 218--219
+Overfull \hbox (9.46297pt too wide) in paragraph at lines 219--220
 [][] 
  []
 
@@ -1112,64 +1112,88 @@ Overfull \hbox (9.46297pt too wide) in paragraph at lines 218--219
 Overfull \vbox (210.44025pt too high) has occurred while \output is active []
 
 [6 <../img/1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
 
  []
 
 \openout3 = `document.pyg'.
 
 
-(_minted-document/618000EB4339E8858132A4815D0887A95061E4B692DD718FCBC086EF9FCF3
+(_minted-document/FA5F10F11C4CB03C319D8E45084282F75061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 236--238
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
 \openout3 = `document.pyg'.
 
 
-(_minted-document/809036A525FCC8D6F44195B832928EB15061E4B692DD718FCBC086EF9FCF3
+(_minted-document/FC839A29E296E01A4E464E208333B0C45061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [7])
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
 \openout3 = `document.pyg'.
 
 
-(_minted-document/5D80772088A7D7790906613E36CD477B5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/2A144DCFE32C8485DD049B561646082A5061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
 \openout3 = `document.pyg'.
 
 
-(_minted-document/C0851D40E3E0BC6363D3E696660902C85061E4B692DD718FCBC086EF9FCF3
+(_minted-document/6D7985E8A1404FDA3D7889588598768E5061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
 \openout3 = `document.pyg'.
 
 
-(_minted-document/A53E01ACA462EAE4B1D17CEF5E5CE90D5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/A2476E2D542D4DE071B7051B1E89AA065061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
 \openout3 = `document.pyg'.
 
 
-(_minted-document/F2FE39F0E7AF7E792D58523394AD5DA75061E4B692DD718FCBC086EF9FCF3
+(_minted-document/FBE8AC8573EDEC145A5614C0EC2E16755061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [8])
 \openout3 = `document.pyg'.
 
 
-(_minted-document/55CAC8428403CCDD43D5888767B4F2035061E4B692DD718FCBC086EF9FCF3
-0EF.pygtex [9]) [10] (document.aux<<t1.cmap>>)
+(_minted-document/DAFE5CFB6EFA54CE296E2AAE92A9625A5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex [9])
+Underfull \hbox (badness 10000) in paragraph at lines 376--378
+
+ []
+
+\openout3 = `document.pyg'.
+
+
+(_minted-document/06CE4D48AC0FD2882AA7D55DEAD31E9D5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex)
+\openout3 = `document.pyg'.
+
+
+(_minted-document/CF66F122363CA0C642A2A8B1F815BF895061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex [10])
+<../img/2.png, id=55, 722.7pt x 406.51875pt>
+File: ../img/2.png Graphic file (type png)
+<use ../img/2.png>
+Package pdftex.def Info: ../img/2.png  used on input line 406.
+(pdftex.def)             Requested size: 492.06537pt x 276.78885pt.
+\openout3 = `document.pyg'.
+
+
+(_minted-document/3C894A76FB75ACE47AF0CEC4E4F6422F5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex) [11 <../img/2.png>] (document.aux<<t1.cmap>>)
 runsystem(del document.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 12569 strings out of 492450
- 220762 string characters out of 3129685
- 439553 words of memory out of 3000000
- 16627 multiletter control sequences out of 15000+200000
+ 12598 strings out of 492450
+ 222700 string characters out of 3129685
+ 439772 words of memory out of 3000000
+ 16646 multiletter control sequences out of 15000+200000
  13337 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,7n,53p,9106b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,8n,53p,9106b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Пенопласточка\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
 r/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\Пенопласточка\AppData\Lo
 cal\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lait1440.pk> <C:\Users\Пено
@@ -1187,9 +1211,9 @@ cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on document.pdf (10 pages, 217980 bytes).
+Output written on document.pdf (11 pages, 241442 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
+ 375 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 30 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 

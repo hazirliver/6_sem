@@ -123,3 +123,6 @@ plot_df <- data.frame(type = rep(c("theoretical", "emperical"), each=m),
 ggplot(data=plot_df, aes(x=step, y=prob, fill=type)) +
   geom_bar(stat="identity", position=position_dodge()) + 
   theme_bw()
+
+prob_diff <- emp - theor
+max(abs(prob_diff))
