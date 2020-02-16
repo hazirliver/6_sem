@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{library}\PYG{p}{(}\PYG{n}{markovchain}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{library}\PYG{p}{(}\PYG{n}{diagram}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{png}\PYG{p}{(}\PYG{n}{filename} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}../img/1.png\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n}{width} \PYG{o}{=} \PYG{l+m}{1920}\PYG{p}{,} \PYG{n}{height} \PYG{o}{=} \PYG{l+m}{1080}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n}{res} \PYG{o}{=} \PYG{l+m}{96} \PYG{o}{*} \PYG{l+m}{1.25}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{plotmat}\PYG{p}{(}\PYG{n+nf}{signif}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{l+m}{3}\PYG{p}{),}
+\PYG{o}{+}         \PYG{n}{lwd} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{,} \PYG{n}{box.lwd} \PYG{o}{=} \PYG{l+m}{2}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{cex.txt} \PYG{o}{=} \PYG{l+m}{0.8}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{box.size} \PYG{o}{=} \PYG{l+m}{0.04}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{box.type} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}circle\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{box.prop} \PYG{o}{=} \PYG{l+m}{0.5}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{box.col} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}light blue\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{arr.length}\PYG{o}{=}\PYG{l+m}{.25}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{arr.width}\PYG{o}{=}\PYG{l+m}{.1}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{self.cex} \PYG{o}{=} \PYG{l+m}{.7}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{self.shifty} \PYG{o}{=} \PYG{l+m}{\PYGZhy{}.01}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{self.shiftx} \PYG{o}{=} \PYG{l+m}{.07}\PYG{p}{,}
+\PYG{o}{+}         \PYG{n}{main} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Markov Chain\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{dev.off}\PYG{p}{()}
+\end{Verbatim}

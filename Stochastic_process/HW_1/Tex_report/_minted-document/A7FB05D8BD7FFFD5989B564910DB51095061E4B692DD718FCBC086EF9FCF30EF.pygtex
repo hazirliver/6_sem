@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{} Начальные данные:}
+\PYG{o}{\PYGZgt{}} \PYG{n}{m} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{l+m}{6} \PYG{c+c1}{\PYGZsh{} Число состояний марковской цепи}
+\PYG{o}{\PYGZgt{}} \PYG{n}{k} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{l+m}{5} \PYG{c+c1}{\PYGZsh{} время (шаги)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{n} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{l+m}{180} \PYG{c+c1}{\PYGZsh{} траектории}
+\end{Verbatim}

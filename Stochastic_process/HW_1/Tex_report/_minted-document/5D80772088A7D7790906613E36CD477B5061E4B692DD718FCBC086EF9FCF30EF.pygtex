@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{r\PYGZus{}1} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{runif}\PYG{p}{(}\PYG{l+m}{1}\PYG{p}{,} \PYG{n}{min} \PYG{o}{=} \PYG{l+m}{0}\PYG{p}{,} \PYG{n}{max} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{r\PYGZus{}1}
+\PYG{n}{[1]} \PYG{l+m}{0.8652293}
+\PYG{o}{\PYGZgt{}} \PYG{n}{step\PYGZus{}2} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{foo}\PYG{p}{(}\PYG{n}{r\PYGZus{}1}\PYG{p}{,}\PYG{n}{step\PYGZus{}1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{step\PYGZus{}2}
+\PYG{n}{[1]} \PYG{l+m}{5}
+\end{Verbatim}

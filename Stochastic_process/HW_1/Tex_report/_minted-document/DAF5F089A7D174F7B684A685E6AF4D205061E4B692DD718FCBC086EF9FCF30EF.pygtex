@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}tmp} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{lapply}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n}{diff}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}} \PYG{n}{heads} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{lapply}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n}{head}\PYG{p}{,} \PYG{l+m}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{tails} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{lapply}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{p}{(}\PYG{l+m}{1}\PYG{o}{\PYGZhy{}}\PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{l+m}{1}\PYG{p}{)))}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{mapply}\PYG{p}{(}\PYG{n}{append}\PYG{p}{,} \PYG{n+nf}{mapply}\PYG{p}{(}\PYG{n}{append}\PYG{p}{,} \PYG{n}{heads}\PYG{p}{,}\PYG{n}{p\PYGZus{}tmp}\PYG{p}{,}\PYG{n}{SIMPLIFY} \PYG{o}{=} \PYG{n+nb+bp}{F}\PYG{p}{),}
+\PYG{o}{+}             \PYG{n}{tails}\PYG{p}{,} \PYG{n}{SIMPLIFY} \PYG{o}{=} \PYG{n+nb+bp}{F}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p}
+\PYG{n}{[[1]]}
+\PYG{n}{[1]} \PYG{l+m}{0.10424689} \PYG{l+m}{0.56580266} \PYG{l+m}{0.01507492} \PYG{l+m}{0.14272891} \PYG{l+m}{0.06038386} \PYG{l+m}{0.11176275}
+
+\PYG{n}{[[2]]}
+\PYG{n}{[1]} \PYG{l+m}{0.21358371} \PYG{l+m}{0.21408467} \PYG{l+m}{0.03187156} \PYG{l+m}{0.09578759} \PYG{l+m}{0.04909199} \PYG{l+m}{0.39558049}
+
+\PYG{n}{[[3]]}
+\PYG{n}{[1]} \PYG{l+m}{0.51937464} \PYG{l+m}{0.17551486} \PYG{l+m}{0.03693588} \PYG{l+m}{0.03443202} \PYG{l+m}{0.07828406} \PYG{l+m}{0.15545854}
+
+\PYG{n}{[[4]]}
+\PYG{n}{[1]} \PYG{l+m}{0.024841045} \PYG{l+m}{0.002699268} \PYG{l+m}{0.210590575} \PYG{l+m}{0.062998231} \PYG{l+m}{0.329663308} \PYG{l+m}{0.369207573}
+
+\PYG{n}{[[5]]}
+\PYG{n}{[1]} \PYG{l+m}{0.12582500} \PYG{l+m}{0.23502193} \PYG{l+m}{0.07136614} \PYG{l+m}{0.19362140} \PYG{l+m}{0.14836075} \PYG{l+m}{0.22580478}
+
+\PYG{n}{[[6]]}
+\PYG{n}{[1]} \PYG{l+m}{0.07761379} \PYG{l+m}{0.39902772} \PYG{l+m}{0.09531885} \PYG{l+m}{0.24139643} \PYG{l+m}{0.03405832} \PYG{l+m}{0.15258489}
+
+\PYG{n}{[[7]]}
+\PYG{n}{[1]} \PYG{l+m}{0.19272691} \PYG{l+m}{0.57867661} \PYG{l+m}{0.02599155} \PYG{l+m}{0.08545218} \PYG{l+m}{0.01550662} \PYG{l+m}{0.10164613}
+\end{Verbatim}

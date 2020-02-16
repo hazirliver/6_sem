@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{r0} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{runif}\PYG{p}{(}\PYG{l+m}{1}\PYG{p}{,} \PYG{n}{min} \PYG{o}{=} \PYG{l+m}{0}\PYG{p}{,} \PYG{n}{max} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{r0}
+\PYG{n}{[1]} \PYG{l+m}{0.496682}
+\PYG{o}{\PYGZgt{}} \PYG{n}{foo} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{r0\PYGZus{}loc}\PYG{p}{,}\PYG{n}{j}\PYG{p}{)}
+\PYG{o}{+}   \PYG{p}{\PYGZob{}}
+\PYG{o}{+}     \PYG{n+nf}{ifelse}\PYG{p}{(}\PYG{n}{r0\PYGZus{}loc} \PYG{o}{\PYGZlt{}} \PYG{n}{r[[j}\PYG{l+m}{+1}\PYG{n}{]][1]}\PYG{p}{,}\PYG{l+m}{1}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n+nf}{ifelse}\PYG{p}{(}\PYG{n}{r0\PYGZus{}loc} \PYG{o}{\PYGZlt{}} \PYG{n}{r[[j}\PYG{l+m}{+1}\PYG{n}{]][2]}\PYG{p}{,}\PYG{l+m}{2}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n+nf}{ifelse}\PYG{p}{(}\PYG{n}{r0\PYGZus{}loc} \PYG{o}{\PYGZlt{}} \PYG{n}{r[[j}\PYG{l+m}{+1}\PYG{n}{]][3]}\PYG{p}{,}\PYG{l+m}{3}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n+nf}{ifelse}\PYG{p}{(}\PYG{n}{r0\PYGZus{}loc} \PYG{o}{\PYGZlt{}} \PYG{n}{r[[j}\PYG{l+m}{+1}\PYG{n}{]][4]}\PYG{p}{,}\PYG{l+m}{4}\PYG{p}{,}
+\PYG{o}{+}     \PYG{n+nf}{ifelse}\PYG{p}{(}\PYG{n}{r0\PYGZus{}loc} \PYG{o}{\PYGZlt{}} \PYG{n}{r[[j}\PYG{l+m}{+1}\PYG{n}{]][5]}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{,}\PYG{l+m}{6}\PYG{p}{)))))}
+\PYG{o}{+}   \PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}}   \PYG{n}{step\PYGZus{}1} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{foo}\PYG{p}{(}\PYG{n}{r0}\PYG{p}{,}\PYG{l+m}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{step\PYGZus{}1}
+\PYG{n}{[1]} \PYG{l+m}{5}
+\PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{o}{\PYGZgt{}} \PYG{n}{r[[1]]}
+\PYG{n}{[1]} \PYG{l+m}{0.05178461} \PYG{l+m}{0.13461717} \PYG{l+m}{0.35892529} \PYG{l+m}{0.46682475} \PYG{l+m}{0.54672747}
+\end{Verbatim}

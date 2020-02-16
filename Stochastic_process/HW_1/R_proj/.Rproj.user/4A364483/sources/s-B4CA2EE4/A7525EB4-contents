@@ -1,13 +1,13 @@
 ### Начальные данные:
-m <- 4 # Число состояний марковской цепи
-k <- 8 # время (шаги)
-n <- 100 # траектории
+m <- 6 # Число состояний марковской цепи
+k <- 5 # время (шаги)
+n <- 180 # траектории
 
 
 #### Моделирование цепи маркова с m состояниями
 # 1. Генерируем (m+1) раз вектор r=(r_1, ..., r_{m-1}) из независимых 
 #             и равномерно распределенных на отрезке
-#             [0;1] случайных велечин
+#             [0;1] случайных величин
 
 r_tmp <- replicate((m+1), runif((m-1), min = 0, max = 1), simplify = F)
 
@@ -23,7 +23,8 @@ p_tmp <- lapply(r, diff)
 heads <- lapply(r, head, 1)
 tails <- lapply(r, function(x) (1-tail(x,1)))
 
-p <- mapply(append, mapply(append, heads,p_tmp,SIMPLIFY = F),tails, SIMPLIFY = F)
+p <- mapply(append, mapply(append, heads,p_tmp,SIMPLIFY = F),
+            tails, SIMPLIFY = F)
 
 # 4. Первый из полученных векторов p считаем вектором начальных вероятностей, 
 #             из остальных составляем матрицу переходов P,
@@ -69,42 +70,56 @@ p_k <- p0 %*% matrix.power(P,k)
 #1. Генерируем равномерно распределенную на [0;1] случайную величину r0 и по вектору p0
 #             разыгрываем начальное состояние
 
-r0 <- runif(1, min = 0, max = 1)
+tracs <- list()
 
-foo <- function(r0_loc,j)
+for (k in 1:n)
 {
-  ifelse(r0_loc < r[[j]][1],0,
-  ifelse(r0_loc < r[[j]][2],1,
-  ifelse(r0_loc < r[[j]][3],2,
-  ifelse(r0_loc < r[[j]][4],3,
-  ifelse(r0_loc < r[[j]][5],4,0)))))
+  r0 <- runif(1, min = 0, max = 1)
+  foo <- function(r0_loc,j)
+  {
+    ifelse(r0_loc < r[[j+1]][1],1,
+    ifelse(r0_loc < r[[j+1]][2],2,
+    ifelse(r0_loc < r[[j+1]][3],3,
+    ifelse(r0_loc < r[[j+1]][4],4,
+    ifelse(r0_loc < r[[j+1]][5],5,6)))))
+  }
+  
+  step_1 <- foo(r0,0)
+  step_2 <- foo(runif(1, min = 0, max = 1),step_1)
+  step_3 <- foo(runif(1, min = 0, max = 1),step_2)
+  step_4 <- foo(runif(1, min = 0, max = 1),step_3)
+  step_5 <- foo(runif(1, min = 0, max = 1),step_4)
+  
+  trac <- list(c(step_1,step_2,step_3,step_4,step_5))
+  tracs[k] <- trac
 }
 
-step_1 <- foo(r0,1)
-step_2 <- foo(runif(1, min = 0, max = 1),step_1)
-step_3 <- foo(runif(1, min = 0, max = 1),step_2)
-step_4 <- foo(runif(1, min = 0, max = 1),step_3)
-step_5 <- foo(runif(1, min = 0, max = 1),step_4)
-
-xi
+tracs_array <- t(simplify2array(tracs,higher = F))
+colnames(tracs_array) <- paste("Шаг",as.character(1:m))
+rownames(tracs_array) <- paste("Тр.",as.character(1:n))
 
 
 
+### Вычисление эмпирических вероятностей (относительных частот) 
+#         состояний  цепи на k шаге.
 
-aa <- matrix(c(0,5/11,6/11,
-               5/12,0,7/12,
-               6/13,7/13,0),nrow = 3, byrow = T)
-matrix.power(aa,3)
 
-bb <- matrix(c(1/2,0,1/2,0,
-               0,0,0,1,
-               1/4,1/2,1/4,0,
-               0,1/2,1/2,0),
-             byrow = T, ncol = 4)
-bb
 
-vect <- c(1/7, 2/7, 2/7, 2/7)
+library(ggplot2)
 
-eigen(bb)
+emp <- hist(tracs_array, breaks = 0:m)$density
+theor <- as.numeric(p_k)
 
-vect %*% bb
+matr <- matrix(c(rep("theor", m),rep("emperical", m),
+                 1:m,1:m,
+                 theor,emp), ncol = 3)
+
+
+
+plot_df <- data.frame(type = rep(c("theoretical", "emperical"), each=m),
+                      step = rep(paste("Шаг",as.character(1:m)), 2),
+                      prob = c(theor, emp))
+
+ggplot(data=plot_df, aes(x=step, y=prob, fill=type)) +
+  geom_bar(stat="identity", position=position_dodge()) + 
+  theme_bw()

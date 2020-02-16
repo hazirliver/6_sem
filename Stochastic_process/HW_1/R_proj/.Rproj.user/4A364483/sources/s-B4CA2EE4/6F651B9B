@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581857970570.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6F651B9B",
+    "lastKnownWriteTime" : 32370030347157551,
+    "last_content_update" : 1581857970570,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "d43fd33d193044768ada26970f98e34a",
+        "name" : "tracs",
+        "title" : "tracs"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}
