@@ -131,3 +131,26 @@ dev.off()
 prob_diff <- emp - theor
 prob_diff
 max(abs(prob_diff))
+
+
+
+
+###Вычисление финальных вероятностей для Марковской цепи из задачи 1 
+#       и сравнение их с вероятностями состояний на k шаге
+
+library(matlib)
+b <- c(rep(0,m),1)
+
+
+
+showEqn(signif(rbind(P - diag(m),rep(1,m)),3), b, 
+        vars = paste("p", as.character(1:m),sep = ""), latex = T)
+
+Solve(rbind(P - diag(1,m),rep(1,m)),b)
+
+solve(signif(P - diag(m),9),rep(0,m))
+
+echelon(rbind(P - diag(1,m),rep(1,m)),b,verbose =T)
+
+
+      
