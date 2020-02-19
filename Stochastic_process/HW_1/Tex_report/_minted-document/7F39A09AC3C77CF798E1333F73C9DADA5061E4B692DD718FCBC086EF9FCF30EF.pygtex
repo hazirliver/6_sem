@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k2} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{l+m}{2}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k2}
+	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.1461953} \PYG{l+m}{0.3307245} \PYG{l+m}{0.1527279} \PYG{l+m}{0.2160571} \PYG{l+m}{0.1160726} \PYG{l+m}{0.03822257}
+
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k3} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{l+m}{3}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k3}
+	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.1578451} \PYG{l+m}{0.3355846} \PYG{l+m}{0.1813559} \PYG{l+m}{0.1397837} \PYG{l+m}{0.1344228} \PYG{l+m}{0.05100792}
+
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k4} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k4}
+	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.1675757} \PYG{l+m}{0.3474905} \PYG{l+m}{0.1611048} \PYG{l+m}{0.146334} \PYG{l+m}{0.1351685} \PYG{l+m}{0.04232641}
+
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k5} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k5}
+	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.170569} \PYG{l+m}{0.3514299} \PYG{l+m}{0.1596612} \PYG{l+m}{0.1356754} \PYG{l+m}{0.1402044} \PYG{l+m}{0.04246026}
+
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k10} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{l+m}{10}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k10}
+	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.1762364} \PYG{l+m}{0.3585034} \PYG{l+m}{0.1531416} \PYG{l+m}{0.1291872} \PYG{l+m}{0.1428944} \PYG{l+m}{0.04003696}
+
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k100} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{l+m}{100}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k100}
+	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.1765572} \PYG{l+m}{0.3589433} \PYG{l+m}{0.1527727} \PYG{l+m}{0.1287059} \PYG{l+m}{0.1431139} \PYG{l+m}{0.03990709}
+\end{Verbatim}

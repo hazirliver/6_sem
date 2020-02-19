@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{b} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{c}\PYG{p}{(}\PYG{n+nf}{rep}\PYG{p}{(}\PYG{l+m}{0}\PYG{p}{,}\PYG{n}{m}\PYG{l+m}{\PYGZhy{}1}\PYG{p}{),}\PYG{l+m}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{b}
+\PYG{n}{[1]} \PYG{l+m}{0} \PYG{l+m}{0} \PYG{l+m}{0} \PYG{l+m}{0} \PYG{l+m}{0} \PYG{l+m}{1}
+\PYG{o}{\PYGZgt{}} \PYG{n}{maat} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{rbind}\PYG{p}{((}\PYG{n+nf}{t}\PYG{p}{(}\PYG{n}{P}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n+nf}{diag}\PYG{p}{(}\PYG{n}{m}\PYG{p}{))}\PYG{n}{[}\PYG{o}{\PYGZhy{}}\PYG{n}{m}\PYG{p}{,}\PYG{n}{]}\PYG{p}{,}\PYG{n+nf}{rep}\PYG{p}{(}\PYG{l+m}{1}\PYG{p}{,}\PYG{n}{m}\PYG{p}{))}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{round}\PYG{p}{(}\PYG{n}{maat}\PYG{p}{,}\PYG{l+m}{7}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Округлено до 7 знаков после запятой}
+	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.8539564}  \PYG{l+m}{0.1939823}  \PYG{l+m}{0.0252286}  \PYG{l+m}{0.0466180}  \PYG{l+m}{0.4697933} \PYG{l+m}{0.1016177}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.0993604} \PYG{l+m}{\PYGZhy{}0.3666236}  \PYG{l+m}{0.2213508}  \PYG{l+m}{0.1070602}  \PYG{l+m}{0.4288217} \PYG{l+m}{0.1275028}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.0357133}  \PYG{l+m}{0.1520716} \PYG{l+m}{\PYGZhy{}0.9074397}  \PYG{l+m}{0.4089160}  \PYG{l+m}{0.0331593} \PYG{l+m}{0.5103369}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.0502001}  \PYG{l+m}{0.0018951}  \PYG{l+m}{0.5846570} \PYG{l+m}{\PYGZhy{}0.8385060}  \PYG{l+m}{0.0496515} \PYG{l+m}{0.0489077}
+\PYG{n}{[5}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.6163126}  \PYG{l+m}{0.0123922}  \PYG{l+m}{0.0485918}  \PYG{l+m}{0.1250756} \PYG{l+m}{\PYGZhy{}0.9864176} \PYG{l+m}{0.1099095}
+\PYG{n}{[6}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{1.0000000}  \PYG{l+m}{1.0000000}  \PYG{l+m}{1.0000000}  \PYG{l+m}{1.0000000}  \PYG{l+m}{1.0000000} \PYG{l+m}{1.0000000}
+\PYG{o}{\PYGZgt{}} \PYG{n}{res} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{solve}\PYG{p}{(}\PYG{n}{maat}\PYG{p}{,}\PYG{n}{b}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{res}
+\PYG{n}{[1]} \PYG{l+m}{0.17655716} \PYG{l+m}{0.35894326} \PYG{l+m}{0.15277268} \PYG{l+m}{0.12870587} \PYG{l+m}{0.14311394} \PYG{l+m}{0.03990709}
+\end{Verbatim}

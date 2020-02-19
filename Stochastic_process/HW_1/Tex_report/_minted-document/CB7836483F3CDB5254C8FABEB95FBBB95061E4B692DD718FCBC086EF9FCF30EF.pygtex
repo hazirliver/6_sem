@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{res}
+\PYG{n}{[1]} \PYG{l+m}{0.17655716} \PYG{l+m}{0.35894326} \PYG{l+m}{0.15277268} \PYG{l+m}{0.12870587} \PYG{l+m}{0.14311394} \PYG{l+m}{0.03990709}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n}{p\PYGZus{}k}\PYG{p}{)}
+\PYG{n}{[1]} \PYG{l+m}{0.17056898} \PYG{l+m}{0.35142986} \PYG{l+m}{0.15966116} \PYG{l+m}{0.13567537} \PYG{l+m}{0.14020437} \PYG{l+m}{0.04246026}
+\PYG{o}{\PYGZgt{}} \PYG{n}{res} \PYG{o}{\PYGZhy{}} \PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n}{p\PYGZus{}k}\PYG{p}{)}
+\PYG{n}{[1]}  \PYG{l+m}{0.005988178}  \PYG{l+m}{0.007513395} \PYG{l+m}{\PYGZhy{}0.006888475}
+\PYG{n}{[4]} \PYG{l+m}{\PYGZhy{}0.006969505}  \PYG{l+m}{0.002909572} \PYG{l+m}{\PYGZhy{}0.002553164}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{max}\PYG{p}{(}\PYG{n+nf}{abs}\PYG{p}{(}\PYG{n}{res}\PYG{o}{\PYGZhy{}}\PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n}{p\PYGZus{}k}\PYG{p}{)))}
+\PYG{n}{[1]} \PYG{l+m}{0.007513395}
+\end{Verbatim}

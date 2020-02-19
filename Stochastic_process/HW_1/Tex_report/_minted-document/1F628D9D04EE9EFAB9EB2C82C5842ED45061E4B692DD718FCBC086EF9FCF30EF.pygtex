@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{r\PYGZus{}tmp} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{replicate}\PYG{p}{((}\PYG{n}{m}\PYG{l+m}{+1}\PYG{p}{),} \PYG{n+nf}{runif}\PYG{p}{((}\PYG{n}{m}\PYG{l+m}{\PYGZhy{}1}\PYG{p}{),} \PYG{n}{min} \PYG{o}{=} \PYG{l+m}{0}\PYG{p}{,} \PYG{n}{max} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{),}
+\PYG{o}{+}	\PYG{n}{simplify} \PYG{o}{=} \PYG{n+nb+bp}{F}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{r\PYGZus{}tmp}
+\PYG{n}{[[1]]}
+\PYG{n}{[1]} \PYG{l+m}{0.57632155} \PYG{l+m}{0.56474213} \PYG{l+m}{0.07399023} \PYG{l+m}{0.45386562} \PYG{l+m}{0.37327926}
+
+\PYG{n}{[[2]]}
+\PYG{n}{[1]} \PYG{l+m}{0.3313175} \PYG{l+m}{0.9476300} \PYG{l+m}{0.2811173} \PYG{l+m}{0.2454040} \PYG{l+m}{0.1460436}
+
+\PYG{n}{[[3]]}
+\PYG{n}{[1]} \PYG{l+m}{0.9794303} \PYG{l+m}{0.9937176} \PYG{l+m}{0.8273587} \PYG{l+m}{0.1939823} \PYG{l+m}{0.9813254}
+
+\PYG{n}{[[4]]}
+\PYG{n}{[1]} \PYG{l+m}{0.02522857} \PYG{l+m}{0.97238848} \PYG{l+m}{0.92379666} \PYG{l+m}{0.33913968} \PYG{l+m}{0.24657940}
+
+\PYG{n}{[[5]]}
+\PYG{n}{[1]} \PYG{l+m}{0.84916377} \PYG{l+m}{0.72408821} \PYG{l+m}{0.04661798} \PYG{l+m}{0.15367816} \PYG{l+m}{0.56259417}
+
+\PYG{n}{[[6]]}
+\PYG{n}{[1]} \PYG{l+m}{0.9814257} \PYG{l+m}{0.9317742} \PYG{l+m}{0.8986149} \PYG{l+m}{0.4697933} \PYG{l+m}{0.9950081}
+
+\PYG{n}{[[7]]}
+\PYG{n}{[1]} \PYG{l+m}{0.8982745} \PYG{l+m}{0.1016177} \PYG{l+m}{0.7394574} \PYG{l+m}{0.2291205} \PYG{l+m}{0.7883651}
+\end{Verbatim}

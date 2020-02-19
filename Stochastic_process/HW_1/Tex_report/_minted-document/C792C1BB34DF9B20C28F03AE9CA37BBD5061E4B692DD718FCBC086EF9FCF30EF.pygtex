@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{tracs\PYGZus{}array}\PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+	Шаг \PYG{l+m}{0} Шаг \PYG{l+m}{1} Шаг \PYG{l+m}{2} Шаг \PYG{l+m}{3} Шаг \PYG{l+m}{4} Шаг \PYG{l+m}{5}
+Тр\PYG{n}{. 1}     \PYG{l+m}{6}     \PYG{l+m}{6}     \PYG{l+m}{4}     \PYG{l+m}{3}     \PYG{l+m}{2}     \PYG{l+m}{2}
+Тр\PYG{n}{. 2}     \PYG{l+m}{6}     \PYG{l+m}{3}     \PYG{l+m}{4}     \PYG{l+m}{3}     \PYG{l+m}{2}     \PYG{l+m}{2}
+Тр\PYG{n}{. 3}     \PYG{l+m}{3}     \PYG{l+m}{2}     \PYG{l+m}{2}     \PYG{l+m}{3}     \PYG{l+m}{4}     \PYG{l+m}{4}
+Тр\PYG{n}{. 4}     \PYG{l+m}{3}     \PYG{l+m}{4}     \PYG{l+m}{3}     \PYG{l+m}{2}     \PYG{l+m}{2}     \PYG{l+m}{2}
+\end{Verbatim}

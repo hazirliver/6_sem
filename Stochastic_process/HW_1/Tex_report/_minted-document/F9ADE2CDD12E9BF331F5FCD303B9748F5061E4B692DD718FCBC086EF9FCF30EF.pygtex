@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{p0} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p[[1]]} \PYG{c+c1}{\PYGZsh{} вектор начальных условий}
+\PYG{o}{\PYGZgt{}} \PYG{n}{p0}
+\PYG{n}{[1]} \PYG{l+m}{0.07399023} \PYG{l+m}{0.29928903} \PYG{l+m}{0.08058636} \PYG{l+m}{0.11087650} \PYG{l+m}{0.01157942} \PYG{l+m}{0.42367845}
+\PYG{o}{\PYGZgt{}} \PYG{n}{P} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{t}\PYG{p}{(}\PYG{n+nf}{simplify2array}\PYG{p}{(}\PYG{n}{p}\PYG{p}{))}\PYG{n}{[}\PYG{l+m}{\PYGZhy{}1}\PYG{p}{,}\PYG{n}{]} \PYG{c+c1}{\PYGZsh{} матрица переходов}
+\PYG{o}{\PYGZgt{}} \PYG{n}{P}
+           \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}        \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}        \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.14604362} \PYG{l+m}{0.09936043} \PYG{l+m}{0.03571326} \PYG{l+m}{0.050200143} \PYG{l+m}{0.61631257} \PYG{l+m}{0.052369977}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.19398230} \PYG{l+m}{0.63337644} \PYG{l+m}{0.15207156} \PYG{l+m}{0.001895136} \PYG{l+m}{0.01239216} \PYG{l+m}{0.006282408}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.02522857} \PYG{l+m}{0.22135084} \PYG{l+m}{0.09256028} \PYG{l+m}{0.584656978} \PYG{l+m}{0.04859183} \PYG{l+m}{0.027611518}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.04661798} \PYG{l+m}{0.10706018} \PYG{l+m}{0.40891601} \PYG{l+m}{0.161494042} \PYG{l+m}{0.12507555} \PYG{l+m}{0.150836234}
+\PYG{n}{[5}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.46979326} \PYG{l+m}{0.42882168} \PYG{l+m}{0.03315929} \PYG{l+m}{0.049651461} \PYG{l+m}{0.01358242} \PYG{l+m}{0.004991889}
+\PYG{n}{[6}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.10161771} \PYG{l+m}{0.12750281} \PYG{l+m}{0.51033685} \PYG{l+m}{0.048907685} \PYG{l+m}{0.10990946} \PYG{l+m}{0.101725481}
+\end{Verbatim}

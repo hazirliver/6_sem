@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  16 FEB 2020 23:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  19 FEB 2020 14:11
 entering extended mode
 **./document.tex
 (document.tex
@@ -1051,7 +1051,7 @@ File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 
 (_minted-document/default-pyg-prefix.pygstyle) (_minted-document/default.pygsty
 le)
-(_minted-document/A7FB05D8BD7FFFD5989B564910DB51095061E4B692DD718FCBC086EF9FCF3
+(_minted-document/14DB0234487E9CC4E3D50497624ABD9A5061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
 1.
@@ -1059,25 +1059,25 @@ LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 75.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 76.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 77.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 78.
 
 \openout3 = `document.pyg'.
 
 
-(_minted-document/31945C940B9A536EF16009409300B8D45061E4B692DD718FCBC086EF9FCF3
+(_minted-document/1F628D9D04EE9EFAB9EB2C82C5842ED45061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
 \openout3 = `document.pyg'.
 
 
-(_minted-document/371A369861100955561F4427D74F125D5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/4AD25D13EBAF062D849FBDDD72BAB1F35061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [2])
 \openout3 = `document.pyg'.
 
 
-(_minted-document/FFAC08EA55801E99516587DDB3EC87E45061E4B692DD718FCBC086EF9FCF3
+(_minted-document/FE8CA1977AA9E6603DE253C8B8F52AC75061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [3])
 \openout3 = `document.pyg'.
 
@@ -1087,9 +1087,9 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 77.
 \openout3 = `document.pyg'.
 
 
-(_minted-document/351A86F9BE9186717AA87564569745AD5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/F9ADE2CDD12E9BF331F5FCD303B9748F5061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
 
  []
 
@@ -1101,10 +1101,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--195
 <../img/1.png, id=31, 1156.32pt x 650.43pt>
 File: ../img/1.png Graphic file (type png)
 <use ../img/1.png>
-Package pdftex.def Info: ../img/1.png  used on input line 219.
+Package pdftex.def Info: ../img/1.png  used on input line 220.
 (pdftex.def)             Requested size: 1156.31718pt x 650.4284pt.
 
-Overfull \hbox (9.46297pt too wide) in paragraph at lines 219--220
+Overfull \hbox (9.46297pt too wide) in paragraph at lines 220--221
 [][] 
  []
 
@@ -1112,93 +1112,130 @@ Overfull \hbox (9.46297pt too wide) in paragraph at lines 219--220
 Overfull \vbox (210.44025pt too high) has occurred while \output is active []
 
 [6 <../img/1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 224--226
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
 \openout3 = `document.pyg'.
 
 
-(_minted-document/FA5F10F11C4CB03C319D8E45084282F75061E4B692DD718FCBC086EF9FCF3
+(_minted-document/AF110A4E9D17F21C0FF60B34458440125061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
+\openout3 = `document.pyg'.
+
+
+(_minted-document/7F39A09AC3C77CF798E1333F73C9DADA5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
+
+ []
+
+[7]
+\openout3 = `document.pyg'.
+
+
+(_minted-document/6442DC27DF217863F44B1FFDF2131DB85061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 
  []
 
 \openout3 = `document.pyg'.
 
 
-(_minted-document/FC839A29E296E01A4E464E208333B0C45061E4B692DD718FCBC086EF9FCF3
-0EF.pygtex [7])
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
-
- []
-
-\openout3 = `document.pyg'.
-
-
-(_minted-document/2A144DCFE32C8485DD049B561646082A5061E4B692DD718FCBC086EF9FCF3
-0EF.pygtex)
-\openout3 = `document.pyg'.
-
-
-(_minted-document/6D7985E8A1404FDA3D7889588598768E5061E4B692DD718FCBC086EF9FCF3
-0EF.pygtex)
-\openout3 = `document.pyg'.
-
-
-(_minted-document/A2476E2D542D4DE071B7051B1E89AA065061E4B692DD718FCBC086EF9FCF3
-0EF.pygtex)
-\openout3 = `document.pyg'.
-
-
-(_minted-document/FBE8AC8573EDEC145A5614C0EC2E16755061E4B692DD718FCBC086EF9FCF3
+(_minted-document/7E2903D2A4967703ED3F751A7A4613BC5061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [8])
 \openout3 = `document.pyg'.
 
 
-(_minted-document/C9C2F9A4874536ECDE926109486D16B05061E4B692DD718FCBC086EF9FCF3
-0EF.pygtex [9])
-Underfull \hbox (badness 10000) in paragraph at lines 376--378
-
- []
-
-\openout3 = `document.pyg'.
-
-
-(_minted-document/06CE4D48AC0FD2882AA7D55DEAD31E9D5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/10E140BFD6CD7317920F432249F891255061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
 \openout3 = `document.pyg'.
 
 
-(_minted-document/CF66F122363CA0C642A2A8B1F815BF895061E4B692DD718FCBC086EF9FCF3
-0EF.pygtex [10])
+(_minted-document/FD4CAAC2019DE75BF7FD351D00B4A1DE5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex)
+\openout3 = `document.pyg'.
+
+
+(_minted-document/65831D98FABC1111B7D7FE0F2CDA4B3A5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex [9])
+\openout3 = `document.pyg'.
+
+
+(_minted-document/E58118612714CC275A3D2F826C3C2A735061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
+
+ []
+
+[10]
+\openout3 = `document.pyg'.
+
+
+(_minted-document/15EDC10521DE298E503EA975EAE943325061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex)
+\openout3 = `document.pyg'.
+
+
+(_minted-document/649BA87457F5AE5E0F7B5A49C453358B5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex)
 <../img/2.png, id=55, 722.7pt x 406.51875pt>
 File: ../img/2.png Graphic file (type png)
 <use ../img/2.png>
-Package pdftex.def Info: ../img/2.png  used on input line 406.
+Package pdftex.def Info: ../img/2.png  used on input line 433.
 (pdftex.def)             Requested size: 492.06537pt x 276.78885pt.
+[11]
 \openout3 = `document.pyg'.
 
 
-(_minted-document/3C894A76FB75ACE47AF0CEC4E4F6422F5061E4B692DD718FCBC086EF9FCF3
+(_minted-document/EF49ABB3FEE98351CC4FC71E6E101E295061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+\openout3 = `document.pyg'.
+
+
+(_minted-document/B2D585DF7AE8C8DB7055085586B0A4AB5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex [12 <../img/2.png>])
+<../img/3.png, id=63, 722.7pt x 406.51875pt>
+File: ../img/3.png Graphic file (type png)
+<use ../img/3.png>
+Package pdftex.def Info: ../img/3.png  used on input line 475.
+(pdftex.def)             Requested size: 541.2749pt x 304.4665pt.
+
+Overfull \hbox (49.20953pt too wide) in paragraph at lines 475--475
+ [] 
+ []
+
+\openout3 = `document.pyg'.
+
+
+(_minted-document/C792C1BB34DF9B20C28F03AE9CA37BBD5061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex) [13 <../img/3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 490--492
 
  []
 
-[11 <../img/2.png>] [12] (document.aux<<t1.cmap>>)
+\openout3 = `document.pyg'.
+
+
+(_minted-document/0EAB87508321146229CDFC05915196415061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex) [14]
+\openout3 = `document.pyg'.
+
+
+(_minted-document/CB7836483F3CDB5254C8FABEB95FBBB95061E4B692DD718FCBC086EF9FCF3
+0EF.pygtex) [15] (document.aux<<t1.cmap>>)
 runsystem(del document.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 12598 strings out of 492450
- 222700 string characters out of 3129685
- 439772 words of memory out of 3000000
- 16646 multiletter control sequences out of 15000+200000
+ 12634 strings out of 492450
+ 225759 string characters out of 3129685
+ 445137 words of memory out of 3000000
+ 16666 multiletter control sequences out of 15000+200000
  13337 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,8n,53p,9106b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,8n,53p,9106b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Пенопласточка\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
 r/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\Пенопласточка\AppData\Lo
 cal\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lait1440.pk> <C:\Users\Пено
@@ -1217,9 +1254,9 @@ amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on document.pdf (12 pages, 252372 bytes).
+Output written on document.pdf (15 pages, 277303 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
+ 407 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 40 words of extra memory for PDF output out of 10000 (max. 10000000)
 

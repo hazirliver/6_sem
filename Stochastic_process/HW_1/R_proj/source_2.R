@@ -2,7 +2,7 @@
 m <- 6 # Число состояний марковской цепи
 k <- 5 # время (шаги)
 n <- 180 # траектории
-set.seed(1337)
+
 
 #### Моделирование цепи маркова с m состояниями
 # 1. Генерируем (m+1) раз вектор r=(r_1, ..., r_{m-1}) из независимых 
@@ -81,8 +81,7 @@ p_k5 <- p0 %*% matrix.power(P,5)
 p_k5
 p_k10 <- p0 %*% matrix.power(P,10)
 p_k10
-p_k100 <- p0 %*% matrix.power(P,100)
-p_k100
+
 #### Моделирование траектории длины k цепи маркова
 #1. Генерируем равномерно распределенную на [0;1] случайную величину r0 и по вектору p0
 #             разыгрываем начальное состояние
@@ -102,65 +101,45 @@ for (i in 1:n)
   }
   
   step_1 <- foo(r0,0)
-  #print(c("r0", r0,step_1))
+  print(c("r0", r0,step_1))
   
   r1 <- runif(1, min = 0, max = 1)
   step_2 <- foo(r1,step_1)
-  #print(c("r1",r1,step_2))
+  print(c("r1",r1,step_2))
   
   r2 <- runif(1, min = 0, max = 1)
   step_3 <- foo(r2,step_2)
-  #print(c("r2",r2,step_3))
+  print(c("r2",r2,step_3))
   
   r3 <- runif(1, min = 0, max = 1)
   step_4 <- foo(r3,step_3)
-  #print(c("r3",r3,step_4))
+  print(c("r3",r3,step_4))
   
   r4 <- runif(1, min = 0, max = 1)
   step_5 <- foo(r4,step_4)
-  #print(c("r4",r4,step_5))
+  print(c("r4",r4,step_5))
   
-  r5 <- runif(1, min = 0, max = 1)
-  step_6 <- foo(r5,step_5)
-  #print(c("r5",r5,step_6))
-  
-  trac <- list(c(step_1,step_2,step_3,step_4,step_5,step_6))
+  trac <- list(c(step_1,step_2,step_3,step_4,step_5))
   tracs[i] <- trac
 }
 
 tracs_array <- t(simplify2array(tracs,higher = F))
-colnames(tracs_array) <- paste("Шаг",as.character(0:k))
+colnames(tracs_array) <- paste("Шаг",as.character(1:k))
 rownames(tracs_array) <- paste("Тр.",as.character(1:n))
-#tracs_array
-head(tracs_array,5)
-tail(tracs_array,5)
+tracs_array
+head(tracs_array,7)
+tail(tracs_array,7)
 ### Вычисление эмпирических вероятностей (относительных частот) 
 #         состояний  цепи на k шаге.
 
 
 
 library(ggplot2)
-hist(tracs_array[,k+1], breaks =0:m)$counts
+hist(tracs_array[,k], breaks =0:m)$counts
 emp <- hist(tracs_array[,k], breaks =0:m)$density
 emp
 theor <- as.numeric(p_k)
 
-#########
-
-plot_df_obl <- data.frame(type = rep(c("Тр. 1", "Тр. 2", "Тр. 3", "Тр. 4"), each=k+1),
-                      step = rep(paste("Шаг",as.character(0:k),sep = " "), 4),
-                      state = c(tracs_array[1,], tracs_array[2,], 
-                               tracs_array[3,], tracs_array[4,]))
-png(filename = "../img/3.png",
-    width = 1920, height = 1080,
-    res = 96 * 2)
-ggplot(data=plot_df_obl, aes(x=step, y=state, fill=type)) +
-  geom_bar(stat="identity", position=position_dodge()) +
-  scale_fill_manual("legend", 
-  values = c("#03A82F", "#07728C", "#E17204", "#E11E04")) +
-  theme_bw()
-dev.off()
-#########
 
 plot_df <- data.frame(type = rep(c("theoretical", "emperical"), each=m),
                       state = rep(paste("S",as.character(1:m),sep = "_"), 2),
@@ -171,13 +150,13 @@ png(filename = "../img/2.png",
     res = 96 * 2)
 ggplot(data=plot_df, aes(x=state, y=prob, fill=type)) +
   geom_bar(stat="identity", position=position_dodge()) + 
-  theme_bw() + ggtitle("Шаг 5")
+  theme_bw()
 dev.off()
 
 emp
 theor
 prob_diff <- emp - theor
-signif(prob_diff,4)
+prob_diff
 max(abs(prob_diff))
 
 
@@ -190,13 +169,13 @@ library(matlib)
 b <- c(rep(0,m-1),1)
 b
 maat <- rbind((t(P) - diag(m))[-m,],rep(1,m))
-round(maat,7)
+maat
 res <- solve(maat,b)
 res
 
 
 showEqn(signif(maat,3), b, 
-        vars = paste("\\pi", as.character(1:m),sep = ""), latex = T)
+        vars = paste("pi", as.character(1:m),sep = ""), latex = T)
 
 res
 as.numeric(p_k)

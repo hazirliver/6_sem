@@ -3,5 +3,5 @@
 \PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{p0} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n+nf}{matrix.power}\PYG{p}{(}\PYG{n}{P}\PYG{p}{,}\PYG{n}{k}\PYG{p}{)}
 \PYG{o}{\PYGZgt{}} \PYG{n}{p\PYGZus{}k}
 	\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}
-\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.1640754} \PYG{l+m}{0.1558242} \PYG{l+m}{0.1454201} \PYG{l+m}{0.1477368} \PYG{l+m}{0.170361} \PYG{l+m}{0.2165826}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{0.170569} \PYG{l+m}{0.3514299} \PYG{l+m}{0.1596612} \PYG{l+m}{0.1356754} \PYG{l+m}{0.1402044} \PYG{l+m}{0.04246026}
 \end{Verbatim}

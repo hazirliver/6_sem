@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{c}\PYG{p}{(}\PYG{n}{step\PYGZus{}1}\PYG{p}{,}\PYG{n}{step\PYGZus{}2}\PYG{p}{,}\PYG{n}{step\PYGZus{}3}\PYG{p}{,}\PYG{n}{step\PYGZus{}4}\PYG{p}{,}\PYG{n}{step\PYGZus{}5}\PYG{p}{,}\PYG{n}{step6}\PYG{p}{)}
+\PYG{n}{[1]} \PYG{l+m}{3} \PYG{l+m}{5} \PYG{l+m}{2} \PYG{l+m}{2} \PYG{l+m}{3} \PYG{l+m}{5}
+\end{Verbatim}

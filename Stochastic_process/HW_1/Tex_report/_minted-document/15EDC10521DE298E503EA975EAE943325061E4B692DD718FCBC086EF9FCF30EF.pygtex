@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{hist}\PYG{p}{(}\PYG{n}{tracs\PYGZus{}array[}\PYG{p}{,}\PYG{n}{k}\PYG{l+m}{+1}\PYG{n}{]}\PYG{p}{,} \PYG{n}{breaks} \PYG{o}{=}\PYG{l+m}{0}\PYG{o}{:}\PYG{n}{m}\PYG{p}{)}\PYG{o}{\PYGZdl{}}\PYG{n}{counts}
+\PYG{n}{[1]} \PYG{l+m}{32} \PYG{l+m}{67} \PYG{l+m}{30} \PYG{l+m}{21} \PYG{l+m}{21}  \PYG{l+m}{9}
+\PYG{o}{\PYGZgt{}} \PYG{n}{emp} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{hist}\PYG{p}{(}\PYG{n}{tracs\PYGZus{}array[}\PYG{p}{,}\PYG{n}{k]}\PYG{p}{,} \PYG{n}{breaks} \PYG{o}{=}\PYG{l+m}{0}\PYG{o}{:}\PYG{n}{m}\PYG{p}{)}\PYG{o}{\PYGZdl{}}\PYG{n}{density}
+\PYG{o}{\PYGZgt{}} \PYG{n}{emp}
+\PYG{n}{[1]} \PYG{l+m}{0.16666667} \PYG{l+m}{0.41111111} \PYG{l+m}{0.11666667} \PYG{l+m}{0.15555556} \PYG{l+m}{0.12222222} \PYG{l+m}{0.02777778}
+\end{Verbatim}

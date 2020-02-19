@@ -1,8 +1,8 @@
 ### Начальные данные:
-m <- 6 # Число состояний марковской цепи
-k <- 5 # время (шаги)
-n <- 180 # траектории
-set.seed(1337)
+m <- 5 # Число состояний марковской цепи
+k <- 7 # время (шаги)
+n <- 120 # траектории
+
 
 #### Моделирование цепи маркова с m состояниями
 # 1. Генерируем (m+1) раз вектор r=(r_1, ..., r_{m-1}) из независимых 
@@ -10,11 +10,11 @@ set.seed(1337)
 #             [0;1] случайных величин
 
 r_tmp <- replicate((m+1), runif((m-1), min = 0, max = 1), simplify = F)
-r_tmp
+
 # 2. Для каждого из полученный векторов строим вариационный ряд, то есть упорядочиваем по возрастанию
 
 r <- lapply(r_tmp, sort)
-r
+lapply(r, round,3)
 # 3. Находим длины отрезков, на которые вектор r разбивает отрезок [0;1] --
 #             получаем вектор вероятностей p
 
@@ -25,7 +25,7 @@ tails <- lapply(r, function(x) (1-tail(x,1)))
 
 p <- mapply(append, mapply(append, heads,p_tmp,SIMPLIFY = F),
             tails, SIMPLIFY = F)
-p
+lapply(p, round, 3)
 
 mapply(sum, p)
 
@@ -35,9 +35,8 @@ mapply(sum, p)
 #             записывая их по строкам
 
 p0 <- p[[1]] # вектор начальных условий
-p0
 P <- t(simplify2array(p))[-1,] # матрица переходов
-P
+round(P,3)
 
 ##### Построение размеченного графа состояний цепи
 #install.packages("diagram")
@@ -45,9 +44,7 @@ P
 #library(markovchain)
 library(diagram)
 
-png(filename = "../img/1.png",
-    width = 1920, height = 1080,
-    res = 96 * 1.25)
+
 plotmat(signif(t(P),3), 
         lwd = 1, box.lwd = 2, 
         cex.txt = 0.8, 
@@ -61,28 +58,29 @@ plotmat(signif(t(P),3),
         self.shifty = -.01,
         self.shiftx = .07,
         main = "Markov Chain")
-dev.off()
+
 
 
 #### Вычисление безусловных вероятностей состояний цепи на k шаге
 #install.packages("matrixcalc")
 library(matrixcalc)
 
+#
+p0_stroka <- matrix(p0, nrow = 1)
+p_k_stroka <- p0_stroka %*% matrix.power(P,k)
+
+#
+
 p_k <- p0 %*% matrix.power(P,k)
-p_k
+
 
 p_k2 <- p0 %*% matrix.power(P,2)
-p_k2
 p_k3 <- p0 %*% matrix.power(P,3)
-p_k3
 p_k4 <- p0 %*% matrix.power(P,4)
-p_k4
 p_k5 <- p0 %*% matrix.power(P,5)
-p_k5
-p_k10 <- p0 %*% matrix.power(P,10)
-p_k10
-p_k100 <- p0 %*% matrix.power(P,100)
-p_k100
+p_k6 <- p0 %*% matrix.power(P,6)
+p_k8 <- p0 %*% matrix.power(P,8)
+round(p_k,3)
 #### Моделирование траектории длины k цепи маркова
 #1. Генерируем равномерно распределенную на [0;1] случайную величину r0 и по вектору p0
 #             разыгрываем начальное состояние
@@ -97,8 +95,7 @@ for (i in 1:n)
     ifelse(r0_loc < r[[j+1]][1],1,
     ifelse(r0_loc < r[[j+1]][2],2,
     ifelse(r0_loc < r[[j+1]][3],3,
-    ifelse(r0_loc < r[[j+1]][4],4,
-    ifelse(r0_loc < r[[j+1]][5],5,6)))))
+    ifelse(r0_loc < r[[j+1]][4],4,5))))
   }
   
   step_1 <- foo(r0,0)
@@ -124,60 +121,48 @@ for (i in 1:n)
   step_6 <- foo(r5,step_5)
   #print(c("r5",r5,step_6))
   
-  trac <- list(c(step_1,step_2,step_3,step_4,step_5,step_6))
+  r6 <- runif(1, min = 0, max = 1)
+  step_7 <- foo(r6,step_6)
+  #print(c("r6",r6, step_7))
+  
+  
+  trac <- list(c(step_1,step_2,step_3,step_4,step_5,step_6,step_7))
   tracs[i] <- trac
 }
 
 tracs_array <- t(simplify2array(tracs,higher = F))
-colnames(tracs_array) <- paste("Шаг",as.character(0:k))
+colnames(tracs_array) <- paste("Шаг",as.character(1:k))
 rownames(tracs_array) <- paste("Тр.",as.character(1:n))
-#tracs_array
-head(tracs_array,5)
-tail(tracs_array,5)
+
+
+
 ### Вычисление эмпирических вероятностей (относительных частот) 
 #         состояний  цепи на k шаге.
 
 
 
 library(ggplot2)
-hist(tracs_array[,k+1], breaks =0:m)$counts
+
+
+
+
+
 emp <- hist(tracs_array[,k], breaks =0:m)$density
-emp
 theor <- as.numeric(p_k)
 
-#########
-
-plot_df_obl <- data.frame(type = rep(c("Тр. 1", "Тр. 2", "Тр. 3", "Тр. 4"), each=k+1),
-                      step = rep(paste("Шаг",as.character(0:k),sep = " "), 4),
-                      state = c(tracs_array[1,], tracs_array[2,], 
-                               tracs_array[3,], tracs_array[4,]))
-png(filename = "../img/3.png",
-    width = 1920, height = 1080,
-    res = 96 * 2)
-ggplot(data=plot_df_obl, aes(x=step, y=state, fill=type)) +
-  geom_bar(stat="identity", position=position_dodge()) +
-  scale_fill_manual("legend", 
-  values = c("#03A82F", "#07728C", "#E17204", "#E11E04")) +
-  theme_bw()
-dev.off()
-#########
 
 plot_df <- data.frame(type = rep(c("theoretical", "emperical"), each=m),
-                      state = rep(paste("S",as.character(1:m),sep = "_"), 2),
+                      sostoyanie = rep(paste("S",as.character(1:m),sep = "_"), 2),
                       prob = c(theor, emp))
 
-png(filename = "../img/2.png",
-    width = 1920, height = 1080,
-    res = 96 * 2)
-ggplot(data=plot_df, aes(x=state, y=prob, fill=type)) +
+ggplot(data=plot_df, aes(x=sostoyanie, y=prob, fill=type)) +
   geom_bar(stat="identity", position=position_dodge()) + 
-  theme_bw() + ggtitle("Шаг 5")
-dev.off()
+  theme_bw()
 
-emp
-theor
+
+
 prob_diff <- emp - theor
-signif(prob_diff,4)
+prob_diff
 max(abs(prob_diff))
 
 
@@ -188,17 +173,23 @@ max(abs(prob_diff))
 #install.packages("matlib")
 library(matlib)
 b <- c(rep(0,m-1),1)
-b
-maat <- rbind((t(P) - diag(m))[-m,],rep(1,m))
-round(maat,7)
-res <- solve(maat,b)
-res
 
 
-showEqn(signif(maat,3), b, 
-        vars = paste("\\pi", as.character(1:m),sep = ""), latex = T)
 
-res
-as.numeric(p_k)
-res - as.numeric(p_k)
-max(abs(res-as.numeric(p_k)))
+showEqn(signif(rbind((P - diag(m))[-m,],rep(1,m)),3), b, 
+        vars = paste("p", as.character(1:m),sep = ""))
+
+maat <- rbind((P - diag(m))[-m,],rep(1,m))
+
+ress <- matrix(solve(maat,b,nrow = 1))
+
+
+P %*% ress
+max(abs(ress - p_k))
+
+
+
+#
+b_stroka <- matrix(c(rep(0,m-1),1), nrow = 1)
+ress %*% P
+

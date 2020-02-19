@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{o}{\PYGZgt{}} \PYG{n}{emp} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{hist}\PYG{p}{(}\PYG{n}{tracs\PYGZus{}array}\PYG{p}{,} \PYG{n}{breaks} \PYG{o}{=} \PYG{l+m}{0}\PYG{o}{:}\PYG{n}{m}\PYG{p}{)}\PYG{o}{\PYGZdl{}}\PYG{n}{density}
-\PYG{o}{\PYGZgt{}} \PYG{n}{emp}
-\PYG{n}{[1]} \PYG{l+m}{0.1422222} \PYG{l+m}{0.1988889} \PYG{l+m}{0.1088889} \PYG{l+m}{0.1955556} \PYG{l+m}{0.1866667} \PYG{l+m}{0.1677778}
-\end{Verbatim}
