@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1582110704 "document.tex" "document.pdf" "document" 1582110709
+["pdflatex"] 1582120535 "document.tex" "document.pdf" "document" 1582120540
   "../img/1.png" 1582109478 36153 4cfc14593671f5bee4643c93ca10ee1c ""
   "../img/2.png" 1582109479 25426 566e6a8c8883113e72c40c9bf63eb631 ""
   "../img/3.png" 1582109892 24814 7d108e0c0a058374cbce1085b0993261 ""
@@ -94,9 +94,9 @@
   "_minted-document/FE8CA1977AA9E6603DE253C8B8F52AC75061E4B692DD718FCBC086EF9FCF30EF.pygtex" 1582107963 2214 a3fc5a567725483e32a2d4ff4d96af7d ""
   "_minted-document/default-pyg-prefix.pygstyle" 1581846176 7990 3ce1fbc763e3e2c748310f4fe31722b6 ""
   "_minted-document/default.pygstyle" 1581846177 9376 f200be7fc0b7de2461cca28cb35b1427 ""
-  "document.aux" 1582110708 1842 90bf3787a9fb0f3e74eee62c7c733db9 "pdflatex"
-  "document.tex" 1582110700 20727 84ec1866421a06e5a6bda46e6cb94c26 ""
+  "document.aux" 1582120540 1842 90bf3787a9fb0f3e74eee62c7c733db9 "pdflatex"
+  "document.tex" 1582120535 20727 8a96caf45fefdf1b2c67b7350d2bfd50 ""
   (generated)
-  "document.log"
   "document.aux"
+  "document.log"
   "document.pdf"

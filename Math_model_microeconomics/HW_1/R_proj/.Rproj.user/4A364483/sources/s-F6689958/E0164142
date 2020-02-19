@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582111461744.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3456286794",
+    "id" : "E0164142",
+    "lastKnownWriteTime" : 1582119763,
+    "last_content_update" : 1582119763839,
+    "path" : "~/6_sem/Math_model_microeconomics/HW_1/R_proj/source.R",
+    "project_path" : "source.R",
+    "properties" : {
+        "cursorPosition" : "66,0",
+        "scrollLine" : "43",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
