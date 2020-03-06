@@ -1,0 +1,58 @@
+mydata <- as.data.frame(HairEyeColor)
+shat <- mydata[mydata$Hair == "Brown" & mydata$Sex == "Female",]
+chisq.test(shat$Freq)
+
+
+
+library(ggplot2)
+mydata <- as.data.frame(diamonds)
+
+chisq.test(rbind(as.character(mydata$cut), as.character(mydata$color)))
+tmp <- data.frame(mydata$cut, mydata$color)
+chisq.test(tmp)
+
+vars <- unique(tmp$mydata.cut)
+count(tmp)
+table(tmp)
+main_stat <- chisq.test(table(data.frame(diamonds$cut, diamonds$color)))$statistic
+
+diamonds <- cbind(diamonds)
+
+factor_price <- ifelse(diamonds$price >= mean(diamonds$price),1,0)
+factor_carat <- ifelse(diamonds$carat >= mean(diamonds$carat),1,0)
+
+main_stat <- chisq.test(factor_price, factor_carat)$statistic
+
+
+fisher_test <- fisher.test(mtcars$am,mtcars$vs)$p.value
+table(mtcars$am, mtcars$vs)
+
+
+
+
+
+
+df <- ToothGrowth
+str(df)
+
+
+
+t_stat <- t.test(df$len[df$supp == "OJ" & df$dose == 0.5], 
+                 df$len[df$supp == "VC" & df$dose == 2])$statistic
+subset(ToothGrowth, supp=='OJ' & dose==0.5 | supp=='VC' & dose==2 | supp == 'OJ' & dose == 1) 
+
+
+df <- read.csv("C:/Users/Пенопласточка/Downloads/lekarstva.csv")
+df
+
+
+t.test(df$Pressure_before, df$Pressure_after, paired = T)
+
+
+
+df <- read.table("C:/Users/Пенопласточка/Downloads/dataset_11504_16.txt")
+
+
+
+
+t.test(df$V1, df$V2, var.equal = F)
