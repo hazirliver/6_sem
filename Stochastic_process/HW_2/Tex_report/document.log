@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  6 MAR 2020 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.22)  15 MAR 2020 23:06
 entering extended mode
 **./document.tex
 (document.tex
@@ -1047,35 +1047,94 @@ LaTeX Font Info:    Trying to load font information for T2A+cmss on input line
 ("C:\Program Files\MiKTeX 2.9\tex/latex/cyrillic\t2acmss.fd"
 File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-<../img/graph.png, id=13, 838.63312pt x 301.8778pt>
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+
+ []
+
+<../img/graph.png, id=13, 839.38594pt x 309.40594pt>
 File: ../img/graph.png Graphic file (type png)
 <use ../img/graph.png>
-Package pdftex.def Info: ../img/graph.png  used on input line 70.
-(pdftex.def)             Requested size: 492.06537pt x 177.12521pt.
-[2 <../img/graph.png>] (document.aux<<t1.cmap>>) ) 
+Package pdftex.def Info: ../img/graph.png  used on input line 74.
+(pdftex.def)             Requested size: 492.06537pt x 181.38179pt.
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 97.
+
+[2 <../img/graph.png>] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+[4]
+
+Class scrartcl Warning: deprecated old font command `\rm' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\rm' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\rm', e.g., by `\mathrm '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\rm' yourself you should replace it, e.g., by
+(scrartcl)              `\mathrm ' on input line 251.
+
+
+Class scrartcl Warning: deprecated old font command `\rm' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\rm' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\rm', e.g., by `\mathrm '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\rm' yourself you should replace it, e.g., by
+(scrartcl)              `\mathrm ' on input line 252.
+
+[5] (document.aux<<t1.cmap>>) ) 
 Here is how much of TeX's memory you used:
- 12245 strings out of 492450
- 208478 string characters out of 3129685
- 438482 words of memory out of 3000000
- 16365 multiletter control sequences out of 15000+200000
- 11899 words of font info for 32 fonts, out of 3000000 for 9000
+ 12256 strings out of 492450
+ 208630 string characters out of 3129685
+ 443482 words of memory out of 3000000
+ 16374 multiletter control sequences out of 15000+200000
+ 12717 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,9n,53p,9106b,375s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Пенопласт
-очка\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lasx2074.pk>
- <C:\Users\Пенопласточка\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
-lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\Пенопласточка\AppData\Loca
-l\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2488.pk> <C:\Users\Пеноп
-ласточка\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
-1728.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on document.pdf (2 pages, 136840 bytes).
+ 58i,10n,53p,9106b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Пенопласточка\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\Пено
+пласточка\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
+sx2074.pk> <C:\Users\Пенопласточка\AppData\Local\MiKTeX\2.9\fonts/
+pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\Пенопласточка\Ap
+pData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2488.pk> <C:\Users\
+Пенопласточка\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/d
+pi600\larm1728.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb>
+Output written on document.pdf (5 pages, 187469 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
+ 237 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  30 words of extra memory for PDF output out of 10000 (max. 10000000)
 
