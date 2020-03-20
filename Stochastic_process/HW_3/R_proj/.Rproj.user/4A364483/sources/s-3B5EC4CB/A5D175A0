@@ -7,11 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "A5D175A0",
-    "lastKnownWriteTime" : 1584719874,
-    "last_content_update" : 1584719874010,
+    "lastKnownWriteTime" : 1584736569,
+    "last_content_update" : 1584736569553,
     "path" : "~/6_sem/Stochastic_process/HW_3/R_proj/source.R",
     "project_path" : "source.R",
     "properties" : {
+        "cursorPosition" : "81,63",
+        "scrollLine" : "60",
         "tempName" : "Untitled1"
     },
     "relative_order" : 1,

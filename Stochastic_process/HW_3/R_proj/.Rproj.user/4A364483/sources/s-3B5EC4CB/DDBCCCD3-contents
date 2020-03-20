@@ -1,0 +1,38 @@
+library(ggplot2)
+main_func <- function(Tt, Hh, N, t1, t2)
+{
+  ### Функция моделирования одной траектории
+  trajectories <- function(Tt, Hh)
+  {
+    Nn <- Tt/Hh + 1
+    vect <- runif(Nn)
+    vect_expected <- Mm(vect)
+    Sigma_mat <- outer(vect,vect,FUN = covar)
+    eps <- runif(Nn)
+    L <- t(chol(Sigma_mat))
+    eta <- as.numeric(L %*% eps)
+    ksi <- vect + eta
+    return(ksi)
+  }
+  
+  ### Реплецирование
+  traj_list <- replicate(N, trajectories(Tt, Hh), simplify = F)
+  
+  ### Построение сечений с рассчетами corr, UB, LB
+  selected_cut <- as.data.frame(matrix(c(sapply(traj_list, `[[`, t1), sapply(traj_list, `[[`, t2)),
+                                       ncol = 2, byrow = F))
+  scatter_plot <- ggplot(selected_cut, aes(x = V1, y = V2)) + geom_point()
+  cor_test <- cor.test(selected_cut$V1, selected_cut$V2)
+  
+  output <- list(matr = selected_cut, scatter = scatter_plot,
+                 corr = cor_test)
+  
+  ### Формирование аутпута
+  corr <- as.numeric(output$corr$estimate)
+  corr_LB <- output$corr$conf.int[1]
+  corr_UB <- output$corr$conf.int[2]
+  
+  output_main <- c(corr, corr_LB, corr_UB)
+  
+  return(output_main)
+}
