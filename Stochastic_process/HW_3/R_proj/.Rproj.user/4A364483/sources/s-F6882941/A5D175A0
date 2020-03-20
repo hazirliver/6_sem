@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1584719869683.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A5D175A0",
+    "lastKnownWriteTime" : 1584719874,
+    "last_content_update" : 1584719874010,
+    "path" : "~/6_sem/Stochastic_process/HW_3/R_proj/source.R",
+    "project_path" : "source.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
