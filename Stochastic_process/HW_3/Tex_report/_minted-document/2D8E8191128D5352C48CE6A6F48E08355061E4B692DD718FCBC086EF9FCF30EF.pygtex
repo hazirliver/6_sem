@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{L} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{t}\PYG{p}{(}\PYG{n+nf}{chol}\PYG{p}{(}\PYG{n}{Sigma\PYGZus{}mat}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{} Верхние 7*7 элементов, округленные до 4 знаков}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{round}\PYG{p}{(}\PYG{n}{L[1}\PYG{o}{:}\PYG{l+m}{7}\PYG{p}{,}\PYG{l+m}{1}\PYG{o}{:}\PYG{l+m}{7}\PYG{n}{]}\PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}   \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}   \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}   \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}   \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{5}\PYG{n}{]}   \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{6}\PYG{n}{]}   \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{7}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.4142} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.3793} \PYG{l+m}{0.3123} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.3452} \PYG{l+m}{0.3046} \PYG{l+m}{0.3123} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.3120} \PYG{l+m}{0.2971} \PYG{l+m}{0.3046} \PYG{l+m}{0.3123} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000}
+\PYG{n}{[5}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.2796} \PYG{l+m}{0.2897} \PYG{l+m}{0.2971} \PYG{l+m}{0.3046} \PYG{l+m}{0.3123} \PYG{l+m}{0.0000} \PYG{l+m}{0.0000}
+\PYG{n}{[6}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.2480} \PYG{l+m}{0.2826} \PYG{l+m}{0.2897} \PYG{l+m}{0.2971} \PYG{l+m}{0.3046} \PYG{l+m}{0.3123} \PYG{l+m}{0.0000}
+\PYG{n}{[7}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.2172} \PYG{l+m}{0.2756} \PYG{l+m}{0.2826} \PYG{l+m}{0.2897} \PYG{l+m}{0.2971} \PYG{l+m}{0.3046} \PYG{l+m}{0.3123}
+\end{Verbatim}

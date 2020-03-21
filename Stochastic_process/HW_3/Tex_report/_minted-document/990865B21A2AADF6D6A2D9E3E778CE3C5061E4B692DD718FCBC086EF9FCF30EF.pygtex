@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{t1} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{l+m}{20}
+\PYG{o}{\PYGZgt{}} \PYG{n}{t2} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{l+m}{150}
+\PYG{o}{\PYGZgt{}} \PYG{n}{selected\PYGZus{}cut} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{as.data.frame}\PYG{p}{(}\PYG{n+nf}{matrix}\PYG{p}{(}\PYG{n+nf}{c}\PYG{p}{(}\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{traj\PYGZus{}list}\PYG{p}{,} \PYG{n}{`[[`}\PYG{p}{,} \PYG{n}{t1}\PYG{p}{),}
+\PYG{o}{+}                                        \PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{traj\PYGZus{}list}\PYG{p}{,} \PYG{n}{`[[`}\PYG{p}{,} \PYG{n}{t2}\PYG{p}{)),}
+\PYG{o}{+}                                      \PYG{n}{ncol} \PYG{o}{=} \PYG{l+m}{2}\PYG{p}{,} \PYG{n}{byrow} \PYG{o}{=} \PYG{n+nb+bp}{F}\PYG{p}{))}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{colnames}\PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{c}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}t1\PYGZdq{}}\PYG{p}{,}\PYG{l+s}{\PYGZdq{}t2\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{p}{)}
+\PYG{n}{t1}          \PYG{n}{t2}
+\PYG{l+m}{1}  \PYG{l+m}{4.321029147}  \PYG{l+m}{2.96629306}
+\PYG{l+m}{2} \PYG{l+m}{\PYGZhy{}0.482835214} \PYG{l+m}{\PYGZhy{}0.17319608}
+\PYG{l+m}{3}  \PYG{l+m}{1.204216338}  \PYG{l+m}{3.51484731}
+\PYG{l+m}{4}  \PYG{l+m}{1.971526428}  \PYG{l+m}{1.13883326}
+\PYG{l+m}{5}  \PYG{l+m}{0.007253878}  \PYG{l+m}{2.03409005}
+\PYG{l+m}{6}  \PYG{l+m}{1.351975832}  \PYG{l+m}{0.08824699}
+\end{Verbatim}

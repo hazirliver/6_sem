@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{} Функция моделирования одной траектории}
+\PYG{n}{trajectories} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{Tt}\PYG{p}{,} \PYG{n}{Hh}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+  \PYG{n}{Nn} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{Tt}\PYG{o}{/}\PYG{n}{Hh}
+  \PYG{n}{kh} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{seq}\PYG{p}{(}\PYG{l+m}{0}\PYG{p}{,}\PYG{n}{Tt}\PYG{p}{,}\PYG{n}{Hh}\PYG{p}{)}
+  \PYG{n}{vect\PYGZus{}expected} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{Mm}\PYG{p}{(}\PYG{n}{kh}\PYG{p}{)}
+  \PYG{n}{Sigma\PYGZus{}mat} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{outer}\PYG{p}{(}\PYG{n}{kh}\PYG{p}{,}\PYG{n}{kh}\PYG{p}{,} \PYG{n}{FUN} \PYG{o}{=} \PYG{n}{covar}\PYG{p}{)}
+  \PYG{n}{eps} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{rnorm}\PYG{p}{(}\PYG{n}{Nn}\PYG{l+m}{+1}\PYG{p}{,} \PYG{n}{mean} \PYG{o}{=} \PYG{l+m}{0}\PYG{p}{,} \PYG{n}{sd} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{)}
+  \PYG{n}{L} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{t}\PYG{p}{(}\PYG{n+nf}{chol}\PYG{p}{(}\PYG{n}{Sigma\PYGZus{}mat}\PYG{p}{))}
+  \PYG{n}{eta} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n}{L} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{eps}\PYG{p}{)}
+  \PYG{n}{ksi} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{vect\PYGZus{}expected} \PYG{o}{+} \PYG{n}{eta}
+  \PYG{n+nf}{return}\PYG{p}{(}\PYG{n}{ksi}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{kh} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{seq}\PYG{p}{(}\PYG{l+m}{0}\PYG{p}{,}\PYG{n}{Tt}\PYG{p}{,}\PYG{n}{Hh}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Формуруем равномерную сетку}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{kh}\PYG{p}{,}\PYG{l+m}{10}\PYG{p}{)}
+\PYG{n}{[1]} \PYG{l+m}{0.00} \PYG{l+m}{0.05} \PYG{l+m}{0.10} \PYG{l+m}{0.15} \PYG{l+m}{0.20} \PYG{l+m}{0.25} \PYG{l+m}{0.30} \PYG{l+m}{0.35} \PYG{l+m}{0.40} \PYG{l+m}{0.45}
+
+\PYG{o}{\PYGZgt{}} \PYG{n}{vect\PYGZus{}expected} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{Mm}\PYG{p}{(}\PYG{n}{kh}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{vect\PYGZus{}expected}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+\PYG{n}{[1]} \PYG{l+m}{2.000000} \PYG{l+m}{1.951229} \PYG{l+m}{1.904837} \PYG{l+m}{1.860708} \PYG{l+m}{1.818731}
+\end{Verbatim}

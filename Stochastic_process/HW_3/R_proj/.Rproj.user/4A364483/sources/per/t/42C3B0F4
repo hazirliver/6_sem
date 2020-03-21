@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1584737580340.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2416568980",
+    "id" : "42C3B0F4",
+    "lastKnownWriteTime" : 1584746149,
+    "last_content_update" : 1584746149305,
+    "path" : "~/6_sem/Stochastic_process/HW_3/R_proj/func.R",
+    "project_path" : "func.R",
+    "properties" : {
+        "cursorPosition" : "38,54",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

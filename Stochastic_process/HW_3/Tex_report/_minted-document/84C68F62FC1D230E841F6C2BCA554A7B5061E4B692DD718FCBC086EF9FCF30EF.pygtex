@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{cor\PYGZus{}test} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{cor.test}\PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t1}\PYG{p}{,} \PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t2}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{cor\PYGZus{}test}
+
+	\PYG{n}{Pearson`s} \PYG{n}{product}\PYG{o}{\PYGZhy{}}\PYG{n}{moment} \PYG{n}{correlation}
+	
+	\PYG{n}{data}\PYG{o}{:}  \PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t1} \PYG{n}{and} \PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t2}
+	\PYG{n}{t} \PYG{o}{=} \PYG{l+m}{7.6924}\PYG{p}{,} \PYG{n}{df} \PYG{o}{=} \PYG{l+m}{158}\PYG{p}{,} \PYG{n}{p}\PYG{o}{\PYGZhy{}}\PYG{n}{value} \PYG{o}{=} \PYG{l+m}{1.457e\PYGZhy{}12}
+	\PYG{n}{alternative} \PYG{n}{hypothesis}\PYG{o}{:} \PYG{n}{true} \PYG{n}{correlation} \PYG{n}{is} \PYG{n}{not} \PYG{n}{equal} \PYG{n}{to} \PYG{l+m}{0}
+	\PYG{l+m}{95} \PYG{n}{percent} \PYG{n}{confidence} \PYG{n}{interval}\PYG{o}{:}
+	\PYG{l+m}{0.3991569} \PYG{l+m}{0.6264126}
+	\PYG{n}{sample} \PYG{n}{estimates}\PYG{o}{:}
+	\PYG{n}{cor}
+	\PYG{l+m}{0.5219876}
+\end{Verbatim}
