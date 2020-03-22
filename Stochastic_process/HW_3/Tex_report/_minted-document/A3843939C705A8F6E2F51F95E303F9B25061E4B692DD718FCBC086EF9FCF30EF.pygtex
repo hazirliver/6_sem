@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{r\PYGZus{}tr} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{Sigma\PYGZus{}mat[20}\PYG{p}{,}\PYG{l+m}{150}\PYG{n}{]}\PYG{o}{/}
+\PYG{o}{+}         \PYG{n+nf}{sqrt}\PYG{p}{(}\PYG{n}{Sigma\PYGZus{}mat[20}\PYG{p}{,}\PYG{l+m}{20}\PYG{n}{]} \PYG{o}{*} \PYG{n}{Sigma\PYGZus{}mat[150}\PYG{p}{,}\PYG{l+m}{150}\PYG{n}{]}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{r\PYGZus{}tr}
+\PYG{n}{[1]} \PYG{l+m}{0.03877421}
+\end{Verbatim}

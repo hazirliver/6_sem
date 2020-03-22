@@ -1,0 +1,30 @@
+library(psychometric)
+CIr(rv, nnn, 0.95)
+
+
+rv <- 0.15
+nnn <- 39
+alpha <- 0.05
+CIr_lower_bound <- tanh(atanh(corr) - rv/(2*(Nn-1)) 
+                        - qnorm(1-alpha/2)/sqrt(Nn-3))
+CIr_lower_bound
+CIr_upper_bound <- tanh(atanh(corr) - rv/(2*(nnn-1)) 
+                        + qnorm(1-alpha/2)/sqrt(nnn-3))
+CIr_upper_bound
+
+
+
+crit_mn1 <- tanh(qnorm(alpha)/sqrt(nnn-3))
+crit_mn1
+
+
+crit_mn2 <- qt(alpha, nnn-2)/(sqrt(nnn-2+(qt(alpha, nnn-2))^2))
+crit_mn2
+##############################################################
+##############################################################
+library(psychometric)
+CIr(corr,Nn,0.95)
+CIrdif(0.71,0.85,28,39,0.99)
+
+
+qnorm(0.995)

@@ -2,18 +2,18 @@
 ui <- (pageWithSidebar(
   
   # Application title
-  headerPanel("Введите исходные данные"),
+  headerPanel("Input initial data"),
   
   # Sidebar with controls to select a dataset and specify the number
   # of observations to view
   sidebarPanel(
-    numericInput("Tt", "Конец интервала (T):", 10),
-    numericInput("Hh", "Шаг (h):", 0.05),
-    numericInput("N", "Количество траекторий:", 160),
-    textInput("Mm", "Математическое ожидание:", "1 + exp(-t)"),
-    textInput("covar", "Автоковариационная функция:", "2*exp(-abs(t2 - t1)/2)"),
-    numericInput("t_1", "Первое сечение:", 1),
-    numericInput("t_2", "Второе сечение:", 2)
+    numericInput("Tt", "End of interval (T):", 10),
+    numericInput("Hh", "Step (h):", 0.05),
+    numericInput("N", "Number of trajectories:", 160),
+    textInput("Mm", "Expected value:", "1 + exp(-t)"),
+    textInput("covar", "Autocovariance function:", "2*exp(-abs(t2 - t1)/2)"),
+    numericInput("t_1", "First section:", 1),
+    numericInput("t_2", "Second section:", 2)
   ),
   
   # Show a summary of the dataset and an HTML table with the requested

@@ -217,10 +217,10 @@ main_func(Tt = 10,Hh = 0.05,N = 160,Mm_text = "1 + exp(-t)",covar_text = "2*exp(
 
 
 
-
-
-
-
+#######
+#
+#
+#
 ###1###
 
 
@@ -282,6 +282,32 @@ trajectories <- function(Tt, Hh)
 ### Реплецирование
 traj_list <- replicate(N, trajectories(Tt, Hh), simplify = F)
 
+## График 1,98,155 траекторий
+trajs <- data.frame(x = kh, exp_val = vect_expected,
+                    traj_1 = round(traj_list[[1]],3),
+                    traj_98 = round(traj_list[[98]],3),
+                    traj_155 = round(traj_list[[155]],3))
+
+trajs_pl <- ggplot(data = trajs, aes(x=x)) + 
+  geom_line(aes(y=exp_val,colour="#4cff79"), lty = 2, lwd = 1.5) +
+  geom_line(aes(y=traj_1,colour="#ff584c"), lwd = 0.5) + 
+  geom_line(aes(y=traj_98,colour="#ffb14c"), lwd = 0.6) + 
+  geom_line(aes(y=traj_155,colour="#614cff"), lwd = 0.7) +
+  scale_color_discrete(name = "", 
+                       labels = c("Expected value", 
+                                  "Trajectory 1",
+                                  "Trajectory 98",
+                                  "Trajectory 155")) +
+  labs(x = "", y = "")+
+  theme_classic()
+
+png(filename = "../img/trajs.png",
+    width = 1920, height = 1080,
+    res = 96 * 3)
+trajs_pl
+dev.off()
+
+trajs_pl
 ################################################################
 ############################t1 = 1, t2 = 2
 t1 <- 1
@@ -314,6 +340,13 @@ r <- (sum((selected_cut$t1 - mean(selected_cut$t1))*
 
 cor_test <- cor.test(selected_cut$t1, selected_cut$t2,
                      method = "pearson")
+
+r_tr <- Sigma_mat[1,2]/sqrt(Sigma_mat[1,1] * Sigma_mat[2,2])
+r_tr
+
+
+library(psychometric)
+CIr(corr,Nn,0.95)
 
 #output_tmp_f <- list(matr = selected_cut, scatter = scatter_plot,
 #                     corr = cor_test)
@@ -360,6 +393,10 @@ dev.off()
 cor_test <- cor.test(selected_cut$t1, selected_cut$t2,
                      method = "pearson")
 
+r_tr <- Sigma_mat[20,150]/sqrt(Sigma_mat[20,20] * Sigma_mat[150,150])
+r_tr
+
+
 output_tmp_f <- list(matr = selected_cut, scatter = scatter_plot,
                      corr = cor_test)
 
@@ -399,6 +436,9 @@ dev.off()
 
 
 cor_test <- cor.test(selected_cut$t1, selected_cut$t2)
+
+r_tr <- Sigma_mat[130,155]/sqrt(Sigma_mat[130,130] * Sigma_mat[155,155])
+r_tr
 
 output_tmp_f <- list(matr = selected_cut, scatter = scatter_plot,
                      corr = cor_test)

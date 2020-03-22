@@ -3,7 +3,7 @@ main_func <- function(Tt, Hh, N, Mm_text, covar_text, t1, t2)
 {
   Mm <<- eval(parse(text = paste('Mm <- function(t) { return(' , Mm_text , ')}', sep='')))
   covar <<- eval(parse(text = paste('covar <- function(t1,t2) { return(' , covar_text , ')}', sep='')))
-  ### Функция моделирования одной траектории
+  ### Single path simulation function
   trajectories <- function(Tt, Hh)
   {
     Nn <- Tt/Hh + 1
@@ -19,10 +19,10 @@ main_func <- function(Tt, Hh, N, Mm_text, covar_text, t1, t2)
     return(ksi)
   }
 
-  ### Реплецирование
+  ### replicate
   traj_list <- replicate(N, trajectories(Tt, Hh), simplify = F)
 
-  ### Построение сечений с рассчетами corr, UB, LB
+  ### Construction of sections with calculations corr, UB, LB
   selected_cut <- as.data.frame(matrix(c(sapply(traj_list, `[[`, t1), sapply(traj_list, `[[`, t2)),
                                        ncol = 2, byrow = F))
   scatter_plot <- ggplot(selected_cut, aes(x = V1, y = V2)) + geom_point()
@@ -31,7 +31,7 @@ main_func <- function(Tt, Hh, N, Mm_text, covar_text, t1, t2)
   output_tmp_f <- list(matr = selected_cut, scatter = scatter_plot,
                  corr = cor_test)
 
-  ### Формирование аутпута
+  ### Output Formation
   corr <- as.numeric(output_tmp_f$corr$estimate)
   corr_LB <- output_tmp_f$corr$conf.int[1]
   corr_UB <- output_tmp_f$corr$conf.int[2]

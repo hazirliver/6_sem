@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2294557252",
+    "hash" : "4202729369",
     "id" : "861E219E",
-    "lastKnownWriteTime" : 1584746267,
-    "last_content_update" : 1584746267699,
+    "lastKnownWriteTime" : 1584807944,
+    "last_content_update" : 1584807944712,
     "path" : "~/6_sem/Stochastic_process/HW_3/R_proj/shinyapp/server.R",
     "project_path" : "shinyapp/server.R",
     "properties" : {
-        "cursorPosition" : "19,10",
+        "cursorPosition" : "0,0",
         "scrollLine" : "0",
         "tempName" : "Untitled1"
     },
