@@ -317,14 +317,14 @@ trajectories <- function(Tt, Hh)
 [193]  1.234  1.042  1.199  0.900  1.141  0.958  1.474  2.047
 [201]  1.912
 \end{minted}
-\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
-	\begin{figure}[H]
-		\begin{minipage}[h]{1\linewidth}
-			\center{\includegraphics[width=0.95\linewidth]{../img/trajs.png}}  \\
-			\caption*{Совмещённые графики трёх траекторий и математического ожидания}
-		\end{minipage}
-	\end{figure}
-\end{tcolorbox}
+
+\begin{figure}[H]
+	\begin{minipage}[h]{1\linewidth}
+		\center{\includegraphics[width=0.95\linewidth]{../img/trajs.png}}  \\
+		\caption*{Совмещённые графики трёх траекторий и математического ожидания}
+	\end{minipage}
+\end{figure}
+
 
 
 \pagebreak
@@ -434,17 +434,17 @@ trajectories <- function(Tt, Hh)
 	r_{UB} &= 0.9837906\\
 	0.9699081 < &0.9779025 < 0.9837906
 \end{align*}
-\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
-	Сравним с истинным значением коэффициента корреляции:
+
+Сравним с истинным значением коэффициента корреляции:
 \begin{minted}{R}
 > r_tr <- Sigma_mat[1,2]/
 +         sqrt(Sigma_mat[1,1] * Sigma_mat[2,2])
 > r_tr
 [1] 0.9753099
 \end{minted}
-	
-	Истинное значение коэффициента корреляции попадает в доверительный интервал.
-\end{tcolorbox}
+
+Истинное значение коэффициента корреляции попадает в доверительный интервал.
+
 
 
 \pagebreak
@@ -509,17 +509,17 @@ t1          t2
 	-0.1445461 < &0.01085617 < 0.1657357
 \end{align*}
 
-\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
-	Сравним с истинным значением коэффициента корреляции:
+
+Сравним с истинным значением коэффициента корреляции:
 \begin{minted}{R}
 > r_tr <- Sigma_mat[20,150]/
 +         sqrt(Sigma_mat[20,20] * Sigma_mat[150,150])
 > r_tr
 [1] 0.03877421
 \end{minted}
-	
-	Истинное значение коэффициента корреляции попадает в доверительный интервал.
-\end{tcolorbox}
+
+Истинное значение коэффициента корреляции попадает в доверительный интервал.
+
 
 
 
@@ -589,7 +589,7 @@ t1          t2
 	0.3991569 < &0.5219876 <0.6264126
 \end{align*}
 
-\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
+
 \begin{minted}{R}
 > r_tr <- Sigma_mat[130,155]/
 +         sqrt(Sigma_mat[130,130] * Sigma_mat[155,155])
@@ -598,7 +598,7 @@ t1          t2
 \end{minted}
 
 Истинное значение коэффициента корреляции попадает в доверительный интервал.
-\end{tcolorbox}
+
 
 \pagebreak
 \subsection*{Построение коррелограммы}
