@@ -139,11 +139,8 @@ source("./h_dvd_2.R", echo = T)
 
 euc_metric <- function(y)
 {
-  
   sqrt(sum(y[dim(y)[1],]^2))
 }
-
-
 
 z.sc <- as.numeric(Map(euc_metric, pairs.list))
 head(z.sc,5)
@@ -159,8 +156,15 @@ png(filename = "../img/2d_1_circle.png",
 MASS::eqscplot(pairs.list[[1]], type = "l", main = "Trajectory 1, h = 0.02, z = 2.5", 
      xlab = "", ylab = "", xlim = c(-z-0.5, z+0.5), ylim = c(-z-0.5,z+0.5), asp = 1,
      lwd = 2)
+points(pairs.list[[1]][(N/2)+1,1], pairs.list[[1]][(N/2)+1,2],
+       lwd = 2, col = "green", pch = 16)
 draw.circle(0,0,2.5, nv = 1000, lwd = 2, border = "red")
+legend("topright", inset = 0.02, c("traj", "z = 2.5", "at time T"), 
+       lty = c(1,1,NA), lwd = c(2,2,2), pch = c(NA,NA,16), col= c("black", "red", "green"))
 dev.off()
+
+
+
 
 png(filename = "../img/2d_6_circle.png",
     width = 1920, height = 1080,
@@ -168,8 +172,15 @@ png(filename = "../img/2d_6_circle.png",
 MASS::eqscplot(pairs.list[[6]], type = "l", main = "Trajectory 6, h = 0.02, z = 2.5", 
                xlab = "", ylab = "", xlim = c(-z-0.5, z+0.5), ylim = c(-z-0.5,z+0.5), asp = 1,
                lwd = 2)
+points(pairs.list[[6]][(N/2)+1,1], pairs.list[[6]][(N/2)+1,2],
+       lwd = 2, col = "green", pch = 16)
 draw.circle(0,0,2.5, nv = 1000, lwd = 2, border = "red")
+legend("topright", inset = 0.02, c("traj", "z = 2.5", "at time T"), 
+       lty = c(1,1,NA), lwd = c(2,2,2), pch = c(NA,NA,16), col= c("black", "red", "green"))
 dev.off()
+
+
+
 
 png(filename = "../img/2d_70_circle.png",
     width = 1920, height = 1080,
@@ -177,8 +188,14 @@ png(filename = "../img/2d_70_circle.png",
 MASS::eqscplot(pairs.list[[70]], type = "l", main = "Trajectory 70, h = 0.02, z = 2.5", 
                xlab = "", ylab = "", xlim = c(-z-0.5, z+0.5), ylim = c(-z-0.5,z+0.5), asp = 1,
                lwd = 2)
+points(pairs.list[[70]][(N/2)+1,1], pairs.list[[70]][(N/2)+1,2],
+       lwd = 2, col = "green", pch = 16)
 draw.circle(0,0,2.5, nv = 1000, lwd = 2, border = "red")
+legend("topright", inset = 0.02, c("traj", "z = 2.5", "at time T"), 
+       lty = c(1,1,NA), lwd = c(2,2,2), pch = c(NA,NA,16), col= c("black", "red", "green"))
 dev.off()
+
+
 
 
 png(filename = "../img/2d_140_circle.png",
@@ -187,7 +204,11 @@ png(filename = "../img/2d_140_circle.png",
 MASS::eqscplot(pairs.list[[140]], type = "l", main = "Trajectory 140, h = 0.02, z = 2.5", 
                xlab = "", ylab = "", xlim = c(-z-0.5, z+0.5), ylim = c(-z-0.5,z+0.5), asp = 1,
                lwd = 2)
+points(pairs.list[[140]][(N/2)+1,1], pairs.list[[140]][(N/2)+1,2],
+       lwd = 2, col = "green", pch = 16)
 draw.circle(0,0,2.5, nv = 1000, lwd = 2, border = "red")
+legend("topright", inset = 0.02, c("traj", "z = 2.5", "at time T"), 
+       lty = c(1,1,NA), lwd = c(2,2,2), pch = c(NA,NA,16), col= c("black", "red", "green"))
 dev.off()
 
 
