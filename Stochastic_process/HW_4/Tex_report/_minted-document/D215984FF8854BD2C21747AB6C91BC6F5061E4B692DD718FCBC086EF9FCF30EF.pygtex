@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{pairs.list[[1]]}\PYG{p}{,} \PYG{l+m}{4}\PYG{p}{)}
+	  \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}       \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.000000000} \PYG{l+m}{0.00000000}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.009801647} \PYG{l+m}{0.01316957}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.009304977} \PYG{l+m}{0.32247326}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.230552785} \PYG{l+m}{0.16546962}
+\end{Verbatim}

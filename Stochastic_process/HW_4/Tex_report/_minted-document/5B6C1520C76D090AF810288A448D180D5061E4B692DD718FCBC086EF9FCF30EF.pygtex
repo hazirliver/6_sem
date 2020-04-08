@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{euc\PYGZus{}metric} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+\PYG{o}{+} \PYG{p}{\PYGZob{}}
+\PYG{o}{+}   \PYG{n+nf}{sqrt}\PYG{p}{(}\PYG{n+nf}{sum}\PYG{p}{(}\PYG{n}{y}\PYG{n+nf}{[dim}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}\PYG{n}{[1]}\PYG{p}{,}\PYG{n}{]\PYGZca{}2}\PYG{p}{))}
+\PYG{o}{+} \PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}} \PYG{n}{z.sc} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n+nf}{Map}\PYG{p}{(}\PYG{n}{euc\PYGZus{}metric}\PYG{p}{,} \PYG{n}{pairs.list}\PYG{p}{))}
+\end{Verbatim}

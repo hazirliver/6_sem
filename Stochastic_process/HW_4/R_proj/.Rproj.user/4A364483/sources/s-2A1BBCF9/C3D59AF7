@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586285856131.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3216567587",
+    "id" : "C3D59AF7",
+    "lastKnownWriteTime" : 1586349609,
+    "last_content_update" : 1586349609386,
+    "path" : "~/6_sem/Stochastic_process/HW_4/R_proj/h_dvd_2.R",
+    "project_path" : "h_dvd_2.R",
+    "properties" : {
+        "cursorPosition" : "71,19",
+        "scrollLine" : "56",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

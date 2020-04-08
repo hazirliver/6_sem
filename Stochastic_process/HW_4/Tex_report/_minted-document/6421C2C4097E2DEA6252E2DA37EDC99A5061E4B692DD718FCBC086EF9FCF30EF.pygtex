@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{pos.sc} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{length}\PYG{p}{(}\PYG{n}{z\PYGZus{}sc[z\PYGZus{}sc} \PYG{o}{\PYGZgt{}} \PYG{n}{z]}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{pos.sc}
+\PYG{n}{[1]} \PYG{l+m}{42}
+\PYG{o}{\PYGZgt{}} \PYG{n}{z.prob} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{pos.sc}\PYG{o}{/}\PYG{p}{((}\PYG{n}{N}\PYG{o}{/}\PYG{l+m}{2}\PYG{p}{)}\PYG{l+m}{+1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{z.prob}
+\PYG{n}{[1]} \PYG{l+m}{0.2089552}
+\end{Verbatim}

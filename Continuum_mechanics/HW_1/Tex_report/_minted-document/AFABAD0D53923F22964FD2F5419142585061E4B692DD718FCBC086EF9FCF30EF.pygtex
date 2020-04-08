@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{M\PYGZus{}negative} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{length}\PYG{p}{(}\PYG{n}{M[M}\PYG{o}{\PYGZlt{}}\PYG{l+m}{0}\PYG{n}{]}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{M\PYGZus{}negative} \PYG{c+c1}{\PYGZsh{} Число отрицательных коэффициентов корреляции}
+\PYG{n}{[1]} \PYG{l+m}{4310}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{length}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Количество элементов в корреляционной матрице (201*201)}
+\PYG{n}{[1]} \PYG{l+m}{40401}
+\PYG{o}{\PYGZgt{}} \PYG{n}{M\PYGZus{}negative\PYGZus{}perc} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{M\PYGZus{}negative} \PYG{o}{/} \PYG{n+nf}{length}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{M\PYGZus{}negative\PYGZus{}perc} \PYG{c+c1}{\PYGZsh{} Процент отрицательных элементов}
+\PYG{n}{[1]} \PYG{l+m}{0.1066805}
+\end{Verbatim}

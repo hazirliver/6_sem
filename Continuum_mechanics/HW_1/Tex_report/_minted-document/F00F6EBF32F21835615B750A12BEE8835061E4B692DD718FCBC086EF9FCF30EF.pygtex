@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{r} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{p}{(}\PYG{n+nf}{sum}\PYG{p}{((}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t1} \PYG{o}{\PYGZhy{}} \PYG{n+nf}{mean}\PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t1}\PYG{p}{))}\PYG{o}{*}
+\PYG{o}{+}              \PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t2} \PYG{o}{\PYGZhy{}} \PYG{n+nf}{mean}\PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t2}\PYG{p}{))))}\PYG{o}{/}
+\PYG{o}{+}   \PYG{p}{(}\PYG{n+nf}{sqrt}\PYG{p}{(}\PYG{n+nf}{sum}\PYG{p}{((}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t1} \PYG{o}{\PYGZhy{}} \PYG{n+nf}{mean}\PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t1}\PYG{p}{))}\PYG{n}{\PYGZca{}2}\PYG{p}{)} \PYG{o}{*}
+\PYG{o}{+}           \PYG{n+nf}{sum}\PYG{p}{((}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t2} \PYG{o}{\PYGZhy{}} \PYG{n+nf}{mean}\PYG{p}{(}\PYG{n}{selected\PYGZus{}cut}\PYG{o}{\PYGZdl{}}\PYG{n}{t2}\PYG{p}{))}\PYG{n}{\PYGZca{}2}\PYG{p}{)))}
+\PYG{o}{\PYGZgt{}} \PYG{n}{r}
+\PYG{n}{[1]} \PYG{l+m}{0.9779025}
+\end{Verbatim}

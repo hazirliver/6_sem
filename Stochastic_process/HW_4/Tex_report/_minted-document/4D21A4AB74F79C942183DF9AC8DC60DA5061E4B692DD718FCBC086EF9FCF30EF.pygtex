@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{vars}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+	  \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{17.46365} \PYG{l+m}{18.10675}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{16.82400} \PYG{l+m}{16.25767}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{17.39559} \PYG{l+m}{16.03837}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{17.33865} \PYG{l+m}{15.00066}
+\PYG{n}{[5}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{16.05115} \PYG{l+m}{16.93480}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{vars}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+	  \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[156}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{19.99023} \PYG{l+m}{17.77190}
+\PYG{n}{[157}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{16.35341} \PYG{l+m}{16.54479}
+\PYG{n}{[158}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{16.62718} \PYG{l+m}{17.14943}
+\PYG{n}{[159}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{17.45334} \PYG{l+m}{18.07495}
+\PYG{n}{[160}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{16.78373} \PYG{l+m}{17.36628}
+\end{Verbatim}
