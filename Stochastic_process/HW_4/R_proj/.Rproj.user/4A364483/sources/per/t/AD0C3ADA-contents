@@ -44,29 +44,29 @@ tail(pairs.list[[6]],4)
 
 ###2
 
-open3d()
-plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[1]][,2],
-       type = "l", xlab = "Time", ylab = "", zlab = "", 
-       main = "Trajectory 1")
-rgl.snapshot("../img/3d_1.png","png")
-
-open3d()
-plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[6]][,2],
-       type = "l", xlab = "Time", ylab = "", zlab = "", 
-       main = "Trajectory 6")
-rgl.snapshot("../img/3d_6.png","png")
-
-open3d()
-plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[70]][,2],
-       type = "l", xlab = "Time", ylab = "", zlab = "", 
-       main = "Trajectory 70")
-rgl.snapshot("../img/3d_70.png","png")
-
-open3d()
-plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[140]][,2],
-       type = "l", xlab = "Time", ylab = "", zlab = "", 
-       main = "Trajectory 140")
-rgl.snapshot("../img/3d_140.png","png")
+# open3d()
+# plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[1]][,2],
+#        type = "l", xlab = "Time", ylab = "", zlab = "", 
+#        main = "Trajectory 1")
+# rgl.snapshot("../img/3d_1.png","png")
+# 
+# open3d()
+# plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[6]][,2],
+#        type = "l", xlab = "Time", ylab = "", zlab = "", 
+#        main = "Trajectory 6")
+# rgl.snapshot("../img/3d_6.png","png")
+# 
+# open3d()
+# plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[70]][,2],
+#        type = "l", xlab = "Time", ylab = "", zlab = "", 
+#        main = "Trajectory 70")
+# rgl.snapshot("../img/3d_70.png","png")
+# 
+# open3d()
+# plot3d(x = seq(0,Tt,h), y = pairs.list[[1]][,1], z = pairs.list[[140]][,2],
+#        type = "l", xlab = "Time", ylab = "", zlab = "", 
+#        main = "Trajectory 140")
+# rgl.snapshot("../img/3d_140.png","png")
 
 
 
@@ -212,9 +212,9 @@ legend("topright", inset = 0.02, c("traj", "z = 2.5", "at time T"),
 dev.off()
 
 
-
-
-
+#END
+##############################
+#
 
 
 
@@ -246,7 +246,7 @@ plot(pairs.list[[6]], type = "l", main = "Trajectory 6, h = 0.02",
      xlab = "", ylab = "", xlim = c(-.06, .06), ylim = c(-.06,.06))
 draw.circle(0,0,0.025)
 
-#
+##################################
 
 
 
@@ -272,7 +272,7 @@ draw.circle(0,0,0.025)
 
 
 
-
+#################################################
 
 plot(pairs.list[[1]], type = "l")
 points(pairs.list[[70]], cex = 0.5)

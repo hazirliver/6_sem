@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586434951828.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2081584925",
+    "id" : "936D171",
+    "lastKnownWriteTime" : 1586471260,
+    "last_content_update" : 1586471260153,
+    "path" : "~/6_sem/Stochastic_process/HW_4/R_proj/pltly.R",
+    "project_path" : "pltly.R",
+    "properties" : {
+        "cursorPosition" : "85,8",
+        "scrollLine" : "72",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
