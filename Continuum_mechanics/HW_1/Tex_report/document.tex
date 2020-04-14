@@ -1,39 +1,371 @@
-%% Преамбула TeX-файла
+\documentclass[14pt,a4paper]{scrartcl}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{physics}
+\makeatletter
 
-% 1. Стиль и язык
-\documentclass[utf8x, 12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\renewcommand{\thesubsection}{\arabic{subsection}}
 
-
-% Остальные стандартные настройки убраны в preamble.inc.tex.
-\include{10-preamble}
+\newenvironment{sqcases}{%
+	\matrix@check\sqcases\env@sqcases
+}{%
+	\endarray\right.%
+}
+\def\env@sqcases{%
+	\let\@ifnextchar\new@ifnextchar
+	\left\lbrack
+	\def\arraystretch{1.2}%
+	\array{@{}l@{\quad}l@{}}%
+}
+\makeatother
 
 \begin{document}
+	\begin{titlepage}
+	\begin{center}
+		\large
+		МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ\\ РОССИЙСКОЙ ФЕДЕРАЦИИ
+		
+		\vspace{0.5cm}
+		
+		МГТУ им Н.Э.Баумана
+		\vspace{0.25cm}
+		
+		Факультет ФН
+		
+		Кафедра вычислительной математики и математической физики
+		\vfill
+		
+		
+		Соколов Арсений Андреевич\\
+		\vfill
+		
+		
+		{\LARGE Домашнее задания №1 \\ по механике сплошной среды\\[2mm]
+		}
+		\bigskip
+		
+		3 курс, группа ФН11-63Б\\
+		Вариант 19
+	\end{center}
+	\vfill
 	
-	\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
-	\include{11-title-page}
+	\newlength{\ML}
+	\settowidth{\ML}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}}}
+	\hfill\begin{minipage}{0.4\textwidth}
+		Преподаватель\\
+		\underline{\hspace{3cm}} Е.\,А.~Губарева\\
+		«\underline{\hspace{0.7cm}}» \underline{\hspace{1.71cm}} 2020 г.
+	\end{minipage}%
+	\bigskip
 	
-	\thispagestyle{empty}
-	\setcounter{page}{0}
-	\tableofcontents
-	\clearpage
 	
+	\vfill
 	
-	\include{2-intro}
-	
-	\mainmatter
-	
-	\include{31-chapter-one}
-	\include{32-chapter-two}
-	
-	\backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
-	%% заключение
-	
-	\include{4-conclusion}
-	
-	\include{5-biblio}
-	
-	\appendix   % Тут идут приложения
-	
-	\include{61-appendix}
-	
+	\begin{center}
+		Москва, 2020 г.
+	\end{center}
+\end{titlepage}
+
+\section*{Задание}
+Рассмотрим сплошную среду $B$, которая в $\mathcal{\overset{\circ}{K}}$ представляет собой прямоугольный параллелепипед (брус), который при переходе в $\mathcal{K}$ изменяет свои линейные размеры без изменения углов и поворачивается на угол $\varphi(t)$ в плоскости $O\mathrm{x}^1\mathrm{x}^2$ вокруг точки $O$. Закон движения такого тела называют вращением бруса с растяжением. Соотношения для него имеют вид:
+
+\begin{equation*}
+	\mathrm{x}^{\mathrm{i}}=\mathrm{F}_{0 \mathrm{j}}^{\mathrm{i}} \mathrm{X}^{\mathrm{i}}, \quad \dot{\mathrm{x}}^{\mathrm{i}}=\mathrm{X}^{\mathrm{i}},
+\end{equation*}
+где матрица $F_{0j}^i$ представляет собой произведение двух матриц (матрица вращения $O_0$ и матрицы растяжения $U_0$):
+
+\begin{align*}
+	\begin{aligned}
+	O_{0 j}^{i}&=\left(\begin{array}{ccc}
+	\cos \varphi & -\sin \varphi & 0 \\
+	\sin \varphi & \cos \varphi & 0 \\
+	0 & 0 & 1
+	\end{array}\right)^{T}, & U_{0}^{i}=\left(\begin{array}{ccc}
+	k_{1} & 0 & 0 \\
+	0 & k_{2} & 0 \\
+	0 & 0 & k_{3}
+	\end{array}\right),  \\
+	& F_{0 j}^{i} = \left(\begin{array}{ccc}
+	k_{1} \cos \varphi & -k_{1} \sin \varphi & 0 \\
+	k_{2} \sin \varphi & k_{2} \cos \varphi & 0 \\
+	0 & 0 & k_{3}
+	\end{array}\right)^{T};
+	\end{aligned}
+\end{align*}
+
+$k_\alpha(t)\frac{h_\alpha(t)}{h_\alpha^0}$ -- функции пропорциональности, характеризующие отношения длин бруса в $\mathcal{K}$ и $\mathcal{\overset{\circ}{K}}$.
+
+Вводя тензоры поворота $O_0$ и растяжения $U_0$:
+
+\begin{equation*}
+	0_{0}=0_{0 j}^{i} \bar{e}_{i} \otimes \bar{e}^{i}, \quad U_{0}=\sum_{\alpha=1}^{3} k_{\alpha} \bar{e}_{\alpha} \otimes \bar{e}_{\alpha}
+\end{equation*}
+
+закон движения бруса можно записать в тензорной форме:
+\begin{equation*}
+	\mathbf{x}=\mathbf{F}_{0} \cdot \dot{\mathbf{x}}, \quad \mathbf{F}_{0}=\mathbf{U}_{0} \cdot \mathbf{0}_{0}
+\end{equation*}
+
+\textbf{Найти:}
+\begin{enumerate}
+	\item Локальные векторы базиса
+	\item Метрические матрицы
+	\item Градиент деформации
+	\item Тензоры деформации Коши-Грина и Альманси
+\end{enumerate}
+
+\pagebreak
+
+\section{Локальные векторы базиса}
+
+Найдём локальные векторы базиса в отсчетной и актуальной конфигурациях. Учитывая, что матрица Якоби $Q_i^{\;j} = \pdv{x^j}{X^i}$ совпадает с матрицей $F_{0i}^j$, имеем:
+
+\begin{equation*}
+\overset{\circ}{\bar{R}_{i}}=\frac{\partial \overset{\circ}{\bar{R}_{i}}}{\partial X^{i}}=\frac{\partial \overset{\circ}{x^j}}{\partial X^{i}} \overline{e_{j}}= \frac{X^j}{X^i}\overline{e_{j}} = \delta_{i}^j\overline{e_{j}}=\overline{e_{i}}
+\end{equation*}
+
+
+\begin{equation*}
+\bar{R}_{i}=\frac{\partial \bar{x}}{\partial X^{i}}=\frac{\partial x^{j}}{\partial X^{i}} \overline{e_{j}}=\frac{\partial\left(F_{0 k}^{j} X^{k}\right)}{\partial X^{i}} \overline{e_{j}}=\delta_{i}^{k} F_{0 k}^{j} \overline{e_{j}}=F_{0 i}^{j} \overline{e_{j}}
+\end{equation*}
+
+\begin{equation*}
+	\bar{R}_{1}=k_{1} \cos \varphi \bar{e}_{1}-k_{1} \sin \varphi \bar{e}_{2}
+\end{equation*}
+
+
+\begin{equation*}
+	\bar{R}_{2}=k_{2} \sin \varphi \bar{e}_{1}+k_{2} \cos \varphi \bar{e}_{2}
+\end{equation*}
+
+\begin{equation*}
+	\bar{R}_{3}=k_{3} \bar{e}_{3}
+\end{equation*}
+
+
+
+\section{Метрические матрицы}
+
+
+
+
+\begin{equation*}
+	\overset{\circ}{g}_{ij} = \overset{\circ}{\overline{R}}_i \cdot \overset{\circ}{\overline{R}}_j = \delta_{ij}
+\end{equation*}
+
+
+\begin{equation*}
+	g_{i j}=\bar{R}_{i} \cdot \bar{R}_{j}=F_{0 i}^{k} \overline{e_{k}} \cdot F_{0 j}^{l} \overline{e_{l}}=F_{0 i}^{k} F_{0 j}^{l} \delta_{k l}	
+\end{equation*}
+
+
+\begin{equation*}
+	g_{11}=\bar{R}_{1} \cdot \bar{R}_{1}=k_{1}^{2} \cos ^{2} \varphi+k_{1}^{2} \sin ^{2} \varphi=k_{1}^{2}
+\end{equation*}
+
+\begin{equation*}
+	g_{12}=g_{21}=\bar{R}_{1} \cdot \bar{R}_{2}=k_{1} k_{2} \cos \varphi \sin \varphi-k_{1} k_{2} \cos \varphi \sin \varphi=0
+\end{equation*}
+
+\begin{equation*}
+	g_{13}=g_{31}=\bar{R}_{1} \cdot \bar{R}_{3}=0
+\end{equation*}
+
+\begin{equation*}
+	g_{23}=g_{32}=\bar{R}_{2} \cdot \bar{R}_{3}=0
+\end{equation*}
+
+\begin{equation*}
+	g_{33}=k_{3}^{2}
+\end{equation*}
+
+То есть метрическая матрица имеет вид:
+
+\begin{equation*}
+	\left(g_{i j}\right)=\left(\begin{array}{ccc}
+	k_{1}^{2} & 0 & 0 \\
+	0 & k_{2}^{2} & 0 \\
+	0 & 0 & k_{3}^{2}
+	\end{array}\right)
+\end{equation*}
+
+А обратная метрическая матрица:
+
+\begin{equation*}
+	\left(g^{i j}\right)=\left(\begin{array}{ccc}
+	\frac{1}{k_{1}^{2}} & 0 & 0 \\
+	0 & \frac{1}{k_{2}^{2}} & 0 \\
+	0 & 0 & \frac{1}{k_{3}^{2}}
+	\end{array}\right)
+\end{equation*}
+
+
+
+\section{Градиент деформации}
+
+Для расчёта градиента деформации найдём векторы взаимного базиса в отсчетной
+
+\begin{equation*}
+	\overset{\circ}{\overline{R^i}} = \overset{\circ}{g^{ij}} \overset{\circ}{\overline{R}}_j = \overline{e_{i}}
+\end{equation*}
+
+и актуальной конфигурации:
+
+
+\begin{equation*}
+	\bar{R}^{i}=g^{i j} \bar{R}_{j}
+\end{equation*}
+
+
+\begin{equation*}
+	\bar{R}^{1}=g^{1 j} \bar{R}_{j}=g^{11} \bar{R}_{1}=\frac{1}{k_{1}} \cos \varphi \bar{e}_{1}-\frac{1}{k_{1}} \sin \varphi \bar{e}_{2}
+\end{equation*}
+
+
+\begin{equation*}
+	\bar{R}^{2}=g^{2 j} \bar{R}_{j}=g^{22} \bar{R}_{2}=\frac{1}{k_{2}} \sin \varphi \bar{e}_{1}+\frac{1}{k_{2}} \cos \varphi \bar{e}_{2}
+\end{equation*}
+
+
+\begin{equation*}
+	\bar{R}^{3}=g^{3 j} \bar{R}_{j}=g^{33} \bar{R}_{3}=\frac{1}{k_{3}} \bar{e}_{3}
+\end{equation*}
+
+
+
+Тогда градиент деформации имеет вид:
+
+\begin{align*}
+	\begin{aligned}
+	&F=\bar{R}_{i} \otimes \overset{\circ}{\overline{R^i}}=\bar{R}_{1} \otimes \overset{\circ}{\overline{R^1}}+\bar{R}_{2} \otimes \overset{\circ}{\overline{R^2}}+\bar{R}_{3} \otimes \overset{\circ}{\overline{R^3}}=\\
+	&=\left(k_{1} \cos \varphi \overline{e_{1}}-k_{1} \sin \varphi \overline{e_{2}}\right) \otimes \bar{e}_{1}+\left(k_{2} \sin \varphi \overline{e_{1}}+k_{2} \cos \varphi \overline{e_{2}}\right) \otimes \bar{e}_{2}+k_{3} \bar{e}_{3} \otimes \bar{e}_{3}=\\
+	&=k_{1} \cos \varphi\bar{e_{1}} \otimes \bar{e}_{1}+k_{2} \cos \varphi \bar{e_{2}} \otimes \bar{e}_{2}+k_{3} \bar{e}_{3} \otimes \bar{e}_{3}-k_{1} \sin \varphi \bar{e}_{2} \otimes \bar{e}_{1}+k_{2} \sin \varphi \bar{e}_{1} \otimes \bar{e}_{2}
+	\end{aligned}
+\end{align*}
+
+
+В матричном виде:
+
+\begin{equation*}
+	\left(F^{i j}\right)=\left(\begin{array}{ccc}
+	k_{1} \cos \varphi & k_{2} \sin \varphi & 0 \\
+	-k_{1} \sin \varphi & k_{2} \cos \varphi & 0 \\
+	0 & 0 & k_{3}
+	\end{array}\right); \quad \quad \det(F) = k_1k_2k_3
+\end{equation*}
+
+\begin{equation*}
+	\left(F^{i j}\right)^{-1}=\left(\begin{array}{ccc}
+	\frac{\cos \varphi}{k_{1}} & -\frac{\sin \varphi}{k_{1}} & 0 \\
+	\frac{\sin \varphi}{k_{2}} & \frac{\cos \varphi}{k_{2}} & 0 \\
+	0 & 0 & \frac{1}{k_{3}}
+	\end{array}\right)
+\end{equation*}
+
+
+\section{Тензоры деформации Коши-Грина и Альманси}
+
+\subsection{Тензоры Коши-Грина}
+
+\subsubsection*{Правый тензор Коши-Грина}
+
+\begin{align*}
+	\left.C=\frac{1}{2}\left(F^{T} F-E\right)&=\frac{1}{2}\left(\left(\begin{array}{ccc}
+	k_{1}^{2} & 0 & 0 \\
+	0 & k_{2}^{2} & 0 \\
+	0 & 0 & k_{3}^{2}
+	\end{array}\right)-\left(\begin{array}{ccc}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1
+	\end{array}\right)\right)= \\
+	&= \frac{1}{2}\left(\begin{array}{ccc}
+	k_{1}^{2}-1 & 0 & 0 \\
+	0 & k_{2}^{2}-1 & 0 \\
+	0 & 0 & k_{3}^{2}-1
+	\end{array}\right)
+\end{align*}
+
+
+
+
+
+\subsubsection*{Левый тензор Коши-Грина}
+
+\begin{equation*}
+	\begin{array}{l}
+	J=\frac{1}{2}\left(F \cdot F^{T}-E\right)=\\
+		&=\frac{1}{2} \left( \left(\begin{array}{ccc}
+		k_{1}^{2} \cos ^{2} \varphi+k_{2}^{2} \sin ^{2} \varphi & -k_{1}^{2} \cos \varphi \sin \varphi+k_{2}^{2} \sin \varphi \cos \varphi & 0 \\
+		-k_{1}^{2} \cos \varphi \sin \varphi+k_{2}^{2} \sin \varphi \cos \varphi & k_{1}^{2} \sin ^{2} \varphi+k_{2}^{2} \cos ^{2} \varphi & 0 \\
+		0 & 0 & k_{3}^{2}
+		\end{array}\right) - E\right) = \\
+		&= \frac{1}{2}\left(\begin{array}{ccc}
+		k_{1}^{2} \cos ^{2} \varphi+k_{2}^{2} \sin ^{2} \varphi-1 & -k_{1}^{2} \cos \varphi \sin \varphi+k_{2}^{2} \sin \varphi \cos \varphi & 0 \\
+		-k_{1}^{2} \cos \varphi \sin \varphi+k_{2}^{2} \sin \varphi \cos \varphi & k_{1}^{2} \sin ^{2} \varphi+k_{2}^{2} \cos ^{2} \varphi-1 & 0 \\
+		0 & 0 & k_{3}^{2}-1
+		\end{array}\right)
+	\end{array}
+\end{equation*}
+
+
+
+\subsection{Тензоры Альманзи}
+
+\subsubsection*{Правый тензор альманзи}
+
+\begin{align*}
+	\Lambda&=\left(E-F^{-1}\left(F^{-1}\right)^{T}\right)=\frac{1}{2}\left(\begin{array}{ccc}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1
+	\end{array}\right)-\left(\begin{array}{ccc}
+	\frac{1}{k_{1}^{2}} & 0 & 0 \\
+	0 & \frac{1}{k_{2}^{2}} & 0 \\
+	0 & 0 & \frac{1}{k_{3}^{2}}
+	\end{array}\right)=\\
+	&= \frac{1}{2}\left(\begin{array}{ccc}
+	1-\frac{1}{k_{1}^{2}} & 0 & 0 \\
+	0 & 1-\frac{1}{k_{2}^{2}} & 0 \\
+	0 & 0 & 1-\frac{1}{k_{3}^{2}}
+	\end{array}\right)
+\end{align*}
+
+
+\subsubsection*{Левый тензор Альманзи}
+
+\begin{align*}
+	A&=\left(E-\left(F^{-1}\right)^{T} F^{-1}\right)=\\
+	&= \frac{1}{2}\left(\left(\begin{array}{ccc}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1
+	\end{array}\right)-\left(\begin{array}{ccc}
+	\frac{\cos ^{2} \varphi}{k_{1}^{2}}+\frac{\sin ^{2} \varphi}{k_{2}^{2}} & -\frac{\cos \varphi \sin \varphi}{k_{1}^{2}}+\frac{\cos \varphi \sin \varphi}{k_{2}^{2}} & 0 \\
+	-\frac{\cos \varphi \sin \varphi}{k_{1}^{2}}+\frac{\cos \varphi \sin \varphi}{k_{2}^{2}} & \frac{\sin ^{2} \varphi}{k_{1}^{2}}+\frac{\cos ^{2} \varphi}{k_{2}^{2}} & 0 \\
+	0 & 0 & \frac{1}{k_{3}^{2}}
+	\end{array}\right)\right) = \\
+	&= \frac{1}{2}\left(\begin{array}{ccc}
+	1-\frac{\cos ^{2} \varphi}{k_{1}^{2}}-\frac{\sin ^{2} \varphi}{k_{2}^{2}} & \frac{\cos \varphi \sin \varphi}{k_{1}^{2}}-\frac{\cos \varphi \sin \varphi}{k_{2}^{2}} & 0 \\
+	\frac{\cos \varphi \sin \varphi}{k_{1}^{2}}-\frac{\cos \varphi \sin \varphi}{k_{2}^{2}} & 1-\frac{\sin ^{2} \varphi}{k_{1}^{2}}-\frac{\cos ^{2} \varphi}{k_{2}^{2}} & 0 \\
+	0 & 0 & 1-\frac{1}{k_{3}^{2}}
+	\end{array}\right)
+\end{align*}
+
+
 \end{document}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{z.theor} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{l+m}{1} \PYG{o}{\PYGZhy{}} \PYG{n+nf}{pchisq}\PYG{p}{(}\PYG{n}{z\PYGZca{}2}\PYG{o}{/}\PYG{p}{(}\PYG{n}{sigma\PYGZca{}2} \PYG{o}{*} \PYG{n}{Tt}\PYG{p}{),}\PYG{l+m}{2}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{z.theor}
+\PYG{n}{[1]} \PYG{l+m}{0.2493522}
+\end{Verbatim}

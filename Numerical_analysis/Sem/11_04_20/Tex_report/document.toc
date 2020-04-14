@@ -1,0 +1,8 @@
+\babel@toc {russian}{}
+\contentsline {subsection}{\numberline {1}Формирование двумерного винеровского процесса}{4}%
+\contentsline {subsection}{\numberline {2}Построение графиков}{6}%
+\contentsline {subsection}{\numberline {3}Вычисление характиристик двумерного винеровского процесса}{8}%
+\contentsline {subsubsection}{\numberline {3.1}Вариации компонент. Среднее значение вариации}{8}%
+\contentsline {subsubsection}{\numberline {3.2}Суммы квадратов приращений. Среднее значение суммы квадратов приращений}{9}%
+\contentsline {subsection}{\numberline {4}Рассмотрение уменьшенного вдвое шага $h$}{10}%
+\contentsline {subsection}{\numberline {5}Вероятность достижения уровня $z$ в момент $T$}{14}%

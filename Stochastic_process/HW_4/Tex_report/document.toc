@@ -6,3 +6,6 @@
 \contentsline {subsubsection}{\numberline {3.2}Суммы квадратов приращений. Среднее значение суммы квадратов приращений}{9}%
 \contentsline {subsection}{\numberline {4}Рассмотрение уменьшенного вдвое шага $h$}{10}%
 \contentsline {subsection}{\numberline {5}Вероятность достижения уровня $z$ в момент $T$}{14}%
+\contentsline {subsubsection}{\numberline {5.1}Эмпирическая вероятность}{14}%
+\contentsline {subsubsection}{\numberline {5.2}Теоретическая вероятность}{17}%
+\contentsline {subsection}{\numberline {6}Выводы}{18}%

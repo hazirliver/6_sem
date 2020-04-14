@@ -150,6 +150,9 @@ pos.sc
 z.prob <- pos.sc/((N/2)+1)
 z.prob
 
+
+
+
 png(filename = "../img/2d_1_circle.png",
     width = 1920, height = 1080,
     res = 96 * 2)

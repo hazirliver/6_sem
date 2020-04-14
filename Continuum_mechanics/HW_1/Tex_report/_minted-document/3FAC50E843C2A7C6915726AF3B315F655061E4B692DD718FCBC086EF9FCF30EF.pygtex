@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{} С учётом индекса начала отсчёта:}
-\PYG{o}{\PYGZgt{}} \PYG{n}{Nn} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{Tt}\PYG{o}{/}\PYG{n}{Hh}
-\PYG{o}{\PYGZgt{}} \PYG{n}{Nn}
-\PYG{n}{[1]} \PYG{l+m}{200}
-\end{Verbatim}

@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{o}{\PYGZgt{}} \PYG{n}{ksi} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{vect\PYGZus{}expected} \PYG{o}{+} \PYG{n}{eta}
-\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{ksi}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
-\PYG{n}{[1]} \PYG{l+m}{2.272225} \PYG{l+m}{1.764905} \PYG{l+m}{1.622179} \PYG{l+m}{2.091697} \PYG{l+m}{1.828824}
-\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{ksi}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
-\PYG{n}{[1]} \PYG{l+m}{2.026718} \PYG{l+m}{2.042285} \PYG{l+m}{1.721970} \PYG{l+m}{2.618887} \PYG{l+m}{2.941892}
-\end{Verbatim}

@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{o}{\PYGZgt{}} \PYG{n}{eps} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{rnorm}\PYG{p}{(}\PYG{n}{Nn}\PYG{l+m}{+1}\PYG{p}{,} \PYG{n}{mean} \PYG{o}{=} \PYG{l+m}{0}\PYG{p}{,} \PYG{n}{sd} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{eps}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
-\PYG{n}{[1]}  \PYG{l+m}{0.1924919} \PYG{l+m}{\PYGZhy{}1.4467018} \PYG{l+m}{\PYGZhy{}0.3231805}  \PYG{l+m}{1.6222961} \PYG{l+m}{\PYGZhy{}0.6890241}
-\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{eps}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
-\PYG{n}{[1]}  \PYG{l+m}{0.3135906}  \PYG{l+m}{0.1310152} \PYG{l+m}{\PYGZhy{}0.9432088}  \PYG{l+m}{2.9289056}  \PYG{l+m}{1.1622098}
-\end{Verbatim}

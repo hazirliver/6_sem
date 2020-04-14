@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{o}{\PYGZgt{}} \PYG{n}{eta} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n}{L} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{eps}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{eta}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
-\PYG{n}{[1]}  \PYG{l+m}{0.27222466} \PYG{l+m}{\PYGZhy{}0.18632440} \PYG{l+m}{\PYGZhy{}0.28265842}  \PYG{l+m}{0.23098913}  \PYG{l+m}{0.01009288}
-\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{eta}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
-\PYG{n}{[1]} \PYG{l+m}{1.0266623} \PYG{l+m}{1.0422321} \PYG{l+m}{0.7219203} \PYG{l+m}{1.6188395} \PYG{l+m}{1.9418466}
-\end{Verbatim}

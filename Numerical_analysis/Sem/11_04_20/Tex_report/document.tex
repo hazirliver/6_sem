@@ -1,0 +1,370 @@
+\documentclass[14pt,a4paper]{scrartcl}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\makeatletter
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newenvironment{sqcases}{%
+	\matrix@check\sqcases\env@sqcases
+}{%
+	\endarray\right.%
+}
+\def\env@sqcases{%
+	\let\@ifnextchar\new@ifnextchar
+	\left\lbrack
+	\def\arraystretch{1.2}%
+	\array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\begin{document}
+	\begin{titlepage}
+	\begin{center}
+		\large
+		МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ\\ РОССИЙСКОЙ ФЕДЕРАЦИИ
+		
+		\vspace{0.5cm}
+		
+		МГТУ им Н.Э.Баумана
+		\vspace{0.25cm}
+		
+		Факультет ФН
+		
+		Кафедра вычислительной математики и математической физики
+		\vfill
+		
+		
+		Соколов Арсений Андреевич\\
+		\vfill
+		
+		
+		{\LARGE Семинар от 11.04.20 \\ по основам сеточных методов\\[2mm]
+		}
+		\bigskip
+		
+		3 курс, группа ФН11-63Б\\
+		Вариант 3
+	\end{center}
+	\vfill
+	
+	\newlength{\ML}
+	\settowidth{\ML}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}}}
+	\hfill\begin{minipage}{0.4\textwidth}
+		Преподаватель\\
+		\underline{\hspace{3cm}} В.\,А.~Кутыркин\\
+		«\underline{\hspace{0.7cm}}» \underline{\hspace{1.71cm}} 2020 г.
+	\end{minipage}%
+	\bigskip
+	
+	
+	\vfill
+	
+	\begin{center}
+		Москва, 2020 г.
+	\end{center}
+\end{titlepage}
+
+\section*{Задачи для решения на семинаре}
+Найти решения задач Коши (m -- номер группы, N - номер фамилии студента в журнале группы):
+\begin{equation*}
+	m = 63;
+\end{equation*}
+
+\begin{equation*}
+	N = 3;
+\end{equation*}
+
+
+\subsection*{Задача 1}
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	y_{n+2}-(66-m) y_{n+1}+(65-m) y_{n}=N ; \quad n \in Z; \\
+	y_{0}=64-m, y_{1}=N.
+	\end{array}\right.
+\end{equation*}
+
+Подставляя $m=63, N=3$, получаем:
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	y_{n+2}-3 y_{n+1}+2 y_{n}=3 ; \quad n \in Z; \\
+	y_{0}=1, y_{1}=3.
+	\end{array}\right.	
+\end{equation*}
+
+\textbf{Решение.}\\
+
+Найдём корни характеристического уравнения:
+
+\begin{equation*}
+	\lambda^2-3\lambda+2=0 \Leftrightarrow \left[\begin{array}{c}
+	\lambda=1=\lambda_1 \\
+	\lambda=2=\lambda_2
+	\end{array}\right.
+\end{equation*}
+
+То есть $\gamma = 1 = \lambda_1$ -- это корень кратности $k = 1$.
+
+Следовательно, $y_n^{\textup{Ч}} = A\cdot n$
+
+Подставляем:
+
+\begin{equation*}
+	y_{n+2}^{\textup{Ч}} - 3y_{n+1}^{\textup{Ч}}+2y_n^{\textup{Ч}} = A(n+2) - 3A(n+1) + 2An = An + 2A -3An -3A + 2An = -A = 3
+\end{equation*}
+
+
+\begin{equation*}
+	A = -3, \quad y_n^{\textup{Ч}} = -3\cdot n
+\end{equation*}
+
+
+\begin{equation*}
+	y_n = C_1 \cdot 1^n + C_2 \cdot 2^n - 3n
+\end{equation*}
+
+
+Из начальных условий определим константы $C_1, C_2$:
+
+\begin{equation*}
+	\left\{\begin{array}{ll}
+	y_{n}=C_{1} \cdot 1^{n}+C_{2} \cdot 2^{n}-3 n ; & \\
+	y_{0}=1 ; & \Leftrightarrow\left\{\begin{array}{l}
+	C_{1}+C_{2}=1 ; \\
+	3 = C_{1}+2 C_{2}-3 ;
+	\end{array} \Leftrightarrow\left\{\begin{array}{l}
+	C_{1}=1-C_{2}; \\
+	1-C_{2}+2 C_{2}-3=3;
+	\end{array}\right.\right. \\
+	y_{1}=3 ;
+	\end{array}\right. \Leftrightarrow
+\end{equation*}
+
+
+\begin{equation*}
+	\Leftrightarrow \left\{\begin{array}{l}
+	C_{1}=-4 \\
+	C_{2}=5
+	\end{array}\right.
+\end{equation*}
+
+Тогда можем записать\\
+\textbf{Ответ:} $y_n=-4\cdot1^n+5\cdot2^n-3\cdot n$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Задача 2}
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	y_{n+2}-2(64-m) y_{n+1}+(64-m)^{2} y_{n}=(64-m)^{n} N ; \quad n \in Z \\
+	y_{0}=64-m, y_{1}=N
+	\end{array}\right.
+\end{equation*}
+
+Подставляя $m=63, N=3$, получаем:
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	y_{n+2}-2 y_{n+1}+y_{n}=3\cdot1^{n} ; \quad n \in Z \\
+	y_{0}=1, y_{1}=3
+	\end{array}\right.
+\end{equation*}
+
+\textbf{Решение.}\\
+
+
+Найдём корни характеристического уравнения:
+
+\begin{equation*}
+	\lambda^2-2\lambda+1=0 \Leftrightarrow \left[\begin{array}{c}
+	\lambda=1=\lambda_1 \\
+	\lambda=1=\lambda_2
+	\end{array}\right.
+\end{equation*}
+
+То есть $\gamma = 1 = \lambda_1= \lambda_2$ -- это корень кратности $k = 2$.
+
+Следовательно, $y_n^{\textup{Ч}} = A n^2 \cdot 1^n$
+
+Подставляем:
+
+\begin{equation*}
+y_{n+2}^{\textup{Ч}} - 2y_{n+1}^{\textup{Ч}}+y_n^{\textup{Ч}} = A\cdot 1^{n+2}(n+2)^2 - 2A\cdot1^{n+1}(n+1)^2 + A\cdot1^nn^2 = 2A\cdot1^n = 3 \cdot 1^n
+\end{equation*}
+
+
+\begin{equation*}
+A = \frac{3}{2}, \quad y_n^{\textup{Ч}} = \frac{3}{2}\cdot 1^nn^2
+\end{equation*}
+
+
+\begin{equation*}
+y_n = C_1 \cdot 1^n + C_2 n \cdot 1^n + \frac{3}{2}\cdot 1^nn^2
+\end{equation*}
+
+
+Из начальных условий определим константы $C_1, C_2$:
+
+\begin{equation*}
+	\left\{\begin{array}{ll}
+	y_{n}=C_{1} \cdot 1^{n}+C_{2} n \cdot 1^{n}+\frac{3}{2} \cdot 1^{n} n^{2} ; & \\
+	y_{0}=1 ; & \Leftrightarrow\left\{\begin{array}{l}
+	C_{1}=1 ; \\
+	1+C_{2}+\frac{3}{2}=3 ;
+	\end{array} \Leftrightarrow\left\{\begin{array}{l}
+	C_{1}=1 ; \\
+	C_{2}=\frac{1}{2}
+	\end{array}\right.\right. \\
+	y_{1}=3
+	\end{array}\right.
+\end{equation*}
+
+
+
+Тогда можем записать\\
+\textbf{Ответ:} $y_n=1^n + \frac{1}{2} n \cdot 1^n + \frac{3}{2}\cdot1^nn^2$
+
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Задача 3}
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	y_{n+2}-y_{n+1}+y_{n}=\operatorname{Nsin}\left(\frac{\pi}{3} n\right) ; \quad n \in Z \\
+	y_{0}=64-m, y_{1}=N
+	\end{array}\right.
+\end{equation*}
+
+
+
+Подставляя $m=63, N=3$, получаем:
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	y_{n+2}-y_{n+1}+y_{n}=\operatorname{3sin}\left(\frac{\pi}{3} n\right) ; \quad n \in Z \\
+	y_{0}=1, y_{1}=3
+	\end{array}\right.
+\end{equation*}
+
+\textbf{Решение.}\\
+
+
+Найдём корни характеристического уравнения:
+
+\begin{equation*}
+\lambda^2-\lambda+1=0 \Leftrightarrow \left[\begin{array}{c}
+\lambda=\frac{1+\sqrt{3}i}{2}=\lambda_1 \\
+\lambda=\frac{1-\sqrt{3}i}{2}=\lambda_2
+\end{array}\right.
+\end{equation*}
+
+
+Следовательно, $y_n^{\textup{Ч}} = n (A\cos(\frac{\pi}{3}n) + B\sin(\frac{\pi}{3}n))$
+
+Подставляем:
+
+\begin{align*}
+	&y_{n+2}^{\textup{Ч}} - y_{n+1}^{\textup{Ч}}+y_n^{\textup{Ч}} = \\ 
+	&= (n+2)\left(A \cos \left(\frac{\pi}{3}(n+2)\right)+B \sin \left(\frac{\pi}{3}(n+2)\right)\right)- \\ 
+	&-(n+1)\left(A \cos \left(\frac{\pi}{3}(n+1)\right)+B \sin \left(\frac{\pi}{3}(n+1)\right)\right)+n\left(A \cos \left(\frac{\pi}{3} n\right)+B \sin \left(\frac{\pi}{3} n\right)\right = \\
+	&= \frac{-\sqrt{3} A-3 B}{2} \sin \left(\frac{\pi}{3} n\right)+\frac{-3 A+\sqrt{3} B}{2} \cos \left(\frac{\pi}{3} n\right)=3 \sin \left(\frac{\pi}{3} n\right).
+\end{align*}
+
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	\frac{-\sqrt{3} A-3 B}{2}=3 ; \\
+	\frac{-3 A+\sqrt{3}B}{2}=0 ;
+	\end{array} \Leftrightarrow\left\{\begin{array}{l}
+	A=\frac{-\sqrt{3}}{2} \\
+	B=\frac{-3}{2}
+	\end{array}\right.\right.
+\end{equation*}
+
+\begin{equation*}
+	y_n^{\textup{Ч}} = n(\frac{-\sqrt{3}}{2}\cos(\frac{\pi}{3}n) - \frac{3}{2}\sin(\frac{\pi}{3}n))
+\end{equation*}
+
+
+\begin{equation*}
+y_n = y_n^{O} + y_n^{\textup{Ч}} = C_1\cos(\frac{\pi}{3}n) + C_2\sin(\frac{\pi}{3}n) + n(-\frac{\sqrt{3}}{2}\cos(\frac{\pi}{3}n) - \frac{3}{2}\sin(\frac{\pi}{3}n))
+\end{equation*}
+
+
+Из начальных условий определим константы $C_1, C_2$:
+
+\begin{equation*}
+\left\{\begin{array}{l}
+C_{1} \cos \left(\frac{\pi}{3} n\right)+C_{2} \sin \left(\frac{\pi}{3} n\right)+n\left(-\frac{\sqrt{3}}{2} \cos \left(\frac{\pi}{3} n\right)- \frac{3}{2} \sin \left(\frac{\pi}{3} n\right)\right) = 3 \sin(\frac{\pi}{3} n)\\
+y_{0}=1 \\
+y_{1}=3
+\end{array}\right.
+\end{equation*}
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	C_{1}=1 \\
+	C_{2} \sin \left(\frac{\pi}{3}\right)+\left(-\frac{\sqrt{3}}{2} \cos \left(\frac{\pi}{3} \right)- \frac{3}{2} \sin \left(\frac{\pi}{3} \right)\right) = 3 \sin(\frac{\pi}{3} )
+	\end{array}\right.
+\end{equation*}
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	C_{1}=1 \\
+	\frac{\sqrt{3} C_{2}}{2}-\sqrt{3}=\frac{3 \sqrt{3}}{2}
+	\end{array}\right.
+\end{equation*}
+
+\begin{equation*}
+	\left\{\begin{array}{l}
+	C_{1}=1 \\
+	C_{2}=5
+	\end{array}\right.
+\end{equation*}
+
+Тогда можем записать\\
+\textbf{Ответ:} 
+\begin{equation*}
+	y_n = \cos(\frac{\pi}{3}n) + 5\sin(\frac{\pi}{3}n) + n(-\frac{\sqrt{3}}{2}\cos(\frac{\pi}{3}n) - \frac{3}{2}\sin(\frac{\pi}{3}n))
+\end{equation*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{o}{\PYGZgt{}} \PYG{n}{traj\PYGZus{}list} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{replicate}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,} \PYG{n+nf}{trajectories}\PYG{p}{(}\PYG{n}{Tt}\PYG{p}{,} \PYG{n}{Hh}\PYG{p}{),} \PYG{n}{simplify} \PYG{o}{=} \PYG{n+nb+bp}{F}\PYG{p}{)}
-\end{Verbatim}
