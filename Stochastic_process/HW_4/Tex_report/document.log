@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.10)  14 APR 2020 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.10)  14 APR 2020 19:50
 entering extended mode
 **./document.tex
 (document.tex
@@ -1349,7 +1349,7 @@ Overfull \vbox (66.99884pt too high) has occurred while \output is active []
 \openout3 = `document.pyg'.
 
 
-(_minted-document/60F54D34B139154F2015044CAD671B015061E4B692DD718FCBC086EF9FCF3
+(_minted-document/2BA7CBADA45140C3B4324600C50C21A45061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex [10])
 \openout3 = `document.pyg'.
 
@@ -1369,35 +1369,35 @@ Overfull \vbox (66.99884pt too high) has occurred while \output is active []
 <../img/2d_1_ext.png, id=68, 722.7pt x 406.51875pt>
 File: ../img/2d_1_ext.png Graphic file (type png)
 <use ../img/2d_1_ext.png>
-Package pdftex.def Info: ../img/2d_1_ext.png  used on input line 404.
+Package pdftex.def Info: ../img/2d_1_ext.png  used on input line 402.
 (pdftex.def)             Requested size: 344.44424pt x 193.74971pt.
 <../img/2d_6_ext.png, id=69, 722.7pt x 406.51875pt>
 File: ../img/2d_6_ext.png Graphic file (type png)
 <use ../img/2d_6_ext.png>
-Package pdftex.def Info: ../img/2d_6_ext.png  used on input line 407.
+Package pdftex.def Info: ../img/2d_6_ext.png  used on input line 405.
 (pdftex.def)             Requested size: 344.44424pt x 193.74971pt.
 <../img/2d_70_ext.png, id=70, 722.7pt x 406.51875pt>
 File: ../img/2d_70_ext.png Graphic file (type png)
 <use ../img/2d_70_ext.png>
-Package pdftex.def Info: ../img/2d_70_ext.png  used on input line 410.
+Package pdftex.def Info: ../img/2d_70_ext.png  used on input line 408.
 (pdftex.def)             Requested size: 344.44424pt x 193.74971pt.
 <../img/2d_140_ext.png, id=71, 722.7pt x 406.51875pt>
 File: ../img/2d_140_ext.png Graphic file (type png)
 <use ../img/2d_140_ext.png>
-Package pdftex.def Info: ../img/2d_140_ext.png  used on input line 413.
+Package pdftex.def Info: ../img/2d_140_ext.png  used on input line 411.
 (pdftex.def)             Requested size: 344.44424pt x 193.74971pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--415
+Underfull \hbox (badness 10000) in paragraph at lines 401--413
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--415
+Underfull \hbox (badness 10000) in paragraph at lines 401--413
 []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--415
+Underfull \hbox (badness 10000) in paragraph at lines 401--413
 []$
  []
 
@@ -1406,18 +1406,18 @@ Overfull \vbox (66.99884pt too high) has occurred while \output is active []
 
 [12 <../img/2d_1_ext.png> <../img/2d_6_ext.png> <../img/2d_70_ext.png> <../img/
 2d_140_ext.png>]
-<../img/2d_1_1.png, id=82, 722.7pt x 406.51875pt>
+<../img/2d_1_1.png, id=83, 722.7pt x 406.51875pt>
 File: ../img/2d_1_1.png Graphic file (type png)
 <use ../img/2d_1_1.png>
-Package pdftex.def Info: ../img/2d_1_1.png  used on input line 424.
+Package pdftex.def Info: ../img/2d_1_1.png  used on input line 422.
 (pdftex.def)             Requested size: 467.46059pt x 262.95003pt.
-<../img/2d_1_1_reduced.png, id=83, 578.16pt x 325.215pt>
+<../img/2d_1_1_reduced.png, id=84, 578.16pt x 325.215pt>
 File: ../img/2d_1_1_reduced.png Graphic file (type png)
 <use ../img/2d_1_1_reduced.png>
-Package pdftex.def Info: ../img/2d_1_1_reduced.png  used on input line 434.
+Package pdftex.def Info: ../img/2d_1_1_reduced.png  used on input line 432.
 (pdftex.def)             Requested size: 467.46059pt x 262.94632pt.
 
-Overfull \hbox (5.06107pt too wide) in paragraph at lines 439--440
+Overfull \hbox (5.06107pt too wide) in paragraph at lines 437--438
 []\T2A/cmr/m/n/14.4 Теперь мо-жем ви-деть раз-ни-цу меж-ду тра-ек-то-ри-я-ми с 
 $\OML/cmm/m/it/14.4 h \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.
 4 02$ \T2A/cmr/m/n/14.4 и $[]$.
@@ -1454,26 +1454,26 @@ $\OML/cmm/m/it/14.4 h \OT1/cmr/m/n/14.4 = 0\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.
 
 (_minted-document/7B1BEAE43FA7425FF320AA2D822FEB155061E4B692DD718FCBC086EF9FCF3
 0EF.pygtex)
-<../img/2d_1_circle.png, id=90, 722.7pt x 406.51875pt>
+<../img/2d_1_circle.png, id=91, 722.7pt x 406.51875pt>
 File: ../img/2d_1_circle.png Graphic file (type png)
 <use ../img/2d_1_circle.png>
-Package pdftex.def Info: ../img/2d_1_circle.png  used on input line 484.
+Package pdftex.def Info: ../img/2d_1_circle.png  used on input line 482.
 (pdftex.def)             Requested size: 492.06537pt x 276.78885pt.
-<../img/2d_6_circle.png, id=91, 722.7pt x 406.51875pt>
+<../img/2d_6_circle.png, id=92, 722.7pt x 406.51875pt>
 File: ../img/2d_6_circle.png Graphic file (type png)
 <use ../img/2d_6_circle.png>
-Package pdftex.def Info: ../img/2d_6_circle.png  used on input line 487.
+Package pdftex.def Info: ../img/2d_6_circle.png  used on input line 485.
 (pdftex.def)             Requested size: 492.06537pt x 276.78885pt.
 [14] [15 <../img/2d_1_circle.png> <../img/2d_6_circle.png>]
-<../img/2d_70_circle.png, id=100, 722.7pt x 406.51875pt>
+<../img/2d_70_circle.png, id=101, 722.7pt x 406.51875pt>
 File: ../img/2d_70_circle.png Graphic file (type png)
 <use ../img/2d_70_circle.png>
-Package pdftex.def Info: ../img/2d_70_circle.png  used on input line 493.
+Package pdftex.def Info: ../img/2d_70_circle.png  used on input line 491.
 (pdftex.def)             Requested size: 492.06537pt x 276.78885pt.
-<../img/2d_140_circle.png, id=101, 722.7pt x 406.51875pt>
+<../img/2d_140_circle.png, id=102, 722.7pt x 406.51875pt>
 File: ../img/2d_140_circle.png Graphic file (type png)
 <use ../img/2d_140_circle.png>
-Package pdftex.def Info: ../img/2d_140_circle.png  used on input line 496.
+Package pdftex.def Info: ../img/2d_140_circle.png  used on input line 494.
 (pdftex.def)             Requested size: 492.06537pt x 276.78885pt.
 [16 <../img/2d_70_circle.png> <../img/2d_140_circle.png>]
 \openout3 = `document.pyg'.
@@ -1485,11 +1485,11 @@ runsystem(del document.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 22534 strings out of 480970
- 461708 string characters out of 2908793
- 812784 words of memory out of 3000000
- 37786 multiletter control sequences out of 15000+200000
- 545465 words of font info for 58 fonts, out of 3000000 for 9000
+ 22537 strings out of 480970
+ 461749 string characters out of 2908793
+ 813784 words of memory out of 3000000
+ 37787 multiletter control sequences out of 15000+200000
+ 546339 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,9n,81p,10122b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/РџРµРЅРѕРїР»Р°СЃС‚РѕС‡РєР°/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvi
@@ -1511,10 +1511,11 @@ X/2.9/fonts/type1/public/cm-super/sfsx1440.pfb><C:/Users/РџРµРЅРѕРїР»Р°СЃС‚РѕС‡
 РєР°/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cm-super/sfsx1728.pfb><C:/Us
 ers/РџРµРЅРѕРїР»Р°СЃС‚РѕС‡РєР°/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cm
 -super/sfsx2074.pfb><C:/Users/РџРµРЅРѕРїР»Р°СЃС‚РѕС‡РєР°/AppData/Roaming/MiKTeX
-/2.9/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on document.pdf (18 pages, 554137 bytes).
+/2.9/fonts/type1/public/cm-super/sfti1440.pfb><C:/Users/РџРµРЅРѕРїР»Р°СЃС‚РѕС‡Р
+єР°/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on document.pdf (18 pages, 567414 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
+ 169 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

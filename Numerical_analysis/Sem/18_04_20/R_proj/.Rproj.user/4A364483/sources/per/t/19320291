@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587205216489.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "420725140",
+    "id" : "19320291",
+    "lastKnownWriteTime" : 1587210265,
+    "last_content_update" : 1587210265289,
+    "path" : "~/6_sem/Numerical_analysis/Sem/18_04_20/R_proj/source.r",
+    "project_path" : "source.r",
+    "properties" : {
+        "cursorPosition" : "69,0",
+        "scrollLine" : "48"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

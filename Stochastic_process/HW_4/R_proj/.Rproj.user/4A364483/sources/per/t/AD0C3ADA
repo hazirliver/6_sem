@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586283436645.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4220588073",
+    "id" : "AD0C3ADA",
+    "lastKnownWriteTime" : 1586872986,
+    "last_content_update" : 1586872986376,
+    "path" : "~/6_sem/Stochastic_process/HW_4/R_proj/thnk_main.R",
+    "project_path" : "thnk_main.R",
+    "properties" : {
+        "cursorPosition" : "156,0",
+        "scrollLine" : "133",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

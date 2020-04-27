@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{B} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{p}{(}\PYG{l+m}{64} \PYG{o}{\PYGZhy{}} \PYG{n}{k}\PYG{p}{)} \PYG{o}{*}
+\PYG{o}{+}   \PYG{n+nf}{matrix}\PYG{p}{(}\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+m}{4}\PYG{p}{,} \PYG{l+m}{1}\PYG{p}{,} \PYG{l+m}{0}\PYG{p}{,} \PYG{l+m}{1}\PYG{p}{,} \PYG{l+m}{4}\PYG{p}{,} \PYG{l+m}{1}\PYG{p}{,} \PYG{l+m}{0}\PYG{p}{,} \PYG{l+m}{1}\PYG{p}{,} \PYG{l+m}{4}\PYG{p}{),}
+\PYG{o}{+}          \PYG{n}{nrow} \PYG{o}{=} \PYG{l+m}{3}\PYG{p}{,} \PYG{n}{ncol} \PYG{o}{=} \PYG{l+m}{3}\PYG{p}{,} \PYG{n}{byrow} \PYG{o}{=} \PYG{k+kc}{TRUE}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{B}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]} \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]} \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{4}    \PYG{l+m}{1}    \PYG{l+m}{0}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{1}    \PYG{l+m}{4}    \PYG{l+m}{1}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{0}    \PYG{l+m}{1}    \PYG{l+m}{4}
+\end{Verbatim}

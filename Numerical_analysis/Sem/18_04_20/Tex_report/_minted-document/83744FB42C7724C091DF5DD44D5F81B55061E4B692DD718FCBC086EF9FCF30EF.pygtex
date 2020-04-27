@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{f1} \PYG{o}{\PYGZlt{}} \PYG{o}{\PYGZhy{}}\PYG{n+nf}{matrix}\PYG{p}{(}\PYG{n+nf}{c}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{f}\PYG{p}{),} \PYG{n}{nrow}\PYG{o}{=}\PYG{l+m}{12}\PYG{p}{,} \PYG{n}{ncol}\PYG{o}{=}\PYG{l+m}{1}\PYG{p}{,} \PYG{n}{byrow}\PYG{o}{=}\PYG{k+kc}{TRUE}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{f1}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{3}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{\PYGZhy{}60}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{66}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{3}
+\PYG{n}{[5}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{\PYGZhy{}60}
+\PYG{n}{[6}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{66}
+\PYG{n}{[7}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{3}
+\PYG{n}{[8}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{\PYGZhy{}60}
+\PYG{n}{[9}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{66}
+\PYG{n}{[10}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{3}
+\PYG{n}{[11}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{\PYGZhy{}60}
+\PYG{n}{[12}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{66}
+\end{Verbatim}

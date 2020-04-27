@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{x4} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{M4}
+\PYG{o}{\PYGZgt{}} \PYG{n}{x4}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}2.275742}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{2.922765}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}2.065917}
+\PYG{o}{\PYGZgt{}} \PYG{n}{x3} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{L3} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{x4} \PYG{o}{+} \PYG{n}{M3}
+\PYG{o}{\PYGZgt{}} \PYG{n}{x3}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{5.464459}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}18.142092}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{17.896599}
+\PYG{o}{\PYGZgt{}} \PYG{n}{x2} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{L2} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{x3} \PYG{o}{+} \PYG{n}{M2}
+\PYG{o}{\PYGZgt{}} \PYG{n}{x2}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.606730}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}1.586556}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{2.173453}
+\PYG{o}{\PYGZgt{}} \PYG{n}{x1} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{L1} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{x2} \PYG{o}{+} \PYG{n}{M1}
+\PYG{o}{\PYGZgt{}} \PYG{n}{x1}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{5.671507}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}23.092774}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{23.506644}
+\end{Verbatim}

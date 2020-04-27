@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{f} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{matrix}\PYG{p}{(}\PYG{n+nf}{c}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,}\PYG{n}{N}\PYG{o}{\PYGZhy{}}\PYG{n}{k}\PYG{p}{,}\PYG{n}{N}\PYG{o}{+}\PYG{n}{k}\PYG{p}{),} \PYG{n}{nrow} \PYG{o}{=} \PYG{l+m}{3}\PYG{p}{,} \PYG{n}{ncol} \PYG{o}{=} \PYG{l+m}{1}\PYG{p}{,} \PYG{n}{byrow} \PYG{o}{=} \PYG{k+kc}{TRUE}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{f}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}    \PYG{l+m}{3}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{\PYGZhy{}60}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{66}
+\end{Verbatim}

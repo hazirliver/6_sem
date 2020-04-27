@@ -1,0 +1,8 @@
+"0","f_d <- function(x)
+{
+  6x^2+18x-24
+"
+"2","Error: unexpected symbol in:
+""{
+  6x""
+"

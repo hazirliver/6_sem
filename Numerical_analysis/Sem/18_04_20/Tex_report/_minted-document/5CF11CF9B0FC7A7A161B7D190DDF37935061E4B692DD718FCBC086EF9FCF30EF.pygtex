@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{M3} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{p}{(}\PYG{n+nf}{solve}\PYG{p}{(}\PYG{n}{L2} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{A} \PYG{o}{+} \PYG{n}{B}\PYG{p}{))} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{p}{(}\PYG{n}{f} \PYG{o}{\PYGZhy{}} \PYG{n}{A} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{M2}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{M3}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}   \PYG{l+m}{6.436183}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}19.360825}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{18.762270}
+\end{Verbatim}

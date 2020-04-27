@@ -1,0 +1,95 @@
+---
+params:
+  lang: RU
+lang: "`r switch(params$lang, RU = 'ru-RU', EN = 'en-US')`"
+
+---
+
+\section{МНК}
+
+В соответствии с методом наименьших квадратов коэффициенты $k,l$ найдем по формулам:
+
+\begin{equation}\left\{\begin{array}{l}
+k=\frac{n \sum\limits_{i=1}^{n} x_{i} y_{i}-\sum\limits_{i=1}^{n} x_{i} \sum\limits_{i=1}^{n} y_{i}}{n \sum\limits_{i=1}^{n} x_{i}^{2}-\left(\sum\limits_{i=1}^{n} x_{i}\right)^{2}} \\
+l=\frac{\sum\limits_{i=1}^{n} y_{i}-k \sum\limits_{i=1}^{n} x_{i}}{n},
+\end{array}\right.\end{equation}
+
+где $n=4$.
+
+Посчитаем соответствущие значения:
+
+```{r echo=TRUE, message=TRUE, warning=FALSE}
+x <- 0:3
+x
+```
+
+
+```{r echo=TRUE, message=TRUE, warning=FALSE}
+f <- function(x)
+{
+  2*x^3 + 9*x^2 -24*x -30
+}
+```
+
+```{r echo=TRUE, message=TRUE, warning=FALSE}
+y <- f(x)
+y
+```
+
+```{r echo=TRUE, message=TRUE, warning=FALSE}
+xy <- x * y
+xy
+```
+
+```{r echo=TRUE, message=TRUE, warning=FALSE}
+x_sq <- x^2
+x_sq
+```
+
+И соответствующие суммы:
+
+```{r echo=TRUE, message=TRUE, warning=FALSE}
+sum(x)
+sum(y)
+sum(xy)
+sum(x_sq)
+sum(x^2)
+sum(x)^2
+```
+
+
+Тогда можем рассчитать наши значения $k,l$:
+
+\begin{equation}\left\{\begin{array}{l}
+k=\frac{4 \cdot 4 - 6 \cdot (-66) }{4 \cdot 14 - 36} = \frac{412}{20} = 20.6\\
+l=\frac{-66 - 20.6 \cdot 6}{4} = \frac{-189.6}{4} = -47.4
+\end{array}\right.\end{equation}
+
+Проверим:
+
+```{r}
+lm(y~x)
+```
+
+Действительно, наши рассчёты верны.
+
+Таким образом линейная аппроксимация заданной функции имеет вид:
+
+\begin{equation}
+  g(x) = 20.6x - 47.6
+\end{equation}
+
+Можем для примера изобразить исходную функцию и полученную методом МНК линейную аппроксимацию. Для этого зададим большее число точек на исходном отрезке $\left[0;3\right]$:
+
+```{r}
+x_for_plot <- seq(0,3,0.01)
+```
+
+```{r echo=TRUE, warning=FALSE, out.width = "70%"}
+plot(f(x_for_plot)~x_for_plot, type = "l", lwd = 2, col = "lightblue",
+     xlab = "", ylab = "")
+abline(lm(y~x), col = "lightgreen", lwd = 2)
+```
+
+
+

@@ -1,0 +1,454 @@
+\documentclass[14pt,a4paper]{scrartcl}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\makeatletter
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newenvironment{sqcases}{%
+	\matrix@check\sqcases\env@sqcases
+}{%
+	\endarray\right.%
+}
+\def\env@sqcases{%
+	\let\@ifnextchar\new@ifnextchar
+	\left\lbrack
+	\def\arraystretch{1.2}%
+	\array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\begin{document}
+	\begin{titlepage}
+	\begin{center}
+		\large
+		МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ\\ РОССИЙСКОЙ ФЕДЕРАЦИИ
+		
+		\vspace{0.5cm}
+		
+		МГТУ им Н.Э.Баумана
+		\vspace{0.25cm}
+		
+		Факультет ФН
+		
+		Кафедра вычислительной математики и математической физики
+		\vfill
+		
+		
+		Соколов Арсений Андреевич\\
+		\vfill
+		
+		
+		{\LARGE Семинар от 18.04.20 \\ по основам сеточных методов\\[2mm]
+		}
+		\bigskip
+		
+		3 курс, группа ФН11-63Б\\
+		Вариант 3
+	\end{center}
+	\vfill
+	
+	\newlength{\ML}
+	\settowidth{\ML}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}}}
+	\hfill\begin{minipage}{0.4\textwidth}
+		Преподаватель\\
+		\underline{\hspace{3cm}} В.\,А.~Кутыркин\\
+		«\underline{\hspace{0.7cm}}» \underline{\hspace{1.71cm}} 2020 г.
+	\end{minipage}%
+	\bigskip
+	
+	
+	\vfill
+	
+	\begin{center}
+		Москва, 2020 г.
+	\end{center}
+\end{titlepage}
+
+\section*{Задачи для решения на семинаре}
+
+Методом матричной прогонки найти решение СЛАУ ($k$ -- номер группы, $N$ -- номер фамилии студента в журнале группы), сделав проверку:
+
+\begin{equation}\label{1}
+	\mathbf{D} \cdot ^>\mathbf{x}_{(\cdot)} = ^>\mathbf{f}_{(\cdot)},
+\end{equation}
+
+где $^>\mathbf{f}_{(\cdot)} = \left[ ^>\mathbf{f}_{(1)}, ^>\mathbf{f}_{(2)}, ^>\mathbf{f}_{(3)}, ^>\mathbf{f}_{(4)} \right\rangle \in ^>\left(^>\mathbb{R}^3\right)^4, \quad ^>\mathbf{x}_{(\cdot)} = \left[ ^>\mathbf{x}_{(1)}, ^>\mathbf{x}_{(2)}, ^>\mathbf{x}_{(3)}, ^>\mathbf{x}_{(4)} \right\rangle \in ^>\left(^>\mathbb{R}^k\right)^n$ и матрица $\mathbf{D} \in \operatorname{L}(\mathbb{R};m\cdot n)$ имеет матрично трёхдиагональный вид:
+
+\begin{equation}\label{2}
+	\mathbf{D}=\left(\begin{array}{llll}
+	\mathbf{B} & \mathbf{C} & \mathbf{O} & \mathbf{O} \\
+	\mathbf{A} & \mathbf{B} & \mathbf{C} & \mathbf{O} \\
+	\mathbf{O} & \mathbf{A} & \mathbf{B} & \mathbf{C} \\
+	\mathbf{O} & \mathbf{O} & \mathbf{A} & \mathbf{B}
+	\end{array}\right),
+\end{equation}
+
+если
+
+\begin{equation*}
+	\mathbf{A}, \mathbf{B}, \mathbf{C} \in \operatorname{L}(\mathbb{R},3) \quad \textup{и} \quad \mathbf{O} \in \operatorname{L}(\mathbb{R},3) \textup{-- нулевая матрица}
+\end{equation*}
+
+
+\begin{equation*}
+	A=(1-(k-63))\left(\begin{array}{ccc}
+	N+2 & 1 & 0 \\
+	1 & N+2 & 1 \\
+	0 & 1 & N+2
+	\end{array}\right), B=(64-k)\left(\begin{array}{lll}
+	4 & 2 & 0 \\
+	2 & 4 & 1 \\
+	0 & 1 & 4
+	\end{array} \right),
+\end{equation*}
+
+\begin{equation*}
+	C=(-1)^{k}\left(\begin{array}{lll}
+	3 & 1 & 0 \\
+	1 & 3 & 1 \\
+	0 & 1 & 3
+	\end{array}\right)
+\end{equation*}
+
+\begin{equation*}
+	 ^>\mathbf{f}_{(1)}= ^>\mathbf{f}_{(2)}= ^>\mathbf{f}_{(3)}= ^>\mathbf{f}_{(4)}=[N, N-k, N+k\rangle \in ^>\mathbb{R}^{3}
+\end{equation*}
+
+
+
+\pagebreak
+
+\section*{Решение}
+
+Начальные значения по условию: $k = 63, \quad N = 3$. Подставляя данные $k$ и $N$ имеем:
+
+\begin{equation*}
+	A=\left(\begin{array}{lll}
+	9 & 1 & 0 \\
+	1 & 9 & 1 \\
+	0 & 1 & 9
+	\end{array}\right), B=\left(\begin{array}{lll}
+	4 & 1 & 0 \\
+	1 & 4 & 1 \\
+	0 & 1 & 4
+	\end{array}\right), C=(-1)\left(\begin{array}{lll}
+	3 & 1 & 0 \\
+	1 & 3 & 1 \\
+	0 & 1 & 3
+	\end{array}\right) = 
+	\left(\begin{array}{lll}
+	-3 & -1 & 0 \\
+	-1 & -3 & -1 \\
+	0 & -1 & -3
+	\end{array}\right)
+\end{equation*}
+
+\begin{equation*}
+^>\mathbf{f}_{(1)}= ^>\mathbf{f}_{(2)}= ^>\mathbf{f}_{(3)}= ^>\mathbf{f}_{(4)}=[3, -60, 66\rangle \in ^>\mathbb{R}^{3}
+\end{equation*}
+
+Рассмотрим прямой ход метода матричной прогонки:
+
+\begin{equation}\label{3}
+	^>x_{k}=L_{k} ^{>}x_{k+1}+^{>}M_{k}, k=\overline{1, n-1}, \quad L_{k} \in L(\mathbb{R}, m), \quad>M_{k} \in^{>} \mathbb{R}^{m}
+\end{equation}
+
+
+\begin{equation*}
+	^>x_{n}= ^{>}M_{n}, ^{>}M_{n} \in \mathbb{R}^{m}
+\end{equation*}
+
+
+\begin{equation*}
+	L_{1}=-B_{1}^{-1} \cdot C_{1},^{>} M_{1}=B_{1}^{-1} \cdot^{>} f_{1}
+\end{equation*}
+
+\begin{equation*}
+	L_{k}=-\left(L_{k-1} A_{k}+B_{k}\right)^{-1} \cdot C_{k},^{>} M_{k}=\left(L_{k-1} A_{k}+B_{k}\right)^{-1} \cdot\left(^{>} f_{k}-A_{k}^{>} M_{k-1}\right), k=\overline{2, n-1}
+\end{equation*}
+
+\begin{equation*}
+	^>M_{n}=\left(L_{n-1} A_{n}+B_{n}\right)^{-1} \cdot\left(^>f_{n}-^{>} M_{n-1} A_{n}\right)=^>x_{n}
+\end{equation*}
+
+
+Будем выполнять работу в языке программирования R.
+
+Введём начальные данные:
+
+\begin{minted}{R}
+> N <- 3
+> N
+[1] 3
+> k <- 63
+> k
+[1] 63
+\end{minted}
+
+\begin{minted}{R}
+> f <- matrix(c(N,N-k,N+k), nrow = 3, ncol = 1, byrow = TRUE)
+> f 
+     [,1]
+[1,]    3
+[2,]  -60
+[3,]   66
+\end{minted}
+
+\pagebreak
+Введём $\mathbf{A}, \mathbf{B}, \mathbf{C} \in \operatorname{L}(\mathbb{R},3)$:
+
+\begin{minted}{R}
+> A <- (1 - (k - 63)) *
++   matrix(c(N + 2, 1, 0, 1, N + 2, 1, 0, 1, N + 2), 
++          nrow = 3, ncol = 3, byrow = TRUE)
+> A
+     [,1] [,2] [,3]
+[1,]    5    1    0
+[2,]    1    5    1
+[3,]    0    1    5
+\end{minted}
+
+\begin{minted}{R}
+> B <- (64 - k) * 
++   matrix(c(4, 1, 0, 1, 4, 1, 0, 1, 4),
++          nrow = 3, ncol = 3, byrow = TRUE)
+> B
+     [,1] [,2] [,3]
+[1,]    4    1    0
+[2,]    1    4    1
+[3,]    0    1    4
+\end{minted}
+
+\begin{minted}{R}
+> C <- (-1)^k * 
++   matrix(c(3, 1, 0, 1, 3, 1, 0, 1, 3),
++          nrow = 3, ncol = 3, byrow = TRUE)
+> C
+     [,1] [,2] [,3]
+[1,]   -3   -1    0
+[2,]   -1   -3   -1
+[3,]    0   -1   -3
+\end{minted}
+
+Тогда получим $L_{1}, L_{2}, L_{3}, M_{1}, M_{2}, M_{3}, M_4$:
+
+\begin{minted}{R}
+> L1 <- solve(-B) %*% C
+> L1
+     [,1]       [,2]        [,3]
+[1,]  0.73214286 0.07142857 -0.01785714
+[2,]  0.07142857 0.71428571  0.07142857
+[3,] -0.01785714 0.07142857  0.73214286
+> M1<-solve(B) %*% f
+> M1
+     [,1]
+[1,]   6.267857
+[2,] -22.071429
+[3,]  22.017857
+\end{minted}
+
+
+\begin{minted}{R}
+> L2 <- -(solve(L1 %*% A + B)) %*% C
+> L2
+     [,1]       [,2]         [,3]
+[1,]  0.380084151 0.02945302 -0.007012623
+[2,]  0.029453015 0.37307153  0.029453015
+[3,] -0.007012623 0.02945302  0.380084151
+\end{minted}
+
+
+\begin{minted}{R}
+> M2 <- (solve(L1 %*% A + B)) %*% (f - A %*% M1)
+> M2
+     [,1]
+[1,] -2.023843
+[2,]  4.493689
+[3,] -4.056101
+\end{minted}
+
+
+
+\begin{minted}{R}
+> L3 <- -(solve(L2 %*% A + B)) %*% C
+> L3
+     [,1]      [,2]        [,3]
+[1,]  0.49443315 0.0447349 -0.01100163
+[2,]  0.04473490 0.4834315  0.04473490
+[3,] -0.01100163 0.0447349  0.49443315
+\end{minted}
+
+
+\begin{minted}{R}
+> M3 <- (solve(L2 %*% A + B)) %*% (f - A %*% M2)
+> M3
+     [,1]
+[1,]   6.436183
+[2,] -19.360825
+[3,]  18.762270
+\end{minted}
+
+
+\begin{minted}{R}
+> M4 <- (solve(L3 %*% A + B)) %*% (f - A %*% M3)
+> M4
+     [,1]
+[1,] -2.275742
+[2,]  2.922765
+[3,] -2.065917
+\end{minted}
+
+\pagebreak
+
+Теперь рассмотрим обратный ход метода прогонки. Согласно прямому ходу метода прогонки, в равенствах (\ref{3}) для $k = \overline{1, n-1}$ вычислены все коэффициента $L_k$ и $^>M_k$ и последняя компонента $^>x_n = ^>M_n$ вектора неизвестных СЛАУ (\ref{1}) с матрицей вида (\ref{2}). Эти найденные матрицы и векторы позволяются последовательно найти все остальные компоненты вектора неизвестных СЛАУ (\ref{1}) с матрицей вида (\ref{2}):
+
+\begin{equation*}
+	\begin{aligned}
+	&^>x_{n-1}=L_{n-1}\; ^{>}x_{n}+ ^{>}M_{n-1};\\
+	&^>x_{n-2}=L_{n-2}\; ^{>}x_{n-2}+ ^{>}M_{n-2};\\
+	& \ldots\ldots\ldots\ldots\ldots\ldots\ldots;\\
+	&^>x_{1}=L_{1}\; ^{>}x_{2}+ ^{>}M_{1}.
+	\end{aligned}
+\end{equation*}
+
+Тогда имеем:
+
+\begin{minted}{R}
+> x4 <- M4
+> x4
+     [,1]
+[1,] -2.275742
+[2,]  2.922765
+[3,] -2.065917
+> x3 <- L3 %*% x4 + M3
+> x3
+     [,1]
+[1,]   5.464459
+[2,] -18.142092
+[3,]  17.896599
+> x2 <- L2 %*% x3 + M2
+> x2
+     [,1]
+[1,] -0.606730
+[2,] -1.586556
+[3,]  2.173453
+> x1 <- L1 %*% x2 + M1
+> x1
+     [,1]
+[1,]   5.671507
+[2,] -23.092774
+[3,]  23.506644
+\end{minted}
+
+
+\pagebreak
+
+Сделаем проверку, что $\mathbf{D} \cdot ^>\mathbf{x}_{(\cdot)} = ^>\mathbf{f}_{(\cdot)}$:
+
+Умножаемые в левой части уравнения имеют вид:
+
+\begin{minted}{R}
+> D
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12]
+[1,]    4    1    0   -3   -1    0    0    0    0     0     0     0
+[2,]    1    4    1   -1   -3   -1    0    0    0     0     0     0
+[3,]    0    1    4    0   -1   -3    0    0    0     0     0     0
+[4,]    5    1    0    4    1    0   -3   -1    0     0     0     0
+[5,]    1    5    1    1    4    1   -1   -3   -1     0     0     0
+[6,]    0    1    5    0    1    4    0   -1   -3     0     0     0
+[7,]    0    0    0    5    1    0    4    1    0    -3    -1     0
+[8,]    0    0    0    1    5    1    1    4    1    -1    -3    -1
+[9,]    0    0    0    0    1    5    0    1    4     0    -1    -3
+[10,]    0    0    0    0    0    0    5    1    0     4     1     0
+[11,]    0    0    0    0    0    0    1    5    1     1     4     1
+[12,]    0    0    0    0    0    0    0    1    5     0     1     4
+\end{minted}
+
+\begin{minted}{R}
+> x
+     [,1]
+[1,]   5.671507
+[2,] -23.092774
+[3,]  23.506644
+[4,]  -0.606730
+[5,]  -1.586556
+[6,]   2.173453
+[7,]   5.464459
+[8,] -18.142092
+[9,]  17.896599
+[10,]  -2.275742
+[11,]   2.922765
+[12,]  -2.065917
+\end{minted}
+
+\pagebreak
+Тогда:
+
+\begin{minted}{R}
+> D%*%x
+     [,1]
+[1,]    3
+[2,]  -60
+[3,]   66
+[4,]    3
+[5,]  -60
+[6,]   66
+[7,]    3
+[8,]  -60
+[9,]   66
+[10,]    3
+[11,]  -60
+[12,]   66
+\end{minted}
+
+
+Что в точности равняется $^>\mathbf{f}_{(\cdot)}$:
+
+\begin{minted}{R}
+> f1 < -matrix(c(f, f, f, f), nrow=12, ncol=1, byrow=TRUE)
+> f1
+     [,1]
+[1,]    3
+[2,]  -60
+[3,]   66
+[4,]    3
+[5,]  -60
+[6,]   66
+[7,]    3
+[8,]  -60
+[9,]   66
+[10,]    3
+[11,]  -60
+[12,]   66
+\end{minted}
+
+Видим, что проверка сошлась.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

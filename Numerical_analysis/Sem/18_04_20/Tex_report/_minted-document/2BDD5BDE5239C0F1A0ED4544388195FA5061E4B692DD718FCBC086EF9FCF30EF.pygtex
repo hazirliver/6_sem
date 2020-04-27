@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{L3} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n+nf}{solve}\PYG{p}{(}\PYG{n}{L2} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{A} \PYG{o}{+} \PYG{n}{B}\PYG{p}{))} \PYG{o}{\PYGZpc{}*\PYGZpc{}} \PYG{n}{C}
+\PYG{o}{\PYGZgt{}} \PYG{n}{L3}
+     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}        \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.49443315} \PYG{l+m}{0.0447349} \PYG{l+m}{\PYGZhy{}0.01100163}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.04473490} \PYG{l+m}{0.4834315}  \PYG{l+m}{0.04473490}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.01100163} \PYG{l+m}{0.0447349}  \PYG{l+m}{0.49443315}
+\end{Verbatim}
