@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{pairs.extnd.list} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{replicate}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n+nf}{pair.func}\PYG{p}{(),} \PYG{n+nb+bp}{F}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{pairs.list} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{Map}\PYG{p}{(}\PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{n}{x}\PYG{n+nf}{[c}\PYG{p}{(}\PYG{n+nb+bp}{T}\PYG{p}{,}\PYG{n+nb+bp}{F}\PYG{p}{),}\PYG{n}{]}\PYG{p}{,} \PYG{n}{pairs.extnd.list}\PYG{p}{)}
+\end{Verbatim}

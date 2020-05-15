@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589538217507.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2286393830",
+    "id" : "B70DF839",
+    "lastKnownWriteTime" : 1589555148,
+    "last_content_update" : 1589555148946,
+    "path" : "~/6_sem/Course_work/R_proj/kernel_k-means.R",
+    "project_path" : "kernel_k-means.R",
+    "properties" : {
+        "cursorPosition" : "26,34",
+        "scrollLine" : "8",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

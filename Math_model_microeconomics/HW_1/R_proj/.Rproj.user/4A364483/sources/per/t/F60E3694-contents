@@ -1,0 +1,41 @@
+#install.packages(gimme)
+library(gimme)
+check_foo <- function(n = 2/3)
+{
+  for (i in 1:100)
+  {
+    mat <- gimme:::expand.grid.unique(0:i, 0:i)
+    tmp <- mean(apply(mat, 1, diff))
+    if (isTRUE(all.equal(mean(apply(mat, 1, diff)) ,n)))
+    {
+      return(i)
+    }
+    rm(mat)
+  }
+}
+
+check_foo()
+
+
+##########################################################
+
+rms <- function(l,r, vec)
+{
+  return(
+    exp(
+      1/(r-l+1) *
+        sum(
+          log(
+            vec[l:r]
+          )
+        )
+    )
+  )
+}
+
+vec <- 1:10
+vec[2:7]
+
+rms(1,4, vec)
+
+prod(vec[4:7])

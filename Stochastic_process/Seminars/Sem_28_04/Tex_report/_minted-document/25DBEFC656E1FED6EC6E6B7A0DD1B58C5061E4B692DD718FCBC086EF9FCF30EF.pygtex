@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{var\PYGZus{}foo} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+\PYG{o}{+} \PYG{p}{\PYGZob{}}
+\PYG{o}{+}   \PYG{n+nf}{sum}\PYG{p}{(}\PYG{n+nf}{abs}\PYG{p}{(}\PYG{n+nf}{diff}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)))}
+\PYG{o}{+} \PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}} \PYG{n}{vars} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{t}\PYG{p}{(}\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{pairs.list}\PYG{p}{,} \PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{n+nf}{apply}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{l+m}{2}\PYG{p}{,} \PYG{n}{var\PYGZus{}foo}\PYG{p}{)))}
+\end{Verbatim}

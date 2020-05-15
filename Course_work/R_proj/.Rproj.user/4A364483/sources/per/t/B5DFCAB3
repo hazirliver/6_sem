@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589478425899.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1875807777",
+    "id" : "B5DFCAB3",
+    "lastKnownWriteTime" : 1589484681,
+    "last_content_update" : 1589484681461,
+    "path" : "~/6_sem/Course_work/R_proj/k-means_Step-by-Step.r",
+    "project_path" : "k-means_Step-by-Step.r",
+    "properties" : {
+        "cursorPosition" : "161,20",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

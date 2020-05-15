@@ -1,0 +1,271 @@
+\documentclass[12 pt]{article}  
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}      	%sets the font to 12 pt and says this is an article (as opposed to book or other documents)
+\usepackage{amssymb}				
+\usepackage{mathtools}	% packages to get the fonts, symbols used in most math
+
+%\usepackage{setspace}               		% Together with \doublespacing below allows for doublespacing of the document
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newenvironment{sqcases}{%
+	\matrix@check\sqcases\env@sqcases
+}{%
+	\endarray\right.%
+}
+\def\env@sqcases{%
+	\let\@ifnextchar\new@ifnextchar
+	\left\lbrack
+	\def\arraystretch{1.2}%
+	\array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+
+\oddsidemargin=-0.5cm                 	% These three commands create the margins required for class
+\setlength{\textwidth}{6.5in}         	%
+\addtolength{\voffset}{-20pt}        		%
+\addtolength{\headsep}{25pt}           	%
+
+\newcommand*{\QEDB}{\hfill\ensuremath{\blacksquare}}%
+\newcommand*{\QEDA}{\hfill\ensuremath{\square}}%
+
+
+\pagestyle{myheadings}                           	% tells LaTeX to allow you to enter information in the heading
+\markright{Sokolov Arseny\hfill \today \hfill} 	% put your name instead of Murphy Waggoner 
+% and put the proposition number from the book
+% LaTeX will put your name on the left, the date the paper 
+% is generated in the middle 
+% and a page number on the right
+
+
+
+\newcommand{\eqn}[0]{\begin{array}{rcl}}%begin an aligned equation - allows for aligning = or inequalities.  Always use with $$ $$
+	\newcommand{\eqnend}[0]{\end{array} }  	%end the aligned equation
+
+\newcommand{\qed}[0]{$\square$}        	% make an unfilled square the default for ending a proof
+
+%\doublespacing                         	% Together with the package setspace above allows for doublespacing of the document
+
+\begin{document}												% end of preamble and beginning of text that will be printed
+\begin{titlepage}
+	\begin{center}
+		\large
+		МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ\\ РОССИЙСКОЙ ФЕДЕРАЦИИ
+		
+		\vspace{0.5cm}
+		
+		МГТУ им Н.Э.Баумана
+		\vspace{0.25cm}
+		
+		Факультет ФН
+		
+		Кафедра вычислительной математики и математической физики
+		\vfill
+		
+		
+		Соколов Арсений Андреевич\\
+		\vfill
+		
+		
+		{\LARGE Домашнее задание №5 (задача 3) \\ по теории случайных процессов\\[2mm]
+		}
+		\bigskip
+		
+		3 курс, группа ФН11-63Б\\
+		Вариант 19
+	\end{center}
+	\vfill
+	
+	\newlength{\ML}
+	\settowidth{\ML}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}}}
+	\hfill\begin{minipage}{0.4\textwidth}
+		Преподаватель\\
+		\underline{\hspace{3cm}} Т.\,В.~Облакова\\
+		«\underline{\hspace{0.7cm}}» \underline{\hspace{1.71cm}} 2020 г.
+	\end{minipage}%
+	\bigskip
+	
+	
+	\vfill
+	
+	\begin{center}
+		Москва, 2020 г.
+	\end{center}
+\end{titlepage}
+	
+\textbf{Условие.}\\
+Задан случайный процесс $X(t)$. Найдите (не дифференцируя и не интегрируя $X(t)$):
+\begin{enumerate}
+	\item Математическое ожидание $m_X(t) = M[X(t)]$, ковариационную функцию $K_X(t_1,T_2)$ и дисперсию $D_X(t)$ случайного процесса $X(t)$;
+	\item Математическое ожидание, ковариационную функцию и дисперсию случайного процесса $T_1(t) = \frac{dX(t)}{dt}$;
+	\item Математическое ожидание, ковариационную функцию и дисперсию случайного процесса $Y_2(t) = X(t) + \frac{dX(t)}{dt}$;
+	\item Математическое ожидание, ковариационную функцию и дисперсию случайного процесса $Y_3(t) = \int_{0}^{t}X(s)ds$;
+	\item Взаимные ковариационные функции $R_{XX'}(t_1,t_2)$ и $R_{X'X}(t_1,t_2)$.
+\end{enumerate}
+	
+\begin{equation}
+	X(t) = U\cos(t) + Vt^3,
+\end{equation}
+	где $U$ и $V$ -- некоррелированные случайные величины, $MU = MV = 0, \; {DU = 2, DV = 1}$.
+\newpage
+\textbf{Решение.}
+
+\subsection{}
+
+Математическое ожидание:
+
+\begin{equation}
+	m_{X}(t)=M[X(t)]=M U \cos t+M V t^{3}=0
+\end{equation}
+
+Ковариационная функция:
+
+\begin{equation}
+	\begin{aligned}
+	&K_{X}\left(t_{1}, t_{2}\right)=\operatorname{cov}\left(U \cos t_{1}+V t_{1}^{3}, \quad U \cos t_{2}+V t_{2}^{3}\right)=\cos t_{1} \cos t_{2} \operatorname{cov}(U, U)+\\
+	&+t_{2}^{3} \cos t_{1} \operatorname{cov}(U, V)+t_{1}^{3} \cos t_{2} \operatorname{cov}(V, U)+t_{1}^{3} t_{2}^{3} \operatorname{cov}(V, V)
+	\end{aligned}
+\end{equation}
+
+
+Так как $U$ и $V$ -- некоррелированные случайные величины, следовательно, 
+
+\begin{equation}
+	\operatorname{cov}(U, V) = \operatorname{cov}(V, U) = 0
+\end{equation}
+
+
+Получаем:
+
+\begin{equation}
+	K_{X}\left(t_{1}, t_{2}\right)=2 \cos t_{1} \cos t_{2}+t_{1}^{3} t_{2}^{3}
+\end{equation}
+
+Дисперсия:
+
+\begin{equation}
+	D_{X}(t)=K_{X}(t, t)=2 \operatorname{cos}t \cos t+t^{3} t^{3}=2 \cos ^{2} t+t^{6}
+\end{equation}
+
+\newpage
+\subsection{}
+
+\begin{equation}
+	Y_1(t) = \frac{dX(t)}{dt}
+\end{equation}
+
+Математическое ожидание:
+
+\begin{equation}
+	m_{Y_{1}}(t)=\frac{d}{d t} M[X(t)]=\frac{d}{d t} 0=0
+\end{equation}
+
+
+Ковариационная функция:
+
+\begin{align*}
+	&K_{Y_{1}}\left(t_{1}, t_{2}\right)=\frac{\partial^{2}}{\partial t_{1} \partial t_{2}} K_{X}\left(t_{1}, t_{2}\right)=\frac{\partial^{2}}{\partial t_{1} \partial t_{2}}\left(2 \cos t_{1} \cos t_{2}+t_{1}^{3} t_{2}^{3}\right)=\frac{\partial}{\partial t_{2}}\left(-2 \sin t_{1} \cos t_{2}+3 t_{1}^{2} t_{2}^{3}\right)= \\
+	&=2 \sin t_{1} \sin t_{2}+9 t_{1}^{2} t_{2}^{2}
+\end{align*}
+
+
+Дисперсия:
+
+\begin{equation}
+	D_{Y_{1}}(t)=K_{Y_{1}}(t, t)=2 \operatorname{sin}t\operatorname{sin}t+9 t^{2} t^{2}=2 \sin ^{2} t+9 t^{4}
+\end{equation}
+
+
+\newpage
+\subsection{}
+
+\begin{equation}
+	Y_2(t) = X(t) + \frac{dX(t)}{dt}
+\end{equation}
+
+Математическое ожидание:
+
+\begin{equation}
+	m_{Y_{2}}(t)=\frac{d}{d t} M\left[X(t)+X^{\prime}(t)\right]=M[X(t)]+M\left[X^{\prime}(t)\right]=m_{X}(t)+\left(m_{X}(t)\right)^{\prime}=0
+\end{equation}
+
+
+Ковариационная функция:
+
+\begin{equation}
+	\begin{array}{l}
+	K_{Y_{2}}\left(t_{1}, t_{2}\right)=\operatorname{cov}\left(X\left(t_{1}\right)+X^{\prime}\left(t_{1}\right), X\left(t_{2}\right)+X^{\prime}\left(t_{2}\right)\right)=K_{X}\left(t_{1}, t_{2}\right)+R_{X X^{\prime}}\left(t_{1}, t_{2}\right)+ \\
+	+R_{X^{\prime} X}\left(t_{1}, t_{2}\right)+K_{X^{\prime}}\left(t_{1}, t_{2}\right)=K_{X}\left(t_{1}, t_{2}\right)+\frac{\partial}{\partial t_{1}} K_{X}\left(t_{1}, t_{2}\right)+\frac{\partial}{\partial t_{2}} K_{X}\left(t_{1}, t_{2}\right)+\frac{\partial^{2}}{\partial t_{1} \partial t_{2}} K_{X}\left(t_{1}, t_{2}\right)= \\
+	=2 \cos t_{1} \cos t_{2}+t_{1}^{3} t_{2}^{3}-2 \sin t_{1} \cos t_{2}+3 t_{1}^{2} t_{2}^{3}-2 \cos t_{1} \sin t_{2}+3 t_{1}^{3} t_{2}^{2}+2 \sin t_{1} \sin t_{2}+9 t_{1}^{2} t_{2}^{2}= \\
+	=2 \cos \left(t_{1}-t_{2}\right)-2 \sin \left(t_{1}+t_{2}\right)+t_{1}^{3} t_{2}^{3}+3 t_{1}^{2} t_{2}^{3}+3 t_{1}^{3} t_{2}^{2}+9 t_{1}^{2} t_{2}^{2}
+	\end{array}
+\end{equation}
+
+Дисперсия:
+
+\begin{equation}
+	\begin{array}{l}
+	D_{Y_{2}}(t)=K_{Y_{2}}(t, t)=2 \cos (t-t)-2 \sin (t+t)+t^{3} t^{3}+3 t^{2} t^{3}+3 t^{3} t^{2}+9 t^{2} t^{2}=2 \cos (0)- \\
+	-2 \sin 2 t+t^{6}+3 t^{5}+3 t^{5}+9 t^{4}=2-2 \sin 2 t+t^{6}+6 t^{5}+9 t^{4}=2-2 \sin 2 t+\left(t^{3}+3 t^{2}\right)^{2}
+	\end{array}
+\end{equation}
+
+\newpage
+\subsection{}
+
+\begin{equation}
+	Y_3(t) = \int_{0}^{t}X(s)ds
+\end{equation}
+
+
+Математическое ожидание:
+
+\begin{equation}
+	m_{Y_{3}}(t)=M\left[Y_{3}(t)\right]=M\left[\int_{0}^{t} X(s) d s\right]=\int_{0}^{t} m_{X}(s) d s=\int_{0}^{t} 0 d s=0
+\end{equation}
+
+
+Ковариационная функция:
+
+\begin{equation}
+	\begin{aligned}
+	&K_{Y_{3}}\left(t_{1}, t_{2}\right)=\int_{0}^{t_{1} t_{2}} \int_{0}^{t_{1}} K_{X}\left(s_{1}, s_{2}\right) d s_{1} d s_{2}=\int_{0}^{t_{1} t_{2}}\left(2 \cos t_{1} \cos t_{2}+t_{1}^{3} t_{2}^{3}\right) d s_{1} d s_{2}=\\
+	&=\frac{1}{16} t_{1}^{4} t_{2}^{4}+2 \sin t_{1} \sin t_{2}
+	\end{aligned}
+\end{equation}
+
+
+Дисперсия:
+
+\begin{equation}
+	D_{Y_{3}}(t)=K_{Y_{3}}(t, t)=\frac{1}{16} t^{4} t^{4}+2 \sin t \sin t=\frac{1}{16} t^{8}+2 \sin ^{2} t
+\end{equation}
+
+\newpage
+\subsection{}
+
+\begin{equation}
+	\begin{array}{c}
+	R_{X X^{\prime}}\left(t_{1}, t_{2}\right)=\frac{\partial K_{X}\left(t_{1}, t_{2}\right)}{\partial t_{2}}=\frac{\partial}{\partial t_{2}}\left(2 \cos t_{1} \cos t_{2}+t_{1}^{3} t_{2}^{3}\right)=-2 \cos t_{1} \sin t_{2}+3 t_{1}^{3} t_{2}^{2} \\
+	R_{X^{\prime} X}\left(t_{1}, t_{2}\right)=\frac{\partial K_{X}\left(t_{1}, t_{2}\right)}{\partial t_{1}}=\frac{\partial}{\partial t_{1}}\left(2 \cos t_{1} \cos t_{2}+t_{1}^{3} t_{2}^{3}\right)=-2 \sin t_{1} \cos t_{2}+3 t_{1}^{2} t_{2}^{3}
+	\end{array}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

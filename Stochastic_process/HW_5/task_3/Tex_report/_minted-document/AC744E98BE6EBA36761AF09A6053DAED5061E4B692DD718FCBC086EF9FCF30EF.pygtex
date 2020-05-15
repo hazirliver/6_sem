@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{z.sc}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+\PYG{n}{[1]} \PYG{l+m}{0.7919054} \PYG{l+m}{0.7308046} \PYG{l+m}{1.7206144} \PYG{l+m}{1.1162275} \PYG{l+m}{1.2255906}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{z.sc}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+\PYG{n}{[1]} \PYG{l+m}{2.0275873} \PYG{l+m}{1.5579907} \PYG{l+m}{0.7739086} \PYG{l+m}{1.5382913} \PYG{l+m}{2.5450301}
+\end{Verbatim}

@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{sq.vars}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+	  \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.333261} \PYG{l+m}{2.598706}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.208715} \PYG{l+m}{2.124458}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.313816} \PYG{l+m}{2.017766}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.368920} \PYG{l+m}{1.849391}
+\PYG{n}{[5}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{1.961947} \PYG{l+m}{2.345290}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{sq.vars}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{)}
+	  \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[156}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{3.147324} \PYG{l+m}{2.232487}
+\PYG{n}{[157}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.128623} \PYG{l+m}{2.094030}
+\PYG{n}{[158}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.105166} \PYG{l+m}{2.304816}
+\PYG{n}{[159}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.478495} \PYG{l+m}{2.442681}
+\PYG{n}{[160}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.163211} \PYG{l+m}{2.254925}
+\end{Verbatim}

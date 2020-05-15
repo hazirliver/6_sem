@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589478420986.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3771582997",
+    "id" : "8191EBBE",
+    "lastKnownWriteTime" : 1589478515,
+    "last_content_update" : 1589478515742,
+    "path" : "~/6_sem/Course_work/R_proj/Voronoi_diagram.R",
+    "project_path" : "Voronoi_diagram.R",
+    "properties" : {
+        "cursorPosition" : "9,38",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

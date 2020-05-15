@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589554511666.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2276688867",
+    "id" : "56C6E8AF",
+    "lastKnownWriteTime" : 1589574367,
+    "last_content_update" : 1589574367697,
+    "path" : "~/6_sem/Course_work/R_proj/k-medoids.R",
+    "project_path" : "k-medoids.R",
+    "properties" : {
+        "cursorPosition" : "142,0",
+        "scrollLine" : "137",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

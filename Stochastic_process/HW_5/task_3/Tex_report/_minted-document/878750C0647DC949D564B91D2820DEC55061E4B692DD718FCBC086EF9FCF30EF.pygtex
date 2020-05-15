@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{mean\PYGZus{}vars} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{colMeans}\PYG{p}{(}\PYG{n}{vars}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{mean\PYGZus{}vars}
+\PYG{n}{[1]} \PYG{l+m}{17.01906} \PYG{l+m}{16.91866}
+\end{Verbatim}

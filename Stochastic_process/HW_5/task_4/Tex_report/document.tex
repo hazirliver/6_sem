@@ -1,0 +1,222 @@
+\documentclass[12 pt]{article}  
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}      	%sets the font to 12 pt and says this is an article (as opposed to book or other documents)
+\usepackage{amssymb}				
+\usepackage{mathtools}	% packages to get the fonts, symbols used in most math
+
+%\usepackage{setspace}               		% Together with \doublespacing below allows for doublespacing of the document
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newenvironment{sqcases}{%
+	\matrix@check\sqcases\env@sqcases
+}{%
+	\endarray\right.%
+}
+\def\env@sqcases{%
+	\let\@ifnextchar\new@ifnextchar
+	\left\lbrack
+	\def\arraystretch{1.2}%
+	\array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+
+\oddsidemargin=-0.5cm                 	% These three commands create the margins required for class
+\setlength{\textwidth}{6.5in}         	%
+\addtolength{\voffset}{-20pt}        		%
+\addtolength{\headsep}{25pt}           	%
+
+\newcommand*{\QEDB}{\hfill\ensuremath{\blacksquare}}%
+\newcommand*{\QEDA}{\hfill\ensuremath{\square}}%
+
+
+\pagestyle{myheadings}                           	% tells LaTeX to allow you to enter information in the heading
+\markright{Sokolov Arseny\hfill \today \hfill} 	% put your name instead of Murphy Waggoner 
+% and put the proposition number from the book
+% LaTeX will put your name on the left, the date the paper 
+% is generated in the middle 
+% and a page number on the right
+
+
+
+\newcommand{\eqn}[0]{\begin{array}{rcl}}%begin an aligned equation - allows for aligning = or inequalities.  Always use with $$ $$
+	\newcommand{\eqnend}[0]{\end{array} }  	%end the aligned equation
+
+\newcommand{\qed}[0]{$\square$}        	% make an unfilled square the default for ending a proof
+
+%\doublespacing                         	% Together with the package setspace above allows for doublespacing of the document
+
+\begin{document}												% end of preamble and beginning of text that will be printed
+\begin{titlepage}
+	\begin{center}
+		\large
+		МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ\\ РОССИЙСКОЙ ФЕДЕРАЦИИ
+		
+		\vspace{0.5cm}
+		
+		МГТУ им Н.Э.Баумана
+		\vspace{0.25cm}
+		
+		Факультет ФН
+		
+		Кафедра вычислительной математики и математической физики
+		\vfill
+		
+		
+		Соколов Арсений Андреевич\\
+		\vfill
+		
+		
+		{\LARGE Домашнее задание №5 (задача 4) \\ по теории случайных процессов\\[2mm]
+		}
+		\bigskip
+		
+		3 курс, группа ФН11-63Б\\
+		Вариант 19
+	\end{center}
+	\vfill
+	
+	\newlength{\ML}
+	\settowidth{\ML}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}}}
+	\hfill\begin{minipage}{0.4\textwidth}
+		Преподаватель\\
+		\underline{\hspace{3cm}} Т.\,В.~Облакова\\
+		«\underline{\hspace{0.7cm}}» \underline{\hspace{1.71cm}} 2020 г.
+	\end{minipage}%
+	\bigskip
+	
+	
+	\vfill
+	
+	\begin{center}
+		Москва, 2020 г.
+	\end{center}
+\end{titlepage}
+	
+\textbf{Условие.}\\
+Задана ковариационная функция стационарного случайного процесса $X(t)$. Найдите:
+\begin{enumerate}
+	\item ковариационную функцию, дисперсию и нормированную	ковариационную функцию случайного процесса $Y(t) = X'(t)$,
+	\item взаимную ковариационную функцию $R_{X X^{\prime}}$,
+	\item ковариационную функцию, дисперсию и нормированную	ковариационную функцию случайного процесса $Z(t) = X(t) + X'(t)$.
+\end{enumerate}
+	
+\begin{equation}
+	K_{X}(\tau)=(1+|\sin 3 \tau|) e^{-2|\tau|}
+\end{equation}
+
+\newpage
+\textbf{Решение.}
+
+\subsection{}
+
+\begin{equation}
+	K_{X}\left(t_{1}, t_{2}\right)=K_{X}\left(t_{2}-t_{1}\right)=K_{X}(\tau)=(1+|\sin 3 \tau|) e^{-2|\tau|}
+\end{equation}
+
+\begin{equation}
+	Y(t) = X'(t)
+\end{equation}
+
+
+\begin{equation}
+	K_{Y}\left(t_{1}, t_{2}\right)=K_{Y}\left(t_{2}-t_{1}\right)=K_{Y}(\tau)
+\end{equation}
+
+Ковариационная функция:
+
+\begin{equation}
+	\begin{array}{l}
+	K_{Y}(\tau)=K_{X^{\prime}}(\tau)=-K_{X}^{\prime \prime}(\tau)=-\left(3|\cos 3 \tau| e^{-2|\tau|}-2(1+|\sin 3 \tau|) e^{-2|\tau|}\right)^{\prime}= \\
+	=-\left(e^{-2|\tau|}(3|\cos 3 \tau|-2-2|\sin 3 \tau|)\right)^{\prime}=-\left(-2 e^{-2|\tau|}(3|\cos 3 \tau|-2-2|\sin 3 \tau|)+\right. \\
+	\left.+e^{-2|\tau|}(-9|\sin 3 \tau|-6|\cos 3 \tau|)\right)=-\left(e^{-2|\tau|}(-12|\cos 3 \tau|-5|\sin 3 \tau|+4)\right)= \\
+	\left.+e^{-2|\tau|}(-9|\sin 3 \tau|-6|\cos 3 \tau|)\right)=e^{-2|\tau|}(12|\cos 3 \tau|+5|\sin 3 \tau|-4)
+	\end{array}
+\end{equation}
+
+Дисперсия:
+
+\begin{equation}
+	D_{Y}(t)=K_{Y}(0)=e^{-2(0)}(12|\cos 0|+5|\sin 0|-4)=12-4=8
+\end{equation}
+
+\begin{equation*}
+\Updownarrow
+\end{equation*}
+
+\begin{equation}
+	D_{Y}(t)=K_{Y}(t, t)=e^{-2|t-t|}(12|\cos 3(t-t)|+5|\sin 3(t-t)|-4)=8
+\end{equation}
+
+Нормированная ковариационная функция:
+
+\begin{equation}
+	\rho_{Y}(\tau)=\frac{K_{Y}(\tau)}{K_{Y}(0)}=\frac{e^{-2|\tau|}(12|\cos 3 \tau|+5|\sin 3 \tau|-4)}{8}
+\end{equation}
+
+
+
+\newpage
+\subsection{}
+Взаимная ковариационная функция:
+
+\begin{equation}
+	R_{X X^{\prime}}(\tau)=K_{X}^{\prime}(\tau)=\left((1+|\sin 3 \tau|) e^{-2|\tau|}\right)^{\prime}=e^{-2|\tau|}(3|\cos 3 \tau|-2-2|\sin 3 \tau|)
+\end{equation}
+
+
+\newpage
+
+\subsection{}
+
+\begin{equation}
+	Z(t) = X(t) + X'(t)
+\end{equation}
+
+Ковариационная функция:
+
+\begin{equation}
+	\begin{array}{l}
+	K_{Z}(\tau)=\operatorname{cov}\left(X\left(t_{1}\right)+X^{\prime}\left(t_{1}\right), X\left(t_{2}\right)+X^{\prime}\left(t_{2}\right)\right)=K_{X}(\tau)+R_{X X^{\prime}}(\tau)+R_{X^{\prime} X}(\tau)+K_{X^{\prime}}(\tau)= \\
+	=K_{X}(\tau)+K_{X}^{\prime}(\tau)-K_{X}^{\prime}(\tau)-K_{X}^{\prime \prime}(\tau)=K_{X}(\tau)-K_{X}^{\prime \prime}(\tau)=(1+|\sin 3 \tau|) e^{-2|\tau|}+ \\
+	+e^{-2|\tau|}(12|\cos 3 \tau|+5|\sin 3 \tau|-4)=e^{-2|\tau|}(-3+6|\sin 3 \tau|+12|\cos 3 \tau|)
+	\end{array}
+\end{equation}
+
+Дисперсия:
+
+\begin{equation}
+	D_{Z}(t)=K_{Z}(0)==e^{-2(0)}(-3+6|\sin 0|+12|\cos 0|)=-3+12=9
+\end{equation}
+
+Нормированная ковариационная функция:
+
+\begin{equation}
+	\rho_{\mathrm{Z}}(\tau)=\frac{K_{\mathrm{Z}}(\tau)}{K_{\mathrm{Z}}(0)}=\frac{e^{-2|\tau|}(-3+6|\sin 3 \tau|+12|\cos 3 \tau|)}{9}=\frac{e^{-2|\tau|}(-3+2|\sin 3 \tau|+4|\cos 3 \tau|)}{3}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

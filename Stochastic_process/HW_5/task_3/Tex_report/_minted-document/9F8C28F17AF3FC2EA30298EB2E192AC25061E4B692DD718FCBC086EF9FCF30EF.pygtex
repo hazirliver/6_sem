@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{} Для 6\PYGZhy{}ой траектории:}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{pairs.list[[6]]}\PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{pairs.list[[6]]}\PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+	  \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}         \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]}  \PYG{l+m}{0.00000000}  \PYG{l+m}{0.000000000}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.01351392} \PYG{l+m}{\PYGZhy{}0.075122664}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.01128064}  \PYG{l+m}{0.002188971}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.27148618} \PYG{l+m}{\PYGZhy{}0.129458504}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{pairs.list[[6]]}\PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+	  \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}      \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[198}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.5810057} \PYG{l+m}{\PYGZhy{}1.660147}
+\PYG{n}{[199}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.5118538} \PYG{l+m}{\PYGZhy{}1.687288}
+\PYG{n}{[200}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.5211355} \PYG{l+m}{\PYGZhy{}1.779348}
+\PYG{n}{[201}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{\PYGZhy{}0.4496010} \PYG{l+m}{\PYGZhy{}1.613658}
+\end{Verbatim}

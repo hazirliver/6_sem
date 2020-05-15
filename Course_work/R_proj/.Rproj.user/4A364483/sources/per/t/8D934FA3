@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589478423527.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1859861056",
+    "id" : "8D934FA3",
+    "lastKnownWriteTime" : 1589477056,
+    "last_content_update" : 1589477056,
+    "path" : "~/6_sem/Course_work/R_proj/kmeans_script_beverage.R",
+    "project_path" : "kmeans_script_beverage.R",
+    "properties" : {
+        "cursorPosition" : "20,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -78,6 +78,111 @@ plot(x = stat_table$p_i, y = stat_table$D_i, "o",
 dev.off()
 
 
+#############################################
+n <- stat_table$D_i[1]
+
+pi <- stat_table$p_i
+Ni <- stat_table$f_i
+piNi <- pi * Ni
+D_pi <- stat_table$D_i
+D_pi_Ni <- D_pi * Ni
+pi_2_Ni <- pi^2 * Ni
+D_pi_pi_Ni <- D_pi_Ni * pi
+
+prep <- data.frame(  pi = pi,Ni = Ni,piNi = piNi, 
+                     D_pi = D_pi, D_pi_Ni = D_pi_Ni,
+                     pi_2_Ni = pi_2_Ni,
+                     D_pi_pi_Ni = D_pi_pi_Ni)
+
+
+a_zv <- ( sum(D_pi_pi_Ni) - ( (1/n) * sum(piNi) * sum(D_pi_Ni)) )/
+  ( sum(pi_2_Ni) - n * (sum(piNi)/n)^2)
+
+b_zv <- sum(D_pi_Ni)/n
+
+d_zv <- b_zv - a_zv * sum(piNi)/n
+
+Dzv_pi <- function(p)
+{
+  return(a_zv * p + d_zv)
+}
+
+D_zv_pi <- Dzv_pi(pi)
+predposl <- Ni * (D_pi - D_zv_pi)
+posl <- Ni * (D_pi - D_zv_pi)^2
+ss <- sum(posl)
+sigma_zv <- sqrt(ss/n)
+
+
+
+# D_dov_verh <- function(p)
+# {
+#   a_zv * p + d_zv + 1.96 * sigma_zv *
+#     sqrt(1/n + ((p-mean(piNi))^2)/
+#            (sum(pi_2_Ni) - n * (mean(piNi))^2))
+# }
+prep$D_pi_2 <- sqrt(prep$D_pi)
+plot(D_pi_2 ~ pi, prep, type = "o")
+abline(lm(D_pi ~ pi, prep), col = "green")
+
+
+
+
+
+
+
+
+
+pi_log <- log(stat_table$p_i)
+Ni_log <- stat_table$f_i
+piNi_log <- pi_log * Ni_log 
+D_pi_log <- log(stat_table$D_i)
+D_pi_Ni_log <- D_pi_log * Ni_log 
+pi_2_Ni_log <- pi_log^2 * Ni_log 
+D_pi_pi_Ni_log <- D_pi_Ni_log * pi_log
+
+prep_log <- data.frame(  pi_log = pi_log,Ni_log = Ni_log,piNi_log = piNi_log, 
+                     D_pi_log = D_pi_log, D_pi_Ni_log = D_pi_Ni_log,
+                     pi_2_Ni_log = pi_2_Ni_log,
+                     D_pi_pi_Ni_log = D_pi_pi_Ni_log)
+
+
+a_zv_log <- ( sum(D_pi_pi_Ni_log) - ( (1/n) * sum(piNi_log) * sum(D_pi_Ni_log)) )/
+  ( sum(pi_2_Ni_log) - n * (sum(piNi_log)/n)^2)
+
+
+b_zv_log <- sum(D_pi_Ni_log)/n
+
+d_zv_log <- b_zv_log - a_zv_log * sum(piNi_log)/n
+
+
+d_s_sayta <- exp(1/n * sum(D_pi_Ni_log) -
+                   a_zv_log/n * sum(piNi_log))
+
+
+Dzv_pi_log <- function(p)
+{
+  return(d_zv_log * p^(a_zv_log ))
+}
+
+tmp1 <- Dzv_pi_log(pi_log)
+
+tmp_foo <- function(p)
+{
+  return(d_s_sayta * p^(a_zv_log))
+}
+
+yy <- tmp_foo(pi)
+
+plot(D_pi ~ pi)
+lines(yy ~ pi, col = "red")
+abline(lm(D_pi ~ pi, prep), col = "green")
+
+
+
+
+
+
 
 
 
