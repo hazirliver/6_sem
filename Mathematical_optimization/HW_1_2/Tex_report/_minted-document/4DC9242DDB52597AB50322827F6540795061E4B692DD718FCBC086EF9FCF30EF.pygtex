@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{compare\PYGZus{}table} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{data.table}\PYG{p}{(}\PYG{n}{mean\PYGZus{}vars} \PYG{o}{=} \PYG{n}{mean\PYGZus{}vars}\PYG{p}{,}
+\PYG{o}{+}                             \PYG{n}{mean\PYGZus{}vars.extnd} \PYG{o}{=} \PYG{n}{mean\PYGZus{}vars.extnd}\PYG{p}{,}
+\PYG{o}{+}                             \PYG{n}{mean\PYGZus{}sq.vars} \PYG{o}{=} \PYG{n}{mean\PYGZus{}sq.vars}\PYG{p}{,}
+\PYG{o}{+}                             \PYG{n}{mean\PYGZus{}sq.vars.extnd} \PYG{o}{=} \PYG{n}{mean\PYGZus{}sq.vars.extnd}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{compare\PYGZus{}table}
+\PYG{n}{mean\PYGZus{}vars} \PYG{n}{mean\PYGZus{}vars.extnd} \PYG{n}{mean\PYGZus{}sq.vars} \PYG{n}{mean\PYGZus{}sq.vars.extnd}
+\PYG{l+m}{1}\PYG{o}{:}  \PYG{l+m}{17.01906}        \PYG{l+m}{24.02536}     \PYG{l+m}{2.285641}           \PYG{l+m}{2.266860}
+\PYG{l+m}{2}\PYG{o}{:}  \PYG{l+m}{16.91866}        \PYG{l+m}{23.96380}     \PYG{l+m}{2.243726}           \PYG{l+m}{2.257994}
+\end{Verbatim}

@@ -1,0 +1,77 @@
+\documentclass[12 pt]{article}  
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}      	%sets the font to 12 pt and says this is an article (as opposed to book or other documents)
+\usepackage{amssymb}				
+\usepackage{mathtools}	% packages to get the fonts, symbols used in most math
+
+%\usepackage{setspace}               		% Together with \doublespacing below allows for doublespacing of the document
+
+\oddsidemargin=-0.5cm                 	% These three commands create the margins required for class
+\setlength{\textwidth}{6.5in}         	%
+\addtolength{\voffset}{-20pt}        		%
+\addtolength{\headsep}{25pt}           	%
+
+\newcommand*{\QEDB}{\hfill\ensuremath{\blacksquare}}%
+\newcommand*{\QEDA}{\hfill\ensuremath{\square}}%
+
+
+\pagestyle{myheadings}                           	% tells LaTeX to allow you to enter information in the heading
+\markright{Sokolov Arseny\hfill \today \hfill} 	% put your name instead of Murphy Waggoner 
+% and put the proposition number from the book
+% LaTeX will put your name on the left, the date the paper 
+% is generated in the middle 
+% and a page number on the right
+
+
+
+\newcommand{\eqn}[0]{\begin{array}{rcl}}%begin an aligned equation - allows for aligning = or inequalities.  Always use with $$ $$
+	\newcommand{\eqnend}[0]{\end{array} }  	%end the aligned equation
+
+\newcommand{\qed}[0]{$\square$}        	% make an unfilled square the default for ending a proof
+
+%\doublespacing                         	% Together with the package setspace above allows for doublespacing of the document
+
+\begin{document}												% end of preamble and beginning of text that will be printed
+	
+	% makes the word Proposition and the proposition number bold face  
+	\textbf{Proposition 1:}							% the Proposition number from the book (this one is fictitious)
+	Доказать, что $\left|\sum\limits_{k=0}^{n-1} \varphi\left(s, t_{k}^{\prime}\right) K_{\xi}\left(t, t_{k}^{\prime}\right) \Delta t_{k}-R_{\xi \zeta}(t, s)\right| \rightarrow 0$
+	\\
+	% be sure to leave at least one blank line here so that 
+	% the Proof starts with a new paragraph
+	
+	\textbf{Proof:}            						% makes the word Proof bold face
+	\begin{align*}
+		&\left|\sum\limits_{k=0}^{n-1} \varphi\left(s, t_{k}^{\prime}\right) K_{\xi}\left(t, t_{k}^{\prime}\right) \Delta t_{k}-R_{\xi \zeta}(t, s)\right|  = 
+		\left| \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)(\operatorname{M}\xi_t\xi_{t'_k} - \operatorname{M}\xi_t\operatorname{M}\xi_{t'_k})\Delta t_k - \operatorname{M}\xi_t\zeta_s + \operatorname{M}\xi_t\operatorname{M}\zeta_s\right| \leq \\
+		& \leq \left| \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)\operatorname{M}\xi_t\xi_{t'_k}\Delta t_k - \operatorname{M}\xi_t\zeta_s \right| + \left| \sum\limits_{k=0}^{n-1}\varphi(s,t'_k)\operatorname{M}\operatorname{\xi}\operatorname{M}\xi_{t'_k}\Delta t_k - \operatorname{M}\xi_t\operatorname{M}\zeta_s \right|
+	\end{align*}
+	
+	Докажем, что данное выражение стремится к нулю. Для этого рассмотрим каждое слагаемое по отдельности. Для первого слагаемого имеем:
+	
+	\begin{align*}
+		&\left| \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)\operatorname{M}\xi_t\xi_{t'_k}\Delta t_k - \operatorname{M}\xi_t\zeta_s \right| = 
+		\left| \operatorname{M} \left( \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)\xi_t\xi_{t'_k}\Delta t_k - \xi_t\zeta_s \right) \right| = \\
+		& = \left|  \operatorname{M} \left[ \xi_t \left( \sum\limits_{k=0}^{n-1}\varphi(s,t'_k)\xi_{t'_k} \Delta t_n - \zeta_s \right) \right] \right| \leq \operatorname{M} \left| \xi_t \left( \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)\xi'_{t_k} \Delta t_k -\zeta_s \right) \right| \leq \\
+		& \leq \sqrt{\operatorname{M} \xi_t^2} \cdot \sqrt{\operatorname{M} \left| \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)\xi_{t'_k} \Delta t_k - \zeta_s \right|^2} \longrightarrow 0
+	\end{align*}
+	
+	Для второго слагаемого:
+	
+	\begin{align*}
+		&\left| \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)\operatorname{M}\xi_t \operatorname{M}\xi_{t'_k}\Delta t_k - \operatorname{M}\xi_t \operatorname{M}\zeta_s \right| = \left| \operatorname{M}\operatorname{\xi_{t}} \left( \sum\limits_{k=0}^{n-1} \varphi(s,t'_k) \operatorname{M}\xi_{t'_k} \Delta t_k  - \operatorname{M}\zeta_s\right) \right| \leq \\
+		& \leq \left|\operatorname{M\xi_t}\right| \cdot \left| \operatorname{M}\sum\limits_{k=0}^{n-1}\varphi(s,t'_k) \xi_{t'_k} \Delta t_k  - \zeta_s\right| \leq 
+		\left|\operatorname{M\xi_t}\right| \cdot \operatorname{M} \sqrt{\left| \sum\limits_{k=0}^{n-1} \varphi(s,t'_k) \xi_{t'_k} \Delta t_k - \zeta_s  \right|^2} \longrightarrow 0
+	\end{align*}
+	
+	
+	Таким образом:
+	
+	\begin{align*}
+		&\left|\sum\limits_{k=0}^{n-1} \varphi\left(s, t_{k}^{\prime}\right) K_{\xi}\left(t, t_{k}^{\prime}\right) \Delta t_{k}-R_{\xi \zeta}(t, s)\right| = \\
+		 &= \left| \sum\limits_{k=0}^{n-1} \varphi(s,t'_k)\operatorname{M}\xi_t\xi_{t'_k}\Delta t_k - \operatorname{M}\xi_t\zeta_s \right| + \left| \sum\limits_{k=0}^{n-1}\varphi(s,t'_k)\operatorname{M}\operatorname{\xi}\operatorname{M}\xi_{t'_k}\Delta t_k - \operatorname{M}\xi_t\operatorname{M}\zeta_s \right|
+		  \longrightarrow 0 + 0 = 0 
+	\end{align*}
+\end{document}

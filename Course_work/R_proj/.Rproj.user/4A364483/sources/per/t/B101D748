@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589621747517.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1968692038",
+    "id" : "B101D748",
+    "lastKnownWriteTime" : 1589632332,
+    "last_content_update" : 1589632332930,
+    "path" : "~/6_sem/Course_work/R_proj/simple_hierarchical.R",
+    "project_path" : "simple_hierarchical.R",
+    "properties" : {
+        "cursorPosition" : "42,0",
+        "scrollLine" : "22",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

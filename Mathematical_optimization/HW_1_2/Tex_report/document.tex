@@ -1,0 +1,297 @@
+\documentclass[12 pt]{article}  
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}      	%sets the font to 12 pt and says this is an article (as opposed to book or other documents)
+\usepackage{amssymb}				
+\usepackage{mathtools}	% packages to get the fonts, symbols used in most math
+
+%\usepackage{setspace}               		% Together with \doublespacing below allows for doublespacing of the document
+
+\oddsidemargin=-0.5cm                 	% These three commands create the margins required for class
+\setlength{\textwidth}{6.5in}         	%
+\addtolength{\voffset}{-20pt}        		%
+\addtolength{\headsep}{25pt}           	%
+
+\newcommand*{\QEDB}{\hfill\ensuremath{\blacksquare}}%
+\newcommand*{\QEDA}{\hfill\ensuremath{\square}}%
+
+
+\pagestyle{myheadings}                           	% tells LaTeX to allow you to enter information in the heading
+\markright{Sokolov Arseny\hfill \today \hfill} 	% put your name instead of Murphy Waggoner 
+% and put the proposition number from the book
+% LaTeX will put your name on the left, the date the paper 
+% is generated in the middle 
+% and a page number on the right
+
+
+
+\newcommand{\eqn}[0]{\begin{array}{rcl}}%begin an aligned equation - allows for aligning = or inequalities.  Always use with $$ $$
+	\newcommand{\eqnend}[0]{\end{array} }  	%end the aligned equation
+
+\newcommand{\qed}[0]{$\square$}        	% make an unfilled square the default for ending a proof
+
+%\doublespacing                         	% Together with the package setspace above allows for doublespacing of the document
+
+\begin{document}												% end of preamble and beginning of text that will be printed
+\textbf{Вариант 3.} $g(u_1,u_2) = u_1^2+5u_2^2$
+\section{Градиентный метод дробления шага.}
+$$x_0=(1,2); \quad \tilde{\alpha}=\varepsilon=\delta=0.1$$
+
+$$g(x_0) = 1^2+5^2\cdot2^2=21$$
+
+$$ g'(u_1,u_2) = (2u_1,10u_2) $$
+
+$$ g'(x_0) = (2,20) \neq (0,0) $$	
+
+$$x_1 = (1,2) - 0.1(2,20) = (0.8,0)$$
+
+$$g(x_1) = 0.64+0 = 0.64$$
+
+Получаем, что 
+
+$$g(x_1)=(1.6, 0) \neq (0,0)$$
+
+Далее
+
+$$g'(x_1) = (1.6,0) \neq (0,0)$$
+
+$$x_2 = (0.8,0) - 0.1(1.6,0) = (0.64,0)$$
+
+$$g(x_2) = 0.4096+0 = 0.4906$$
+
+$$g(x_2) = 0.4096 < 0.64 = g(x_1)$$
+
+Приближенное значение точки минимума возьмём $(0.4096,0)$, тогда минимум функции $m_* \approx 0.4096$.
+
+\newpage
+
+\section{Градиентный метод наискорейшего спуска}
+	
+$$x_0=(1,2); \quad \delta=0.1$$	
+	
+$$\varphi_0(\alpha) = g(x_0-\alpha g'(x_0))$$
+
+$$ g'(u_1,u_2) = (2u_1,10u_2) $$
+
+$$ g'(x_0) = (2,20) \neq (0,0) $$
+	
+$$\varphi_0(\alpha) = g((1,2)-\alpha (2u_1,10u_2)) = g(1-2\alpha, 2-2\alpha) = (1-2\alpha)^2 + 5(2-2\alpha)^2 = 2004\alpha^2-404\alpha+21$$
+
+Минимум функции $\varphi_0(\alpha)$ достигается при $\alpha = \frac{404}{2\cdot 2004} \approx 0.1$. Тогда:
+
+$$x_1 = (1,2) - 0.1(2,20) = (0.8,0)$$
+
+$$g(x_1) = 0.64$$
+
+$$g'(x_1)=(1.6,0)$$
+
+Далее
+
+$$\varphi_1(\alpha) = g(x_1-\alpha g'(x_1)) = g((0.8,0) - \alpha (1.6,0)) = (0.8-1.6\alpha)^2 = 2.56\alpha^2-2.56\alpha+0.64$$
+
+Минимум $\varphi_1(\alpha)$ Достигается при $\alpha = \frac{1}{2}$. Тогда минимум функции $m_* = 0$.
+
+\newpage
+
+\section{Метод сопряжённых направлений}
+
+$$u_0=(1,2)$$
+
+$$Q(u) = Q(u_1,u_2) = u_1^2+5u_2^2$$
+
+$$Q(u) = Q(u_1,u_2) = \frac{1}{2} \langle A u, u\rangle-\langle b, u\rangle$$
+
+$$Q'(u)  = Q'(u_1,u_2) = Au-b,$$
+
+где 
+
+\begin{equation*}
+	A=\left(\begin{array}{ll}
+	2 & 0 \\
+	0 & 10
+	\end{array}\right), b=\left(\begin{array}{l}
+	0 \\
+	0
+	\end{array}\right)
+\end{equation*}
+
+
+$$p_0 = Q'(u_1,u_2) = Au-b = \left(\begin{array}{ll}
+2 & 0 \\
+0 & 10
+\end{array}\right) \left(\begin{array}{l}
+1 \\
+2
+\end{array}\right) - \left(\begin{array}{l}
+0 \\
+0
+\end{array}\right) = \left(\begin{array}{l}
+2 \\
+20
+\end{array}\right) \neq \left(\begin{array}{l}
+0 \\
+0
+\end{array}\right)$$
+
+
+Положим $u_1=u_0-\alpha_0p_0 = \left(\begin{array}{l}
+1 \\
+2
+\end{array}\right) - \alpha_0 \left(\begin{array}{l}
+2 \\
+20
+\end{array}\right)$,
+
+
+\begin{equation*}
+	\alpha_{0}=\frac{\left\langle Q^{\prime}\left(u_{0}\right), p_{0}\right\rangle}{\left\langle A p_{0}, p_{0}\right\rangle}=\frac{\left\langle\left(\begin{array}{c}
+		2 \\
+		20
+		\end{array}\right),\left(\begin{array}{c}
+		2 \\
+		20
+		\end{array}\right)\right\rangle}{\left\langle\left(\begin{array}{cc}
+		2 & 0 \\
+		0 & 10
+		\end{array}\right)\left(\begin{array}{c}
+		2 \\
+		20
+		\end{array}\right),\left(\begin{array}{c}
+		2 \\
+		20
+		\end{array}\right)\right\rangle}=\frac{\left\langle\left(\begin{array}{c}
+		2 \\
+		20
+		\end{array}\right),\left(\begin{array}{c}
+		2 \\
+		20
+		\end{array}\right)\right\rangle}{\left\langle\left(\begin{array}{c}
+		4 \\
+		200
+		\end{array}\right),\left(\begin{array}{c}
+		2 \\
+		20
+		\end{array}\right)\right\rangle}=\frac{404}{4008} \approx 0.1
+\end{equation*}
+
+
+$$u_1 = \left(\begin{array}{l}
+1 \\
+2
+\end{array}\right) - 0.1 \left(\begin{array}{l}
+2 \\
+20
+\end{array}\right) = \left(\begin{array}{l}
+0.8 \\
+0
+\end{array}\right)$$
+
+
+$$Q'(u_1) = Au_1-b = \left(\begin{array}{cc}
+2 & 0 \\
+0 & 10
+\end{array}\right)\left(\begin{array}{c}
+0.8 \\
+0
+\end{array}\right) - \left(\begin{array}{c}
+0 \\
+0
+\end{array}\right) = \left(\begin{array}{c}
+1.6 \\
+0
+\end{array}\right)$$
+
+
+$$p_1 = Q'(u_1) - \beta_0p_0 = \left(\begin{array}{c}
+1.6 \\
+0
+\end{array}\right) - \beta_0 \left(\begin{array}{l}
+2 \\
+20
+\end{array}\right)$$
+
+
+$$\beta_0 = \frac{\left\langle Ap_0, Q^{\prime}\left(u_{1}\right)\right\rangle}{\left\langle A p_{0}, p_{0}\right\rangle}=\frac{\left\langle\left(\begin{array}{c}
+	4 \\
+	200
+	\end{array}\right),\left(\begin{array}{c}
+	0.8 \\
+	0
+	\end{array}\right)\right\rangle}{\left\langle\left(\begin{array}{c}
+	4 \\
+	200
+	\end{array}\right),\left(\begin{array}{c}
+	2 \\
+	20
+	\end{array}\right)\right\rangle}=\frac{3.2}{4008} \approx 0.0008 $$
+
+
+$$ p_1 = \left(\begin{array}{c}
+1.6 \\
+0
+\end{array}\right) - 0.0008 \left(\begin{array}{l}
+2 \\
+20
+\end{array}\right) = 
+\left(\begin{array}{l}
+1.5984 \\
+-0.016
+\end{array}\right)$$
+
+
+$$u_2=u_1-\alpha_1p_1 = \left(\begin{array}{c}
+0.8 \\
+0
+\end{array}\right) - \alpha_1 \left(\begin{array}{l}
+1.5984 \\
+-0.016
+\end{array}\right),$$
+
+
+$$\alpha_1 = \frac{\left\langle Q^{\prime}\left(u_{1}\right), p_{1}\right\rangle}{\left\langle A p_{1}, p_{1}\right\rangle}=\frac{\left\langle\left(\begin{array}{c}
+	1.6 \\
+	0
+	\end{array}\right),\left(\begin{array}{c}
+	1.5984 \\
+	-0.016
+	\end{array}\right)\right\rangle}{\left\langle\left(\begin{array}{c}
+	3.1968 \\
+	-0.016
+	\end{array}\right),\left(\begin{array}{c}
+	1.5984 \\
+	-0.016
+	\end{array}\right)\right\rangle}=\frac{2.5574}{5.1100} \approx 0.5 $$
+
+
+
+$$u_2 = \left(\begin{array}{c}
+0.8 \\
+0
+\end{array}\right) - 0.5 \left(\begin{array}{l}
+1.5984 \\
+-0.016
+\end{array}\right) = \left(\begin{array}{l}
+0.0008\\
+0.008
+\end{array}\right)$$
+
+Тогда приблизительная точка минимума $(0.0008,0.008)$, $m_* = 0.04.$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{compare\PYGZus{}table.rel} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{data.table}\PYG{p}{(}\PYG{n}{compare\PYGZus{}table[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]} \PYG{o}{/} \PYG{n}{compare\PYGZus{}table[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}\PYG{p}{,}
+\PYG{o}{+}                                 \PYG{n}{compare\PYGZus{}table[}\PYG{p}{,}\PYG{l+m}{3}\PYG{n}{]} \PYG{o}{/} \PYG{n}{compare\PYGZus{}table[}\PYG{p}{,}\PYG{l+m}{4}\PYG{n}{]}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}} \PYG{n}{compare\PYGZus{}table.rel}
+\PYG{n}{mean\PYGZus{}vars} \PYG{n}{mean\PYGZus{}sq.vars}
+\PYG{l+m}{1}\PYG{o}{:} \PYG{l+m}{0.7083788}    \PYG{l+m}{1.0082851}
+\PYG{l+m}{2}\PYG{o}{:} \PYG{l+m}{0.7060092}    \PYG{l+m}{0.9936808}
+\end{Verbatim}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{addTaskCallback}\PYG{p}{(}\PYG{n+nf}{function}\PYG{p}{(}\PYG{k+kc}{...}\PYG{p}{)} \PYG{p}{\PYGZob{}}\PYG{n+nf}{set.seed}\PYG{p}{(}\PYG{l+m}{1337}\PYG{p}{);}\PYG{k+kc}{TRUE}\PYG{p}{\PYGZcb{})}
+\PYG{o}{\PYGZgt{}} \PYG{n}{Tt}  \PYG{o}{\PYGZlt{}\PYGZhy{}}  \PYG{l+m}{4}
+\PYG{o}{\PYGZgt{}} \PYG{n}{n}  \PYG{o}{\PYGZlt{}\PYGZhy{}}  \PYG{l+m}{160}
+\PYG{o}{\PYGZgt{}} \PYG{n}{sigma}  \PYG{o}{\PYGZlt{}\PYGZhy{}}  \PYG{l+m}{0.75}
+\PYG{o}{\PYGZgt{}} \PYG{n}{h}  \PYG{o}{\PYGZlt{}\PYGZhy{}}  \PYG{l+m}{0.01}
+\PYG{o}{\PYGZgt{}} \PYG{n}{z}  \PYG{o}{\PYGZlt{}\PYGZhy{}}  \PYG{l+m}{2.5}
+\PYG{o}{\PYGZgt{}} \PYG{n}{N}  \PYG{o}{\PYGZlt{}\PYGZhy{}}  \PYG{n}{Tt}\PYG{o}{/}\PYG{n}{h}
+\PYG{o}{\PYGZgt{}} \PYG{n}{N}
+\PYG{n}{[1]} \PYG{l+m}{400}
+\end{Verbatim}

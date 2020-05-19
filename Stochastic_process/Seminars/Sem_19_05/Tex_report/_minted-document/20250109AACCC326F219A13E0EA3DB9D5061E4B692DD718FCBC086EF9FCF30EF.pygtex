@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{pair.func} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{function}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+	\PYG{n}{pair}  \PYG{o}{\PYGZlt{}\PYGZhy{}}  \PYG{n+nf}{t}\PYG{p}{(}\PYG{n+nf}{replicate}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,}
+		\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+m}{1}\PYG{p}{,}\PYG{l+m}{2}\PYG{p}{),} \PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)} \PYG{n+nf}{rnorm}\PYG{p}{(}\PYG{l+m}{1}\PYG{p}{,} \PYG{l+m}{0}\PYG{p}{,} \PYG{n}{h} \PYG{o}{*} \PYG{n}{sigma\PYGZca{}2}\PYG{p}{)),}
+		\PYG{n}{simplify} \PYG{o}{=} \PYG{n+nb+bp}{T}\PYG{p}{))}
+	\PYG{n+nf}{return}\PYG{p}{(}\PYG{n+nf}{apply}\PYG{p}{(}\PYG{n+nf}{rbind}\PYG{p}{(}\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+m}{0}\PYG{p}{,}\PYG{l+m}{0}\PYG{p}{),}\PYG{n}{pair}\PYG{p}{),} \PYG{l+m}{2}\PYG{p}{,} \PYG{n}{cumsum}\PYG{p}{))}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}} \PYG{n}{sq.vars.extnd}  \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n+nf}{t}\PYG{p}{(}\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{pairs.extnd.list}\PYG{p}{,}
+\PYG{o}{+}	\PYG{n+nf}{function}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{n+nf}{apply}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{l+m}{2}\PYG{p}{,} \PYG{n}{sq.var\PYGZus{}foo}\PYG{p}{)))}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{sq.vars.extnd} \PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[1}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.326814} \PYG{l+m}{2.470255}
+\PYG{n}{[2}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.413601} \PYG{l+m}{2.326623}
+\PYG{n}{[3}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.106365} \PYG{l+m}{2.234015}
+\PYG{n}{[4}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.244770} \PYG{l+m}{2.045897}
+\PYG{o}{\PYGZgt{}} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{n}{sq.vars.extnd} \PYG{p}{,}\PYG{l+m}{4}\PYG{p}{)}
+\PYG{n}{[}\PYG{p}{,}\PYG{l+m}{1}\PYG{n}{]}     \PYG{n}{[}\PYG{p}{,}\PYG{l+m}{2}\PYG{n}{]}
+\PYG{n}{[157}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.137992} \PYG{l+m}{1.946296}
+\PYG{n}{[158}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.447775} \PYG{l+m}{2.410783}
+\PYG{n}{[159}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.224500} \PYG{l+m}{2.576072}
+\PYG{n}{[160}\PYG{p}{,}\PYG{n}{]} \PYG{l+m}{2.201613} \PYG{l+m}{2.195686}
+\end{Verbatim}
